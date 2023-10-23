@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html', {
+"title": "Главная"
+})
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+            <!--intro-->
+            <section class="intro">
+                <div class="container intro__header">
+                    <h1 class="title-grad fadeUp">Живите в городе<span>наедине с природой</span></h1>
+                    <div class="intro__location">
+                        <div class="h6">г.Нижний Новгород, проспект Гагарина, 144</div>
+                    </div>
+                </div>
+                <div class="section-sm intro__inner">
+                    <div class="intro__img">
+                        <div class="media-cover intro__img--front">
+                            <picture>
+                                <source srcset="img/intro.webp" media="(min-width: 1520.99px)" type="image/webp">
+                                <source srcset="img/into.jpg" media="(min-width: 1520.99px)">
+                                <source srcset="img/intro-laptop.webp" media="(min-width: 991.99px)" type="image/webp">
+                                <source srcset="img/intro-laptop.jpg" media="(min-width: 991.99px)">
+                                <source srcset="img/intro-tablet.webp"  media="(min-width: 567.99px)" type="image/webp">
+                                <source srcset="img/intro-tablet.jpg" media="(min-width: 567.99px)">
+                                <source srcset="img/intro-mob.webp" type="image/webp">
+                                <source srcset="img/intro-mob.jpg">
+                                <img src="img/intro.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="media-cover intro__img--back">
+                            <picture>
+                                <source srcset="img/intro-back.webp" media="(min-width: 1520.99px)" type="image/webp">
+                                <source srcset="img/intro-back.png" media="(min-width: 1520.99px)">
+                                <source srcset="img/intro-back-laptop.webp" media="(min-width: 991.99px)" type="image/webp">
+                                <source srcset="img/into-back-laptop.png" media="(min-width: 991.99px)">
+                                <source srcset="img/intro-back-tablet.webp"  media="(min-width: 567.99px)" type="image/webp">
+                                <source srcset="img/intro-back-tablet.png" media="(min-width: 567.99px)" >
+                                <source srcset="img/intro-back-mob.webp" type="image/webp">
+                                <source srcset="img/intro-back-mob.png"> 
+                                <img src="img/intro-back.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="intro__cols">
+                        <div class="col-intro">
+                            <h6>Рядом<span class="h5">Швейцария</span>парк</h6>
+                        </div>
+                        <div class="col-intro">
+                            <h6>Дом<span class="h5">Комфорт</span>класса</h6>
+                        </div>
+                        <div class="col-intro">
+                            <h6>Квартиры<span class="h5">от 2 млн</span>рублей</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--info-->
+            <section class="info">
+                <div class="container">
+                    <div class="section-header info__header">
+                        <h2 class="title-grad fadeUp">Идеальное место<span>для комфортной жизни</span></h2>
+                        <div class="fadeUp info__content">
+                            <p>Жилой комплекс расположен в зеленой зоне города, рядом с парком “Швейцария”.</p>
+                            <p>Это уникальное место, где вы сможете наслаждаться природой и одновременно находиться в
+                                комфортных условиях.</p>
+                        </div>
+                    </div>
+                    <div class="info__items">
+                        <div class="item-info">
+                            <div class="media-contain item-info__img">
+                                <img src="img/house-left.png" alt="">
+                            </div>
+                            <div class="item-info__content">
+                                <h4>18 этажей</h4>
+                                <h6>Максимальное количество<br>видовых квартир</h6>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <div class="media-cover item-info__img">
+                                <picture>
+                                    <source srcset="img/comfort-2.webp" media="(min-width: 991.99px)" type="image/webp">
+                                    <source srcset="img/comfort-2.jpg" media="(min-width: 991.99px)">
+                                    <source srcset="img/comfort-2-mob.webp" type="image/webp">
+                                    <source srcset="img/comfort-2-mob.jpg">
+                                    <img src="img/comfort-2.jpg" alt="Просторные квартиры">
+                                </picture>
+                            </div>
+                            <div class="item-info__content">
+                                <h4>215 квартир</h4>
+                                <h6>Просторные квартиры:<br>от 37 до 113 кв.м.</h6>
+                            </div>
+                        </div>
+                        <div class="item-info">
+                            <div class="media-cover item-info__img">
+                                <picture>
+                                    <source srcset="img/comfort-3.webp" media="(min-width: 991.99px)" type="image/webp">
+                                    <source srcset="img/comfort-3.jpg" media="(min-width: 991.99px)">
+                                    <source srcset="img/comfort-3-mob.webp" type="image/webp">
+                                    <source srcset="img/comfort-3-mob.jpg">
+                                    <img src="img/comfort-3.jpg" alt="Подземный паркинг">
+                                </picture>
+                            </div>
+                            <div class="item-info__content">
+                                <h4>155 парковочных мест</h4>
+                                <h6>Подземный паркинг,<br>в который ходит лифт</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--improvements section-->
+            <section class="improvements">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Благоустройство<span>для каждого</span></h2>
+                    <div class="swiper improvements__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="improvements__item">
+                                    <div class="media-cover">
+                                        <img src="img/improv-1.jpg" alt="">
+                                    </div>
+                                    <h5>Супермаркет на 1 этаже</h5>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="improvements__item">
+                                    <div class="media-cover">
+                                        <img src="img/improv-2.jpg" alt="">
+                                    </div>
+                                    <h5>Современная<br>детская площадка</h5>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="improvements__item">
+                                    <div class="media-cover">
+                                        <img src="img/improv-2.jpg" alt="">
+                                    </div>
+                                    <h5>Пониженные бордюры, подъемы и пандусы</h5>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="improvements__item">
+                                    <div class="media-cover">
+                                        <img src="img/improv-3.jpg" alt="">
+                                    </div>
+                                    <h5>Спортивная площадка<br>с прорезиненным покрытием</h5>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="improvements__item">
+                                    <div class="media-cover">
+                                        <img src="img/improv-4.jpg" alt="">
+                                    </div>
+                                    <h5>Просторные холлы</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--features section-->
+            <section class="features">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Монолитно-<span>каркасный дом</span></h2>
+                    <div class="features__inner">
+                        <div class="features__img">
+                            <img src="img/house-right.png" alt="Монолитно-каркасный дом">
+                        </div>
+                        <div class="swiper features__swiper">
+                            <div class="swiper-wrapper features__cols">
+                                <!--col-features-->
+                                <div class="swiper-slide col-features">
+                                    <img src="img/features-2.png" alt="">
+                                    <div class="fadeUp col-features__content">
+                                        <h4>Современные фасадные конструкции</h4>
+                                        <p>В составе присутствует базальтовый утеплитель, служащий как теплозащитным так и
+                                            звукоизолирующим материалом.</p>
+                                    </div>
+                                </div>
+                                <!--col-features-->
+                                <div class="swiper-slide col-features">
+                                    <img src="img/features-1.png" alt="">
+                                    <div class="fadeUp col-features__content">
+                                        <h4>Пластиковые окна<br>с двухкамерным
+                                            стеклопакетом</h4>
+                                        <p>Окна с алюминиевыми витражами, все лоджии (веранды) входят в тепловой контур здания,
+                                            с отоплением</p>
+                                    </div>
+                                </div>
+                                <!--col-features-->
+                                <div class="swiper-slide col-features">
+                                    <img src="img/features-3.png" alt="">
+                                    <div class="fadeUp col-features__content">
+                                        <h4>Качественные инженерные системы</h4>
+                                        <p>Отопление центральное от ИТП. Трубы — сшитый полиэтилен. Горизонтальная разводка
+                                            отопления и водоснабжения</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!--infrastructure section-->
+            <section class="section-sm infra">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Инфраструктура<span>и развлечения</span></h2>
+                    <div class="swiper infra__swiper">
+                        <div class="swiper-wrapper">
+                            <!--item-infra swiper-slide-->
+                            <div class="item-infra swiper-slide">
+                                <div class="item-infra__images">
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-1.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-2.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-infra__content">
+                                    <h3>Парк «Швейцария»<br>за углом</h3>
+                                    <h6>Наслаждайтесь природой и тишиной. Гуляйте и развлекайтесь в городском парке</h6>
+                                </div>
+                            </div>
+                            <!--item-infra swiper-slide-->
+                            <div class="item-infra swiper-slide">
+                                <div class="item-infra__images">
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-2.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-2.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-infra__content">
+                                    <h3>Парк «Швейцария»<br>за углом</h3>
+                                    <h6>Наслаждайтесь природой и тишиной. Гуляйте и развлекайтесь в городском парке</h6>
+                                </div>
+                            </div>
+                            <!--item-infra swiper-slide-->
+                            <div class="item-infra swiper-slide">
+                                <div class="item-infra__images">
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-3.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-2.jpg" alt="">
+                                    </div>
+                                    <div class="item-infra__img">
+                                        <img src="img/infra1-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-infra__content">
+                                    <h3>Парк «Швейцария»<br>за углом</h3>
+                                    <h6>Наслаждайтесь природой и тишиной. Гуляйте и развлекайтесь в городском парке</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infra__pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!--main map-->
+            <section class="section-sm main-map">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Хорошее расположение<span>для жизни и отдыха</span></h2>
+                </div>
+                <div class="main-map__inner">
+                    <div class="media-cover main-map__img">
+                        <img src="img/map.svg" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="main-map__content content-map">
+                            <h3>Всё для комфорта<br>в шаговой доступности:</h3>
+                            <div class="content-map__items">
+                                <div class="content-map__item">
+                                    <div class="content-map__img">
+                                        <img src="img/icons/school.svg" alt="">
+                                    </div>
+                                    <p class="h6">3 школы</p>
+                                </div>
+                                <div class="content-map__item">
+                                    <div class="content-map__img">
+                                        <img src="img/icons/kindergarten.svg" alt="">
+                                    </div>
+                                    <p class="h6">5 детских садов</p>
+                                </div>
+                                <div class="content-map__item">
+                                    <div class="content-map__img">
+                                        <img src="img/icons/market.svg" alt="">
+                                    </div>
+                                    <p class="h6">4 супермаркета</p>
+                                </div>
+                                <div class="content-map__item">
+                                    <div class="content-map__img">
+                                        <img src="img/icons/cinema.svg" alt="">
+                                    </div>
+                                    <p class="h6">Кинотеатр «Зарница»</p>
+                                </div>
+                                <div class="content-map__item">
+                                    <div class="content-map__img">
+                                        <img src="img/icons/gym.svg" alt="">
+                                    </div>
+                                    <p class="h6">2 спортзала</p>
+                                </div>
+                            </div>
+                            <button data-modal="#map-modal" class="btn stroke-btn btn modal-show-btn content-map__btn">Открыть
+                                подробную карту</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--advantage section-->
+            <section class="advant">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Просторные квартиры<span>с уютными планировками</span></h2>
+                    <div class="advant__items">
+                        <div class="scaleFadeUp col-advant">
+                            <div class="col-advant__img"><img src="img/advant-1.png" alt=""></div>
+                            <h5>Досконально проработанные планировочные решения<br>на самый взыскательный вкус</h5>
+                        </div>
+                        <div class="scaleFadeUp col-advant">
+                            <div class="col-advant__img"><img src="img/advant-2.png" alt=""></div>
+                            <h5>На 18 последнем этаже витражное остекление и высота потолка 3,5м</h5>
+                        </div>
+                        <div class="scaleFadeUp col-advant">
+                            <div class="col-advant__img"><img src="img/advant-3.png" alt=""></div>
+                            <h5>Все лоджии (веранды) входят в тепловой контур здания,<br>с отоплением</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--views day/night section-->
+            <section class="section-sm views">
+                <div class="container section-header views__header">
+                    <h2 class="title-grad fadeUp">Наслаждайтесь видами<span>и днем, и ночью</span></h2>
+                    <div class="fadeUp views__content">
+                        <p>С верхних этажей открываются широкие панорамы города реки Оки и парка «Швейцария».</p>
+                        <p>Городская застройка и в перспективе не помешает наслаждаться видами.</p>
+                    </div>
+                </div>
+                <div class="views__body">
+                    <div class="views__buttons">
+                        <button type="button" class="views__btn views__btn--day active">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#sun"></use>
+                            </svg>
+                            <span class="h6">день</span>
+                        </button>
+                        <button  class="views__btn views__btn--night">
+                            <span class="h6">ночь</span>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#moon"></use>
+                            </svg>
+                        </button>
+                        <div class="views__bar"></div>
+                    </div>
+                    <div class="media-cover views__video views__video--night">
+                        <video autoplay muted loop playsinline src="media/view-night.mp4"></video>
+                    </div>
+                    <div class="media-cover views__video views__video--day">
+                        <video autoplay muted loop playsinline src="media/view-day.mp4"></video>
+                    </div>
+                </div>
+            </section>
+            <!--cards-->
+            <section class="section-sm cards">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Для каждого найдется<span>свой дом</span></h2>
+                </div>
+                <div class="cards__items">
+                    <!--item-card-->
+                    <a href="#" class="item-card">
+                        <div class="item-card__header">
+                            <h3 class="item-card__title">Студии</h3>
+                            <div class="h3 item-card__square">37-43 кв. м.</div>
+                            <div class="h3 item-card__price">от 1 856 000р</div>
+                        </div>
+                        <div class="item-card__img item-card__img--def">
+                            <img src="img/card-img.png" alt="Студии">
+                        </div>
+                        <div class="item-card__hover">
+                            <div class="item-card__btn">
+                                Смотреть квартиры
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-long"></use>
+                                </svg>
+                            </div>
+                            <div class="item-card__img item-card__img--hover">
+                                <img src="img/card-hover-img.png" alt="Студии">
+                            </div>
+                        </div>
+                    </a>
+                    <!--item-card-->
+                    <a href="#" class="item-card">
+                        <div class="item-card__header">
+                            <h3 class="item-card__title">1-комнатные</h3>
+                            <div class="h3 item-card__square">39-64 кв. м.</div>
+                            <div class="h3 item-card__price">от 2 856 000р</div>
+                        </div>
+                        <div class="item-card__img item-card__img--def">
+                            <img src="img/card-img.png" alt="Студии">
+                        </div>
+                        <div class="item-card__hover">
+                            <div class="item-card__btn">
+                                Смотреть квартиры
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-long"></use>
+                                </svg>
+                            </div>
+                            <div class="item-card__img item-card__img--hover">
+                                <img src="img/card-hover-img.png" alt="Студии">
+                            </div>
+                        </div>
+                    </a>
+                    <!--item-card-->
+                    <a href="#" class="item-card">
+                        <div class="item-card__header">
+                            <h3 class="item-card__title">2-комнатные</h3>
+                            <div class="h3 item-card__square">65-87 кв. м.</div>
+                            <div class="h3 item-card__price">от 3 856 000р</div>
+                        </div>
+                        <div class="item-card__img item-card__img--def">
+                            <img src="img/card-img.png" alt="Студии">
+                        </div>
+                        <div class="item-card__hover">
+                            <div class="item-card__btn">
+                                Смотреть квартиры
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-long"></use>
+                                </svg>
+                            </div>
+                            <div class="item-card__img item-card__img--hover">
+                                <img src="img/card-hover-img.png" alt="Студии">
+                            </div>
+                        </div>
+                    </a>
+                    <!--item-card-->
+                    <a href="#" class="item-card">
+                        <div class="item-card__header">
+                            <h3 class="item-card__title">3-комнатные</h3>
+                            <div class="h3 item-card__square">87-113 кв. м.</div>
+                            <div class="h3 item-card__price">от 4 856 000р</div>
+                        </div>
+                        <div class="item-card__img item-card__img--def">
+                            <img src="img/card-img.png" alt="Студии">
+                        </div>
+                        <div class="item-card__hover">
+                            <div class="item-card__btn">
+                                Смотреть квартиры
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-long"></use>
+                                </svg>
+                            </div>
+                            <div class="item-card__img item-card__img--hover">
+                                <img src="img/card-hover-img.png" alt="Студии">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!--news section-->
+            <section class="news main-news">
+                <div class="container">
+                    <h2>Новости</h2>
+                    <div class="news__items">
+                        @@loop('_item-news.html', [
+                        { "date": "20.12.23" },
+                        { "date": "19.12.23" },
+                        { "date": "18.12.23" }
+                        ])
+                    </div>
+                    <hr>
+                    <a href="#" class="btn stroke-btn">Все новости</a>
+                </div>
+            </section>
+            <!--main-building section-->
+            <section class="main-building">
+                <div class="container">
+                    <h2 class="title-grad fadeUp">Ваш будущий дом<span>сегодня</span></h2>
+                    <div class="swiper main-building__swiper">
+                        <div class="swiper-nav">
+                            <button aria-label="Перейти на предыдущий слайд" type="button"
+                                class="btn nav-btn nav-btn--prev main-building-btn--prev">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#nav-btn"></use>
+                                </svg>
+                            </button>
+                            <button aria-label="Перейти на следующий слайд" type="button"
+                                class="btn nav-btn nav-btn--next main-building-btn--next">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#nav-btn"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Август", "nmb": "1"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Июль", "nmb": "2"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Июнь", "nmb": "3"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Май", "nmb": "4"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Апрель", "nmb": "5"})
+                            </div>
+                            <div class="swiper-slide">
+                                @@include("_item-building.html",{"mesyac": "Март", "nmb": "6"})
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <a href="#" class="btn stroke-btn">Все фотографии</a>
+                </div>
+            </section>
+            <!--main-choice section-->
+            <section class="section-sm main-choice">
+                <div class="main-choice__inner">
+                    <div class="main-choice__cloud main-choice__cloud--1">
+                        <img src="img/cloud-1.png" alt="">
+                    </div>
+                    <div class="main-choice__cloud main-choice__cloud--2">
+                        <img src="img/cloud-2.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class="fadeUp main-choice__content">
+                            <h2>Пoчувствуй новый<span>комфорт</span></h2>
+                            <a href="" class="btn main-btn main-btn--white"><span>Выбрать квартиру</span></a>
+                        </div>
+                        <div class="main-choice__img">
+                            <img src="img/house-left.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+        <div class="modal map-modal" id="map-modal">
+            <div class="modal__overlay">
+                <div class="modal__content">
+                    <button class="btn modal__close">Закрыть карту</button>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae9cbd8b7325ad30c1151d90c005ed106754a5643bcc4c43783b9806c05dce7d9&amp;source=constructor"
+                        width="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

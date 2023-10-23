@@ -1,0 +1,15 @@
+.about {
+    &__img {
+        margin-bottom: 65px;
+    }
+    @media (max-width: $bp1) {
+        &__img {
+            margin-bottom: 45px;
+        }
+    }
+    @media (max-width: $bp3) {
+        &__img {
+            margin-bottom: 40px;            
+        }
+    }
+}

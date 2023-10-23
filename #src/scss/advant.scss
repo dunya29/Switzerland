@@ -1,0 +1,124 @@
+.advant {
+    h2 {
+        align-items: center;
+        text-align: center;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0 26px;
+        @media (max-width: $bp2) {
+            display: block;
+            max-width: 708px;
+            margin: 0 auto;
+        }
+    }
+}
+.col-advant {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h5 {
+        max-width: 348px;
+        color: $dark-blue;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 80%;
+        background: rgba($green, 0.2);
+        position: absolute;
+        right: -13px;
+        top: 50%;
+        transform: translateY(-50%);
+    }  
+    &__img {
+        flex: 0 0 300px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%; 
+        overflow: hidden;     
+        margin: 0 0 50px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &:nth-child(2n) {
+        flex-direction: column-reverse;
+        .col-advant__img {
+            margin: 50px 0 0 
+        }
+    }
+    &:nth-child(3n) {
+        &:after {
+            content: none;
+        }
+    }
+    @media (max-width: $bp1) {
+        h5 {
+            max-width: 320px;
+        }
+        &:nth-child(2n) {
+            h5 {
+                max-width: 250px;
+            }
+        }
+        &__img {
+            flex: 0 0 280px;
+            width: 280px;
+            height: 280px;
+        }
+    }
+    @media (max-width: $bp2) {
+        flex-direction: row;
+        justify-content: space-between;
+        &:after {
+            width: 80.22%;
+            height: 1px;
+            top: 100%;
+            right: 50%;
+            transform: translateX(50%);            
+            margin: 20px 0;
+        }
+        &__img {
+            flex: 0 0 240px;
+            width: 240px;
+            height: 240px;
+            margin: 0;
+        }
+        h5 {
+            margin: 0 auto;
+        }
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+            margin: 40px 0;
+            .col-advant__img {
+                margin: 0;
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        flex-direction: column;
+        text-align: center;
+        &:nth-child(2n) {
+            flex-direction: column;
+            .col-advant__img {
+                margin-bottom: 10px;
+            }
+            h5 {
+                max-width: 320px;
+            }
+        } 
+        &__img {
+            flex: 0 0 220px;
+            width: 220px;
+            height: 220px;
+            margin-bottom: 10px;
+        }
+    }
+}

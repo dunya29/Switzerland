@@ -1,0 +1,83 @@
+<!--feedback-modal-->
+<div class="modal" id="feedback-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="modal__top">
+                <h3>Заявка<br>на консультацию</h3>
+                <div class="modal__img"><img src="img/house-left-sm.png" alt=""></div>
+                
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в ближайшее время и обсудим все детали</h6>
+                <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                    <div class="form__item error">
+                        <input type="text" placeholder="Имя">
+                        <div class="form-error">Заполните имя</div>
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input type="tel">
+                        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn"><span>оставить заявку</span></button>
+                        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--question-modal-->
+<div class="modal" id="question-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="modal__top">
+                <h3>Остались<br>вопросы?</h3>
+                <div class="modal__img"><img src="img/house-left-sm.png" alt=""></div>
+                
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в течение 5 мин и ответим на все вопросы</h6>
+                <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                    <div class="form__item">
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input type="tel">
+                        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn"><span>оставить заявку</span></button>
+                        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <h3>Заявка<br>отправлена!</h3>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <h3>Упс! Заявка<br>не отправилась</h3>
+            <p>Попробуйте снова</p>
+        </div>
+    </div>
+</div>
+<!--fixed button-->
+<button class="btn main-btn fixed-btn modal-show-btn" data-modal="#question-modal">
+    <img src="img/icons/fixed-but.svg" alt="">
+    <span>Получить консультацию</span>
+</button>

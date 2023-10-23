@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {
+"title": "Выбор квартиры"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header-nobtn.html')
+        <!--main-->
+        <main class="main">
+            @@include('_breadcrumbs.html', {
+            "page": "Выбор квартиры"
+            })
+            <!--catalog section-->
+            <section class="catalog">
+                <div class="container">
+                    <h1 class="h2">Выбрать квартиру</h1>
+                    <nav class="catalog__tabs">
+                        <div class="btn stroke-btn catalog__tab active" data-nav="scheme">По схеме</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="list">По списку</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="cat">По каталогу</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="plan">Планы этажей</div>
+                    </nav>
+                    <div class="catalog__inner">
+                        <!--filter-->
+                        <div class="filter">
+                            <div class="filter__header">
+                                <div class="page-lbl">Фильтр</div>
+                            </div>
+                            <!--filter-form-->
+                            <form action="" class="modal mob-modal filter-form"
+                                onreset="event.preventDefault();filter-filterFormOnReset(this)">
+                                <div class="modal__overlay filter-form__inner">
+                                    <div class="modal__content filter-form__content">
+                                        <button type="button" class="modal__close filter-form__close"
+                                            aria-label="Закрыть всплывающее окно"></button>
+                                        <div class="modal__scroll">
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Количество комнат</div>
+                                                <div class="filter-form__checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>C</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>1</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>2</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>3</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Стоимость </div>
+                                                <div class="range range--price" data-min="3.34" data-max="15"
+                                                    data-start="3.34" data-end="8.34">
+                                                    <div class="range__values">
+                                                        <div class="range__value">
+                                                            <input class="range-start" type="number" step="any"
+                                                                autocomplete="off">
+                                                        </div>
+                                                        <span></span>
+                                                        <div class="range__value">
+                                                            <input class="range-end" type="number" step="any"
+                                                                autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__slider price-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Этаж</div>
+                                                <div class="range integer" data-min="2" data-max="18" data-start="6"
+                                                    data-end="10">
+                                                    <div class="range__values">
+                                                        <div class="range__value">
+                                                            <input class="range-start" type="number" autocomplete="off">
+                                                        </div>
+                                                        <span></span>
+                                                        <div class="range__value">
+                                                            <input class="range-end" type="number" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__slider floor-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__footer">
+                                                <div class="filter-form__info">
+                                                    <div class="page-lbl">Найдено:</div>
+                                                    <div class="h6 filter-form__result">230 квартир</div>
+                                                </div>
+                                                <div class="filter-form__btns">
+                                                    <button type="submit" class="btn stroke-btn">Применить</button>
+                                                    <button type="reset" class="filter-form__reset">Сбросить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="filter__footer">
+                                <div class="h6">Срок сдачи:</div>
+                                <div class="h5">III квартал 2025г</div>
+                            </div>
+                        </div>
+                        <!--wrapper-->
+                        <div class="catalog__wrapper">
+                            <!--catalog__block-->
+                            <div class="scheme-cat catalog__block active" data-block="scheme">
+                                <div class="scheme-cat__header">
+                                    <div class="scheme-cat__labels">
+                                        <span>Этаж</span>
+                                        <span>Квартиры</span>
+                                    </div>
+                                    <div class="scheme-cat__status">
+                                        <span>Свободно</span>
+                                        <span>Бронь</span>
+                                        <span>Продано</span>
+                                    </div>
+                                </div>
+                                <div class="custom-scroll scheme-cat__inner">
+                                    <ul class="scheme-cat__floors">
+                                        <li>18</li>
+                                        <li>17</li>
+                                        <li>16</li>
+                                        <li>15</li>
+                                        <li>14</li>
+                                        <li>13</li>
+                                        <li>12</li>
+                                        <li>11</li>
+                                        <li>10</li>
+                                        <li>9</li>
+                                        <li>8</li>
+                                        <li>7</li>
+                                        <li>6</li>
+                                        <li>5</li>
+                                        <li>4</li>
+                                        <li>3</li>
+                                        <li>2</li>
+                                    </ul>
+                                    <div class="custom-scroll scheme-cat__apartaments">
+                                        <div class="scheme-cat__sec">
+                                            <div class="scheme-cat__sec-title">Секция 1</div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="97" data-url="/kvartiry/studiya-n-97.html" data-price="9 400 000" data-img="assets/galleries/350/18-etazh-1k-37-6.jpg" data-area="37.60" data-floor="18">С</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="98" data-url="/kvartiry/3-komnatnaya-n98.html" data-price="27 250 000" data-img="assets/galleries/368/18-et.-3k-109.0-m-2d.jpg" data-area="109.00" data-floor="18">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="99" data-url="/kvartiry/2-komnatnaya-n99.html" data-price="20 650 000" data-img="assets/galleries/360/18-etazh-2k-82-6.jpg" data-area="82.60" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="100" data-url="/kvartiry/3-komnatnaya-n100.html" data-price="21 850 000" data-img="assets/galleries/364/18-etazh-3k-87-4.jpg" data-area="87.40" data-floor="18">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="91" data-url="/kvartiry/1-komnatnaya-n91.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="92" data-url="/kvartiry/2-komnatnaya-n92.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="17">2</a>
+                                                <a href="#" class="sold" data-name="1-комнатная" data-nmb="93" data-url="/kvartiry/1-komnatnaya-n93.html" data-price="0" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="94" data-url="/kvartiry/1-komnatnaya-n94.html" data-price="7 462 000" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="95" data-url="/kvartiry/1-komnatnaya-n95.html" data-price="6 562 000" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="96" data-url="/kvartiry/3-komnatnaya-n96.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="17">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="85" data-url="/kvartiry/1-komnatnaya-n85.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="16">1</a>
+                                                 <a href="#" class="hold" data-name="2-комнатная" data-nmb="86" data-url="/kvartiry/2-komnatnaya-n86.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="16">2</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="87" data-url="/kvartiry/1-komnatnaya-n87.html" data-price="8 118 000" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="16">1</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="88" data-url="/kvartiry/1-komnatnaya-n88.html" data-price="0" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="16">1</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="89" data-url="/kvartiry/1-komnatnaya-n89.html" data-price="0" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="16">1</a>
+                                                 <a href="#" class="hold" data-name="3-комнатная" data-nmb="90" data-url="/kvartiry/3-komnatnaya-n90.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="16">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="79" data-url="/kvartiry/1-komnatnaya-n79.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="2-комнатная" data-nmb="80" data-url="/kvartiry/2-komnatnaya-n80.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="15">2</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="81" data-url="/kvartiry/1-komnatnaya-n81.html" data-price="0" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="82" data-url="/kvartiry/1-komnatnaya-n82.html" data-price="7 462 000" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="83" data-url="/kvartiry/1-komnatnaya-n83.html" data-price="6 562 000" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="15">1</a>
+                                                 <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="84" data-url="/kvartiry/3-komnatnaya-n84.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="15">3</a>
+                                             </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="sold" data-name="1-комнатная" data-nmb="73" data-url="/kvartiry/1-komnatnaya-n73.html" data-price="0" data-img="assets/galleries/280/14-etazh-1k-44-4.jpg" data-area="44.40" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="74" data-url="/kvartiry/2-komnatnaya-n74.html" data-price="10 402 000" data-img="assets/galleries/296/14-etazh-2k-74-3.jpg" data-area="74.30" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="75" data-url="/kvartiry/1-komnatnaya-n75.html" data-price="8 118 000" data-img="assets/galleries/286/14-etazh-1k-49-5.jpg" data-area="49.50" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="76" data-url="/kvartiry/1-komnatnaya-n76.html" data-price="7 462 000" data-img="assets/galleries/282/14-etazh-1k-45-5.jpg" data-area="45.50" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="77" data-url="/kvartiry/1-komnatnaya-n77.html" data-price="6 562 000" data-img="assets/galleries/276/14-etazh-1k-38-6.jpg" data-area="38.60" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="78" data-url="/kvartiry/3-komnatnaya-n78.html" data-price="11 850 300" data-img="assets/galleries/298/14-etazh-3k-89-1.jpg" data-area="9.10" data-floor="14">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="67" data-url="/kvartiry/1-komnatnaya-n67.html" data-price="7 104 000" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="68" data-url="/kvartiry/2-komnatnaya-n68.html" data-price="10 402 000" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="13">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="69" data-url="/kvartiry/1-komnatnaya-n69.html" data-price="8 118 000" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="13">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="70" data-url="/kvartiry/1-komnatnaya-n70.html" data-price="0" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="13">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="71" data-url="/kvartiry/1-komnatnaya-n71.html" data-price="6 562 000" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="72" data-url="/kvartiry/3-komnatnaya-n72.html" data-price="11 850 300" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="13">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="61" data-url="/kvartiry/1-komnatnaya-n61.html" data-price="0" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="62" data-url="/kvartiry/2-komnatnaya-n62.html" data-price="0" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="63" data-url="/kvartiry/1-komnatnaya-n63.html" data-price="0" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="64" data-url="/kvartiry/1-komnatnaya-n64.html" data-price="0" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="65" data-url="/kvartiry/1-komnatnaya-n65.html" data-price="0" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="66" data-url="/kvartiry/3-komnatnaya-n66.html" data-price="0" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="12">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="55" data-url="/kvartiry/1-komnatnaya-n55.html" data-price="7 104 000" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="56" data-url="/kvartiry/2-komnatnaya-n56.html" data-price="10 402 000" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="11">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="57" data-url="/kvartiry/1-komnatnaya-n57.html" data-price="0" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="11">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="58" data-url="/kvartiry/1-komnatnaya-n58.html" data-price="7 280 000" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="11">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="59" data-url="/kvartiry/1-komnatnaya-n59.html" data-price="6 562 000" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="60" data-url="/kvartiry/3-komnatnaya-n60.html" data-price="11 850 300" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="11">3</a>
+                                              </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="49" data-url="/kvartiry/1-komnatnaya-n49.html" data-price="6 913 000" data-img="assets/galleries/201/10-etazh-1k-44-6.jpg" data-area="44.60" data-floor="10">1</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="50" data-url="/kvartiry/2-komnatnaya-n50.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="10">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="51" data-url="/kvartiry/1-komnatnaya-n51.html" data-price="7 852 600" data-img="assets/galleries/207/10-etazh-1k-49-7.jpg" data-area="49.70" data-floor="10">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="52" data-url="/kvartiry/1-komnatnaya-n52.html" data-price="7 236 400" data-img="assets/galleries/203/10-etazh-1k-45-8.jpg" data-area="45.80" data-floor="10">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="53" data-url="/kvartiry/1-komnatnaya-n53.html" data-price="0" data-img="assets/galleries/197/10-etazh-38-7.jpg" data-area="38.70" data-floor="10">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="54" data-url="/kvartiry/3-komnatnaya-n54.html" data-price="11 685 200" data-img="assets/galleries/219/10-etazh-3k-89-2.jpg" data-area="89.20" data-floor="10">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="43" data-url="/kvartiry/1-komnatnaya-n43.html" data-price="6 913 000" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="44" data-url="/kvartiry/2-komnatnaya-n44.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="9">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="45" data-url="/kvartiry/1-komnatnaya-n45.html" data-price="7 852 600" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="9">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="46" data-url="/kvartiry/1-komnatnaya-n46.html" data-price="7 236 400" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="9">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="47" data-url="/kvartiry/1-komnatnaya-n47.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="48" data-url="/kvartiry/3-komnatnaya-n48.html" data-price="11 685 200" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="9">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="37" data-url="/kvartiry/1-komnatnaya-n37.html" data-price="6 913 000" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="38" data-url="/kvartiry/2-komnatnaya-n38.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="8">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="39" data-url="/kvartiry/1-komnatnaya-n39.html" data-price="7 852 600" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="40" data-url="/kvartiry/1-komnatnaya-n40.html" data-price="7 236 400" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="8">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="41" data-url="/kvartiry/1-komnatnaya-n41.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="42" data-url="/kvartiry/3-komnatnaya-n42.html" data-price="11 685 200" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="8">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="31" data-url="/kvartiry/1-komnatnaya-n31.html" data-price="0" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="32" data-url="/kvartiry/2-komnatnaya-n32.html" data-price="0" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="33" data-url="/kvartiry/1-komnatnaya-n33.html" data-price="0" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="34" data-url="/kvartiry/1-komnatnaya-n34.html" data-price="0" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="35" data-url="/kvartiry/1-komnatnaya-n35.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="7">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="36" data-url="/kvartiry/3-komnatnaya-n36.html" data-price="11 506 800" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="7">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="25" data-url="/kvartiry/1-komnatnaya-n25.html" data-price="0" data-img="assets/galleries/121/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="26" data-url="/kvartiry/2-komnatnaya-n26.html" data-price="9 881 900" data-img="assets/galleries/137/6-etazh-2k-74-3.jpg" data-area="74.30" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="27" data-url="/kvartiry/1-komnatnaya-n27.html" data-price="7 703 500" data-img="assets/galleries/127/6-etazh-1k-49-7.jpg" data-area="49.70" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="28" data-url="/kvartiry/1-komnatnaya-n28.html" data-price="7 099 000" data-img="assets/galleries/123/6-etazh-1k-45-8.jpg" data-area="45.80" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="29" data-url="/kvartiry/1-komnatnaya-n29.html" data-price="6 192 000" data-img="assets/galleries/117/6-etazh-38-7.jpg" data-area="38.70" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="30" data-url="/kvartiry/3-komnatnaya-n30.html" data-price="11 506 800" data-img="assets/galleries/139/6-etazh-3k-89-2.jpg" data-area="89.20" data-floor="6">3</a>
+                                          </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="19" data-url="/kvartiry/1-komnatnaya-n19.html" data-price="0" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="20" data-url="/kvartiry/2-komnatnaya-n20.html" data-price="0" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="21" data-url="/kvartiry/1-komnatnaya-n21.html" data-price="0" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="22" data-url="/kvartiry/1-komnatnaya-n22.html" data-price="0" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="23" data-url="/kvartiry/1-komnatnaya-n23-kopiya.html" data-price="0" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="24" data-url="/kvartiry/3-komnatnaya-n24.html" data-price="0" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="5">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="13" data-url="/kvartiry/1-komnatnaya-n13.html" data-price="6 690 000" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="14" data-url="/kvartiry/2-komnatnaya-n14.html" data-price="9 733 300" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="4">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="15" data-url="/kvartiry/1-komnatnaya-n15.html" data-price="7 604 100" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="4">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="16" data-url="/kvartiry/1-komnatnaya-n16.html" data-price="0" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="17" data-url="/kvartiry/1-komnatnaya-n17.html" data-price="6 192 000" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="18" data-url="/kvartiry/3-komnatnaya-n18.html" data-price="11 417 600" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="4">3</a>
+                                          </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="7" data-url="/kvartiry/1-komnatnaya-n7.html" data-price="0" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="8" data-url="/kvartiry/2-komnatnaya-n8.html" data-price="9 510 400" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="3">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="9" data-url="/kvartiry/1-komnatnaya-n9.html" data-price="0" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="3">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="10" data-url="/kvartiry/1-komnatnaya-n10.html" data-price="6 641 000" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="3">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="11" data-url="/kvartiry/1-komnatnaya-n11.html" data-price="0" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="12" data-url="/kvartiry/3-komnatnaya-n12.html" data-price="11 328 400" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="3">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="1" data-url="/kvartiry/1-komnatnaya-n1.html" data-price="6 300 000" data-img="assets/galleries/41/2-etazh-1k-45.jpg" data-area="45.00" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="2" data-url="/kvartiry/2-komnatnaya-n2.html" data-price="9 362 500" data-img="assets/galleries/57/2-etazh-2k-74-9.jpg" data-area="74.90" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="3" data-url="/kvartiry/1-komnatnaya-n3.html" data-price="7 028 000" data-img="assets/galleries/47/2-etazh-1k-50-2.jpg" data-area="50.20" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="4" data-url="/kvartiry/1-komnatnaya-n4.html" data-price="6 482 000" data-img="assets/galleries/43/2-etazh-1k-46-3.jpg" data-area="46.30" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="5" data-url="/kvartiry/1-komnatnaya-n5.html" data-price="5 895 000" data-img="assets/galleries/26/2-etazh-39.3.png" data-area="39,30" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="6" data-url="/kvartiry/3-komnatnaya-n6.html" data-price="11 212 500" data-img="assets/galleries/59/2-etazh-3k-89-8.jpg" data-area="89.80" data-floor="2">3</a>
+                                            </div>
+                                        </div>
+                                        <div class="scheme-cat__sec">
+                                            <div class="scheme-cat__sec-title">Секция 2</div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="210" data-url="/kvartiry/studiya-n-210.html" data-price="9 025 000" data-img="assets/galleries/352/18-etazh-1k-47-5.jpg" data-area="47.50" data-floor="18">С</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="211" data-url="/kvartiry/3-komnatnaya-n211.html" data-price="22 425 000" data-img="assets/galleries/366/18-etazh-3k-89-7.jpg" data-area="89.70" data-floor="18">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="212" data-url="/kvartiry/2-komnatnaya-n212.html" data-price="16 350 000" data-img="assets/galleries/358/18-etazh-2k-65-4.jpg" data-area="65.40" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="213" data-url="/kvartiry/2-komnatnaya-n213.html" data-price="16 150 000" data-img="assets/galleries/356/18-etazh-2k-64-6.jpg" data-area="64.60" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="214" data-url="/kvartiry/2-komnatnaya-n214.html" data-price="21 775 000" data-img="assets/galleries/362/18-etazh-2k-87-1.jpg" data-area="87.10" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="215" data-url="/kvartiry/1-komnatnaya-n215.html" data-price="12 999 000" data-img="assets/galleries/354/18-etazh-1k-61-9.jpg" data-area="61.90" data-floor="18">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="204" data-url="/kvartiry/1-komnatnaya-n204.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="17">1</a>
+                                                <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="205" data-url="/kvartiry/3-komnatnaya-n205.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="17">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="206" data-url="/kvartiry/2-komnatnaya-n206.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="17">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="207" data-url="/kvartiry/2-komnatnaya-n207.html" data-price="9 884 200" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="17">2</a>
+                                                <a href="#" class="sold" data-name="3-комнатная" data-nmb="208" data-url="/kvartiry/3-komnatnaya-n208.html" data-price="0" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="17">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="209" data-url="/kvartiry/1-komnatnaya-n209.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="17">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="198" data-url="/kvartiry/1-komnatnaya-n198.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="16">1</a>
+                                                <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="199" data-url="/kvartiry/3-komnatnaya-n199.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="16">3</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="200" data-url="/kvartiry/2-komnatnaya-n200.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="16">2</a>
+                                                <a href="#" class="sold" data-name="2-комнатная" data-nmb="201" data-url="/kvartiry/2-komnatnaya-n201.html" data-price="0" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="16">2</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="202" data-url="/kvartiry/3-komnatnaya-n202.html" data-price="16 399 500" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="16">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="203" data-url="/kvartiry/1-komnatnaya-n203.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="16">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="192" data-url="/kvartiry/1-komnatnaya-n192.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="15">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="193" data-url="/kvartiry/3-komnatnaya-n193.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="15">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="194" data-url="/kvartiry/2-komnatnaya-n194.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="15">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="195" data-url="/kvartiry/2-komnatnaya-n195.html" data-price="9 884 200" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="15">2</a>
+                                                <a href="#" class="sold" data-name="3-комнатная" data-nmb="196" data-url="/kvartiry/3-komnatnaya-n196.html" data-price="0" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="15">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="197" data-url="/kvartiry/1-komnatnaya-n197.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="15">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="185" data-url="/kvartiry/1-komnatnaya-n185.html" data-price="7 417 600" data-img="assets/galleries/284/14-etazh-1k-48-8.jpg" data-area="48.80" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="186" data-url="/kvartiry/3-komnatnaya-n186.html" data-price="12 142 900" data-img="assets/galleries/300/14-etazh-3k-91-3.jpg" data-area="91.30" data-floor="14">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="187" data-url="/kvartiry/2-komnatnaya-n187.html" data-price="9 838 400" data-img="assets/galleries/294/14-etazh-2k-68-8.jpg" data-area="68.80" data-floor="14">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="188" data-url="/kvartiry/2-komnatnaya-n188.html" data-price="9 681 100" data-img="assets/galleries/292/14-etazh-2k-67-7.jpg" data-area="67.70" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="189" data-url="/kvartiry/2-komnatnaya-n189.html" data-price="9 237 800" data-img="assets/galleries/288/14-etazh-2k-64-6.jpg" data-area="64.60" data-floor="14">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="190" data-url="/kvartiry/2-komnatnaya-n190.html" data-price="9 280 700" data-img="assets/galleries/290/14-etazh-2k-64-9.jpg" data-area="64.90" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="191" data-url="/kvartiry/studiya-n-191.html" data-price="6 435 000" data-img="assets/galleries/278/14-etazh-1k-42-9.jpg" data-area="42.90" data-floor="14">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="178" data-url="/kvartiry/1-komnatnaya-n178.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="179" data-url="/kvartiry/3-komnatnaya-n179.html" data-price="12 142 900" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="13">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="180" data-url="/kvartiry/2-komnatnaya-n180.html" data-price="9 838 400" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="181" data-url="/kvartiry/2-komnatnaya-n181.html" data-price="9 681 100" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="182" data-url="/kvartiry/2-komnatnaya-n182.html" data-price="9 237 800" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="183" data-url="/kvartiry/2-komnatnaya-n183.html" data-price="9 280 700" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="13">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="184" data-url="/kvartiry/studiya-n-184.html" data-price="6 435 000" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="13">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="sold" data-name="1-комнатная" data-nmb="171" data-url="/kvartiry/1-komnatnaya-n171.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="172" data-url="/kvartiry/3-komnatnaya-n172.html" data-price="0" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="12">3</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="173" data-url="/kvartiry/2-komnatnaya-n173.html" data-price="0" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="174" data-url="/kvartiry/2-komnatnaya-n174.html" data-price="0" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="175" data-url="/kvartiry/2-komnatnaya-n175.html" data-price="0" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="176" data-url="/kvartiry/2-komnatnaya-n176.html" data-price="0" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="177" data-url="/kvartiry/studiya-n-177.html" data-price="0" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="12">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="164" data-url="/kvartiry/1-komnatnaya-n164.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="165" data-url="/kvartiry/3-komnatnaya-n165.html" data-price="12 142 900" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="11">3</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="166" data-url="/kvartiry/2-komnatnaya-n166.html" data-price="9 838 400" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="11">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="167" data-url="/kvartiry/2-komnatnaya-n167.html" data-price="9 681 100" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="11">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="168" data-url="/kvartiry/2-komnatnaya-n168.html" data-price="9 237 800" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="11">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="169" data-url="/kvartiry/2-komnatnaya-n169.html" data-price="9 280 700" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="11">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="170" data-url="/kvartiry/studiya-n-170.html" data-price="6 435 000" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="11">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="hold" data-name="1-комнатная" data-nmb="157" data-url="/kvartiry/1-komnatnaya-n157.html" data-price="7 350 000" data-img="assets/galleries/205/10-etazh-1k-49.jpg" data-area="49.00" data-floor="10">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="158" data-url="/kvartiry/3-komnatnaya-n158.html" data-price="11 973 400" data-img="assets/galleries/221/10-etazh-3k-91-4.jpg" data-area="91.40" data-floor="10">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="159" data-url="/kvartiry/2-komnatnaya-n159.html" data-price="9 591 000" data-img="assets/galleries/215/10-etazh-2k-69.jpg" data-area="69.00" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="160" data-url="/kvartiry/2-komnatnaya-n160.html" data-price="9 438 100" data-img="assets/galleries/213/10-etazh-2k-67-9.jpg" data-area="67.90" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="161" data-url="/kvartiry/2-komnatnaya-n161.html" data-price="8 993 300" data-img="assets/galleries/209/10-etazh-2k-64-7.jpg" data-area="64.70" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="162" data-url="/kvartiry/2-komnatnaya-n162.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="10">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="163" data-url="/kvartiry/studiya-n-163.html" data-price="6 349 200" data-img="assets/galleries/199/10-etazh-1k-42-9.jpg" data-area="42.90" data-floor="10">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="150" data-url="/kvartiry/1-komnatnaya-n150.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="151" data-url="/kvartiry/3-komnatnaya-n151.html" data-price="11 973 400" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="9">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="152" data-url="/kvartiry/2-komnatnaya-n152.html" data-price="9 591 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="153" data-url="/kvartiry/2-komnatnaya-n153.html" data-price="9 438 100" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="154" data-url="/kvartiry/2-komnatnaya-n154.html" data-price="8 993 300" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="155" data-url="/kvartiry/2-komnatnaya-n155.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="9">2</a>
+                                                    <a href="/kvartiry/studiya-n-156.html" class="on-sale" data-name="Студия" data-nmb="156" data-url="/kvartiry/studiya-n-156.html" data-price="6 349 200" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="9">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="143" data-url="/kvartiry/1-komnatnaya-n143.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="144" data-url="/kvartiry/3-komnatnaya-n144.html" data-price="11 973 400" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="8">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="145" data-url="/kvartiry/2-komnatnaya-n145.html" data-price="9 591 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="146" data-url="/kvartiry/2-komnatnaya-n146.html" data-price="9 438 100" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="147" data-url="/kvartiry/2-komnatnaya-n147.html" data-price="8 993 300" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="8">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="148" data-url="/kvartiry/2-komnatnaya-n148.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="149" data-url="/kvartiry/studiya-n-149.html" data-price="6 349 200" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="8">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="136" data-url="/kvartiry/1-komnatnaya-n136.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="7">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="137" data-url="/kvartiry/3-komnatnaya-n137.html" data-price="11 790 600" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="7">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="138" data-url="/kvartiry/2-komnatnaya-n138.html" data-price="9 315 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="139" data-url="/kvartiry/2-komnatnaya-n139.html" data-price="0" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="140" data-url="/kvartiry/2-komnatnaya-n140.html" data-price="0" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="7">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="141" data-url="/kvartiry/2-komnatnaya-n141.html" data-price="8 775 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="142" data-url="/kvartiry/studiya-n-142.html" data-price="0" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="7">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="129" data-url="/kvartiry/1-komnatnaya-n129.html" data-price="7 350 000" data-img="assets/galleries/125/6-etazh-1k-49.jpg" data-area="49.00" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="130" data-url="/kvartiry/3-komnatnaya-n130.html" data-price="11 790 600" data-img="assets/galleries/141/6-etazh-3k-91-4.jpg" data-area="91.40" data-floor="6">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="131" data-url="/kvartiry/2-komnatnaya-n131.html" data-price="9 315 000" data-img="assets/galleries/135/6-etazh-2k-69.jpg" data-area="69.00" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="132" data-url="/kvartiry/2-komnatnaya-n132.html" data-price="9 166 500" data-img="assets/galleries/133/6-etazh-2k-67-9.jpg" data-area="67.90" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="133" data-url="/kvartiry/2-komnatnaya-n133.html" data-price="8 734 500" data-img="assets/galleries/129/6-etazh-2k-64-7.jpg" data-area="64.70" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="134" data-url="/kvartiry/2-komnatnaya-n134.html" data-price="8 775 000" data-img="assets/galleries/131/6-etazh-2k-65.jpg" data-area="65.00" data-floor="6">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="135" data-url="/kvartiry/studiya-n-135.html" data-price="6 220 500" data-img="assets/galleries/119/6-etazh-1k-42-9.jpg" data-area="42.90" data-floor="6">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="122" data-url="/kvartiry/1-komnatnaya-n122.html" data-price="0" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="123" data-url="/kvartiry/3-komnatnaya-n123.html" data-price="0" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="5">3</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="124" data-url="/kvartiry/2-komnatnaya-n124.html" data-price="0" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="125" data-url="/kvartiry/2-komnatnaya-n125.html" data-price="0" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="126" data-url="/kvartiry/2-komnatnaya-n126.html" data-price="0" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="127" data-url="/kvartiry/2-komnatnaya-n127.html" data-price="0" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="128" data-url="/kvartiry/studiya-n-128.html" data-price="0" data-img="assets/galleries/39/2-etazh-1k-43-4.jpg" data-area="43.40" data-floor="5">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="115" data-url="/kvartiry/1-komnatnaya-n115.html" data-price="7 105 000" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="116" data-url="/kvartiry/3-komnatnaya-n116.html" data-price="1 169 920" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="4">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="117" data-url="/kvartiry/2-komnatnaya-n117.html" data-price="9 177 000" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="4">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="118" data-url="/kvartiry/2-komnatnaya-n118.html" data-price="0" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="119" data-url="/kvartiry/2-komnatnaya-n119.html" data-price="8 605 100" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="120" data-url="/kvartiry/2-komnatnaya-n120.html" data-price="8 645 000" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="121" data-url="/kvartiry/studiya-n-121.html" data-price="6 091 800" data-img="assets/galleries/69/3-5-etazh-1k-42-9.jpg" data-area="42.90" data-floor="4">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="108" data-url="/kvartiry/1-komnatnaya-n108.html" data-price="0" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="109" data-url="/kvartiry/3-komnatnaya-n109.html" data-price="11 607 800" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="3">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="110" data-url="/kvartiry/2-komnatnaya-n110.html" data-price="8 970 000" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="111" data-url="/kvartiry/2-komnatnaya-n111.html" data-price="8 827 000" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="112" data-url="/kvartiry/2-komnatnaya-n112.html" data-price="8 411 000" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="113" data-url="/kvartiry/2-komnatnaya-n113.html" data-price="8 450 000" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="3">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="114" data-url="/kvartiry/studiya-n-114.html" data-price="0" data-img="assets/galleries/69/3-5-etazh-1k-42-9.jpg" data-area="42.90" data-floor="3">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="101" data-url="/kvartiry/1-komnatnaya-n101.html" data-price="6 534 000" data-img="assets/galleries/45/2-etazh-1k-49-5.jpg" data-area="49.50" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="102" data-url="/kvartiry/3-komnatnaya-n102.html" data-price="11 500 000" data-img="assets/galleries/61/2-etazh-3k-92.jpg" data-area="92.00" data-floor="2">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="103" data-url="/kvartiry/2-komnatnaya-n103.html" data-price="8 851 900" data-img="assets/galleries/55/2-etazh-2k-69-7.jpg" data-area="69.70" data-floor="2">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="104" data-url="/kvartiry/2-komnatnaya-n104.html" data-price="8 712 200" data-img="assets/galleries/53/2-etazh-2k-68-6.jpg" data-area="68.60" data-floor="2">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="105" data-url="/kvartiry/2-komnatnaya-n105.html" data-price="0" data-img="assets/galleries/49/2-etazh-2k-65-5.jpg" data-area="65.50" data-floor="2">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="106" data-url="/kvartiry/2-komnatnaya-n106.html" data-price="8 331 200" data-img="assets/galleries/51/2-etazh-2k-65-6.jpg" data-area="65.60" data-floor="2">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="107" data-url="/kvartiry/studiya-n-107.html" data-price="0" data-img="assets/galleries/39/2-etazh-1k-43-4.jpg" data-area="43.40" data-floor="2">С</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="list-cat catalog__block" data-block="list">
+                                <div class="list-cat__inner">
+                                    <div class="list-cat__header">
+                                        <span>Чертёж</span>
+                                        <span>Компас</span>
+                                        <span>№</span>
+                                        <span>Этаж</span>
+                                        <span>Подъезд</span>
+                                        <span>Комнат</span>
+                                        <span class="list-cat__square">Площадь</span>
+                                        <span>Статус</span>
+                                        <span>Цена, руб</span>
+                                    </div>
+                                    <div class="custom-scroll list-cat__items">
+                                        @@loop("_item-list.html", [
+                                        { "number": "124", "floor": "18", "price": "4 452 000" },
+                                        { "number": "123", "floor": "6", "price": "4 452 000" },
+                                        { "number": "122", "floor": "9", "price": "4 452 000" },
+                                        { "number": "121", "floor": "7", "price": "4 452 000" },
+                                        { "number": "120", "floor": "3", "price": "4 452 000" },
+                                        { "number": "45", "floor": "2", "price": "По запросу" },
+                                        { "number": "32", "floor": "5", "price": "4 452 000" },
+                                        { "number": "89", "floor": "18", "price": "4 452 000" },
+                                        { "number": "100", "floor": "18", "price": "4 452 000" },
+                                        { "number": "119", "floor": "18", "price": "4 452 000" }
+                                        ])
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog__btn list-cat__btn"><span>показать еще</span></a>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="catalog-cat catalog__block" data-block="cat">
+                                <div class="catalog-cat__items">
+                                    @@loop("_item-catalog.html", [
+                                    {"title-1": "1-комнатная", "title-2": "№ 124", "price": "4 452 000 руб"},
+                                    {"title-1": "3-комнатная", "title-2": "№ 24", "price": "Цена по запросу"},
+                                    {"title-1": "Студия", "title-2": "№ 34", "price": "4 452 000 руб"},
+                                    {"title-1": "1-комнатная", "title-2": "№ 124", "price": "4 452 000 руб"}
+                                    ])
+                                </div>
+                                <a href="#" class="catalog__btn catalog-cat__btn"><span>показать еще</span></a>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="catalog-plan catalog__block" data-block="plan">
+                                <div class="catalog-plan__swipers">
+                                    <div class="swiper catalog-plan__mainswiper">
+                                        <div class="swiper-wrapper">
+                                            <div data-src="img/galleries/plan-2-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-2-etazha.jpg" alt="План 2 этажа">
+                                                </div>
+                                                <p class="h6">План 2 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-3-10-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-3-10-etazha.jpg" alt="План 3-10 этажа">
+                                                </div>
+                                                <p class="h6">План 3-10 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-11-14-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-11-14-etazha.jpg" alt="План 11-14 этажа">
+                                                </div>
+                                                <p class="h6">План 11-14 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-15-17-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-15-17-etazha.jpg" alt="План 15-17 этажа">
+                                                </div>
+                                                <p class="h6">План 15-17 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-18-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-18-etazha.jpg" alt="План 18 этажа">
+                                                </div>
+                                                <p class="h6">План 18 этажа</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper catalog-plan__thumbswiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-2-etazha.jpg" alt="План 2 этажа">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-3-10-etazha.jpg" alt="План 3-10 этажа">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-11-14-etazha.jpg" alt="План 11-14 этажа">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-15-17-etazha.jpg" alt="План 15-17 этажа">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <img src="img/galleries/plan-18-etazha.jpg" alt="План 18 этажа">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+        <!--scheme-popup-->
+        <div class="modal mob-modal scheme-popup">
+            <button type="button" class="modal__close"></button>
+            <div class="modal__overlay scheme-popup__inner">
+                <div class="modal__content scheme-popup__content">
+                    <button type="button" class="modal__close"></button>
+                    <div class="modal__scroll">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

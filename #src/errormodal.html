@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {
+"title": "Главная"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->
+        <main class="main">
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        <!--error-modal-->
+        <div class="modal error-modal open">
+            <div class="modal__overlay open">
+                <div class="modal__content">
+                    <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+                    <h3>Упс! Заявка<br>не отправилась</h3>
+                    <p>Попробуйте снова</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

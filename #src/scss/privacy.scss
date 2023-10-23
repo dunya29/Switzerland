@@ -1,0 +1,14 @@
+.privacy {
+    h1 {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    h1, .page-content {
+        max-width: 74.3%;
+    }
+    @media (max-width: $bp2) {
+        h1, .page-content {
+            max-width: 100%;
+        }
+    }
+}

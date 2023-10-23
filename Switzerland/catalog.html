@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png"> 
+    <link rel="icon" type="image/ico" sizes="48x48" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet">
+    <title>Выбор квартиры</title>
+</head>
+
+<body>
+    <object style="display: none" class="sprite" type="image/svg+xml" data="../img/icons/sprite.svg" title="Ваш браузер не поддерживает SVG"></object>
+    <div class="wrap">
+        <!--header-->
+        <header class="header no-btn">
+  <div class="header__top">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="403" height="155" viewBox="0 0 403 155" fill="none">
+          <g clip-path="url(#clip0_109_367)">
+          <path d="M403.001 64.1414H396.297V51.0669H393.56L385.719 64.1414H377.997L386.539 50.3383C385.891 50.1794 385.256 49.9277 384.648 49.57C383.048 48.6692 381.779 47.3048 380.84 45.49C379.915 43.6885 379.452 41.675 379.452 39.4893C379.452 37.3036 379.862 35.5152 380.682 33.8462C381.501 32.1771 382.678 30.8524 384.185 29.8854C385.283 29.1833 386.552 28.6932 388.007 28.415C389.461 28.1368 391.458 27.9911 394.01 27.9911H403.001V64.1414ZM396.297 44.6687V34.4025H393.957C392.092 34.4025 390.598 34.5217 389.448 34.7734C388.43 35.0516 387.636 35.6212 387.055 36.4955C386.473 37.3698 386.182 38.4163 386.182 39.6217C386.182 40.708 386.46 41.6617 387.055 42.4698C387.636 43.2911 388.417 43.8342 389.395 44.1124C390.625 44.4833 392.238 44.6555 394.234 44.6555H396.284L396.297 44.6687ZM366.653 27.9911H373.449V64.1414H366.798V39.0919C366.798 39.0919 361.575 47.4373 351.13 64.1547H344.334V28.0043H350.984V53.0407C350.984 53.0407 356.207 44.6952 366.653 28.0043V27.9911ZM323.059 43.9667H325.016C327.052 43.9667 328.586 43.8077 329.604 43.4898C330.556 43.2248 331.31 42.7082 331.852 41.9532C332.394 41.1981 332.672 40.3106 332.672 39.2773C332.672 38.1249 332.394 37.1446 331.839 36.3365C331.283 35.5152 330.516 34.9854 329.551 34.7072C328.599 34.482 327.184 34.376 325.307 34.376H323.072V43.9534L323.059 43.9667ZM316.355 64.1282V28.0043H325.294C327.766 28.0043 329.697 28.1368 331.111 28.415C332.526 28.6932 333.769 29.1701 334.84 29.8456C336.308 30.7994 337.432 32.0843 338.225 33.7004C339.018 35.3033 339.428 37.1313 339.428 39.1448C339.428 41.2908 338.979 43.2513 338.08 44.9867C337.18 46.7352 335.951 48.0599 334.404 48.9342C333.425 49.4773 332.249 49.8615 330.9 50.0734C329.551 50.2986 327.66 50.4046 325.228 50.4046H323.086V64.1414H316.382L316.355 64.1282ZM290.942 48.3778H298.677C298.677 48.3778 297.382 44.7217 294.816 37.4228C294.816 37.4228 293.534 41.0789 290.956 48.3778H290.942ZM277.112 64.1282C277.112 64.1282 282.123 52.0737 292.159 27.9779H297.421C297.421 27.9779 302.472 40.0324 312.561 64.1282H305.196C305.196 64.1282 303.913 61.0152 301.335 54.7892H288.496C288.496 54.7892 287.161 57.9022 284.49 64.1282H277.099H277.112ZM263.665 27.9779H270.342V57.73H275.71V71.2284H271.043C271.043 71.2284 270.58 68.8573 269.655 64.1282H245.233V28.0043H251.937V57.7565H263.678V28.0043L263.665 27.9779ZM231.508 27.9779H238.305V64.1282H231.654V39.0919C231.654 39.0919 226.431 47.4373 215.986 64.1547H209.189V28.0043H215.84V53.0407C215.84 53.0407 221.063 44.6952 231.508 28.0043V27.9779ZM215.1 18.2812H220.719C220.719 19.6059 220.97 20.5597 221.46 21.1293C221.962 21.7122 222.716 22.0036 223.747 22.0036C224.778 22.0036 225.545 21.7122 226.048 21.1293C226.537 20.5464 226.775 19.5927 226.775 18.2812H232.381C231.998 20.5464 231.032 22.2553 229.485 23.421C227.938 24.5999 226.021 25.1828 223.747 25.1828C221.473 25.1828 219.569 24.5999 217.995 23.421C216.435 22.2553 215.47 20.5332 215.086 18.2812H215.1ZM183.604 64.1282V28.0043H202.988V34.4158H190.295V42.9202H202.459V49.3183H190.295V57.7565H202.988V64.1547H183.604V64.1282ZM161.642 41.9134H163.784C165.82 41.9134 167.288 41.6352 168.2 41.0391C169.1 40.4563 169.562 39.5158 169.562 38.2043C169.562 35.7537 167.843 34.5217 164.379 34.5217H161.642V41.9002V41.9134ZM161.642 57.73H164.961C167.301 57.73 168.994 57.3591 170.065 56.6438C171.136 55.9152 171.665 54.7627 171.665 53.1599C171.665 51.557 171.096 50.3913 169.972 49.623C168.848 48.8547 167.129 48.4706 164.816 48.4706H161.642V57.7168V57.73ZM154.939 64.1282V28.0043H162.383C165.133 28.0043 167.196 28.1368 168.597 28.4018C169.986 28.6667 171.228 29.1568 172.339 29.8986C173.582 30.7464 174.534 31.8459 175.222 33.1838C175.909 34.535 176.253 36.0186 176.253 37.6347C176.253 39.3436 175.949 40.708 175.327 41.7545C174.719 42.8009 173.688 43.7017 172.247 44.4435C173.45 44.9469 174.375 45.4106 175.023 45.8609C175.671 46.2981 176.24 46.8809 176.755 47.583C177.839 49.0799 178.395 51.0139 178.395 53.3851C178.395 55.2926 177.958 57.0279 177.099 58.5911C176.24 60.1542 175.036 61.3861 173.476 62.2869C171.334 63.5321 168.359 64.1547 164.578 64.1547H154.952L154.939 64.1282ZM148.05 64.1282H111.266V28.0043H117.969V57.7565H126.313V28.0043H133.016V57.7565H141.359V28.0043H148.063V64.1547L148.05 64.1282Z" fill="#313534"/>
+          <path d="M399.958 143.619H402.973C402.417 144.692 401.902 145.527 401.426 146.136C400.963 146.732 400.394 147.289 399.733 147.779C397.935 149.196 395.793 149.911 393.32 149.911C391.324 149.911 389.512 149.448 387.873 148.547C386.233 147.633 384.951 146.388 383.999 144.798C383.06 143.209 382.597 141.447 382.597 139.526C382.597 137.605 383.06 135.896 383.999 134.32C384.924 132.757 386.207 131.512 387.82 130.598C389.446 129.684 391.218 129.233 393.149 129.233C395.37 129.233 397.366 129.816 399.112 130.982C400.87 132.148 402.14 133.724 402.946 135.698H399.958C399.191 134.399 398.226 133.406 397.049 132.717C395.872 132.015 394.563 131.671 393.109 131.671C390.914 131.671 389.076 132.439 387.556 133.962C386.048 135.486 385.295 137.353 385.295 139.579C385.295 141.804 386.061 143.632 387.582 145.156C389.116 146.666 390.98 147.434 393.201 147.434C394.603 147.434 395.819 147.143 396.838 146.547C397.869 145.964 398.9 144.984 399.932 143.606M366.413 129.697H369.084V138.493C369.084 138.493 372.086 135.552 378.088 129.697H381.539C381.539 129.697 378.274 132.876 371.715 139.248C371.715 139.248 374.994 142.639 381.539 149.435H378.062C378.062 149.435 375.074 146.335 369.097 140.135V149.435H366.426V129.71L366.413 129.697ZM344.993 138.029H360.08C359.63 136.069 358.731 134.519 357.356 133.379C355.981 132.24 354.355 131.671 352.437 131.671C350.52 131.671 348.96 132.253 347.585 133.419C346.21 134.585 345.35 136.122 344.98 138.029H344.993ZM362.737 140.453H344.927C345.033 142.4 345.826 144.056 347.32 145.407C348.814 146.759 350.573 147.447 352.596 147.447C354.09 147.447 355.478 147.037 356.748 146.202C358.017 145.381 358.916 144.295 359.472 142.944H362.248C361.521 145.023 360.278 146.706 358.52 147.991C356.761 149.276 354.804 149.925 352.662 149.925C351.234 149.925 349.872 149.66 348.59 149.117C347.294 148.587 346.183 147.845 345.258 146.918C344.332 145.99 343.605 144.878 343.063 143.579C342.521 142.295 342.256 140.93 342.256 139.499C342.256 137.618 342.706 135.896 343.618 134.32C344.517 132.757 345.747 131.512 347.307 130.611C348.867 129.71 350.586 129.26 352.464 129.26C354.341 129.26 356.206 129.737 357.832 130.704C359.472 131.671 360.714 132.982 361.574 134.625C362.01 135.459 362.314 136.32 362.486 137.181C362.658 138.056 362.751 139.155 362.751 140.466L362.737 140.453ZM341.569 149.435H338.752C338.752 149.435 336.372 143.871 331.626 132.73C331.626 132.73 329.232 138.294 324.459 149.435H321.643C321.643 149.435 324.472 142.851 330.118 129.71H333.12C333.12 129.71 335.936 136.28 341.582 149.435H341.569ZM319.223 149.435H316.552V132.121H304.93V149.435H302.259V129.71H319.223V149.435ZM275.682 149.435V129.71H279.834C279.834 129.71 282.122 135.049 286.71 145.725C286.71 145.725 288.997 140.387 293.585 129.71H297.724V149.435H295.066V132.624C295.066 132.624 292.66 138.228 287.86 149.435H285.559C285.559 149.435 283.153 143.831 278.367 132.624V149.435H275.696H275.682ZM261.574 131.671C259.419 131.671 257.621 132.426 256.193 133.936C254.752 135.446 254.051 137.34 254.051 139.619C254.051 141.897 254.778 143.738 256.246 145.222C257.713 146.706 259.565 147.447 261.786 147.447C264.007 147.447 265.739 146.706 267.128 145.249C268.516 143.791 269.217 141.924 269.217 139.658C269.217 137.393 268.503 135.419 267.061 133.923C265.633 132.426 263.809 131.684 261.574 131.684V131.671ZM261.786 129.22C263.703 129.22 265.422 129.67 266.969 130.571C268.516 131.472 269.719 132.717 270.592 134.293C271.464 135.883 271.901 137.658 271.901 139.619C271.901 142.573 270.949 145.037 269.045 146.984C267.154 148.931 264.748 149.911 261.852 149.911C259.869 149.911 258.07 149.474 256.471 148.573C254.871 147.686 253.601 146.454 252.702 144.878C251.803 143.301 251.34 141.539 251.34 139.592C251.34 136.598 252.319 134.121 254.289 132.161C256.259 130.2 258.758 129.233 261.773 129.233L261.786 129.22ZM235.183 129.697H237.854V138.493C237.854 138.493 240.855 135.552 246.858 129.697H250.309C250.309 129.697 247.043 132.876 240.485 139.248C240.485 139.248 243.764 142.639 250.309 149.435H246.831C246.831 149.435 243.843 146.335 237.867 140.135V149.435H235.196V129.71L235.183 129.697ZM218.02 129.697H220.678V149.421H218.02V133.485C218.02 133.485 214.027 138.797 206.028 149.421H203.357V129.697H206.028V145.633C206.028 145.633 210.021 140.321 218.02 129.697ZM206.53 122.504H209.188C209.188 124.517 210.127 125.537 211.991 125.537C213.855 125.537 214.807 124.531 214.807 122.504H217.465C217.201 124.08 216.592 125.246 215.64 126.028C214.702 126.796 213.485 127.193 211.991 127.193C210.497 127.193 209.294 126.796 208.342 126.028C207.39 125.246 206.781 124.08 206.517 122.504H206.53ZM189.249 131.671C187.094 131.671 185.295 132.426 183.867 133.936C182.439 135.446 181.725 137.34 181.725 139.619C181.725 141.897 182.453 143.738 183.92 145.222C185.388 146.706 187.239 147.447 189.46 147.447C191.682 147.447 193.414 146.706 194.802 145.249C196.19 143.791 196.891 141.924 196.891 139.658C196.891 137.393 196.177 135.419 194.749 133.923C193.321 132.426 191.497 131.684 189.262 131.684L189.249 131.671ZM189.46 129.22C191.378 129.22 193.096 129.67 194.643 130.571C196.19 131.472 197.394 132.717 198.266 134.293C199.139 135.883 199.575 137.658 199.575 139.619C199.575 142.573 198.623 145.037 196.719 146.984C194.829 148.931 192.422 149.911 189.526 149.911C187.543 149.911 185.745 149.474 184.145 148.573C182.545 147.686 181.276 146.454 180.377 144.878C179.478 143.301 179.015 141.539 179.015 139.592C179.015 136.598 179.993 134.121 181.963 132.161C183.933 130.2 186.432 129.233 189.447 129.233L189.46 129.22ZM178.327 149.421H175.511C175.511 149.421 173.131 143.858 168.384 132.717C168.384 132.717 165.991 138.281 161.218 149.421H158.401C158.401 149.421 161.231 142.838 166.877 129.697H169.865C169.865 129.697 172.681 136.267 178.327 149.421ZM153.298 129.697H155.955V149.421H153.298V133.485C153.298 133.485 149.304 138.797 141.305 149.421H138.634V129.697H141.305V145.633C141.305 145.633 145.298 140.321 153.298 129.697ZM122.41 129.697H125.081V138.638C125.081 138.638 127.673 135.658 132.856 129.697H136.201C136.201 129.697 133.398 132.903 127.779 139.301C127.779 139.301 130.582 142.679 136.201 149.435H132.856C132.856 149.435 130.264 146.282 125.081 139.976V149.435H122.41V139.976C122.41 139.976 119.819 143.129 114.636 149.435H111.277C111.277 149.435 114.08 146.057 119.7 139.301C119.7 139.301 116.897 136.095 111.277 129.697H114.636C114.636 129.697 117.227 132.677 122.41 138.638V129.697Z" fill="#313534"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M85.7857 44.5223C79.73 49.8607 74.0444 54.0467 69.0068 57.769C57.1332 66.5251 49.0544 72.4861 48.2875 85.3354V133.607C52.3468 127.871 58.4819 123.354 65.9392 117.843C71.8099 113.524 78.5267 108.557 85.7857 101.748V44.5223ZM42.8929 34.3753L10.8554 51.861L5.38144 54.8547V69.691C12.6404 76.4999 19.3573 81.4674 25.228 85.7858C32.6985 91.2965 38.8337 95.8136 42.8797 101.576V34.3753H42.8929ZM48.2875 68.8698C52.3468 63.1339 58.4819 58.6168 65.9392 53.0797C71.7834 48.7612 78.5267 43.7804 85.7857 37.0114V28.0036L48.2743 7.5109V68.8698H48.2875ZM5.39466 77.2019C11.4504 82.5404 17.136 86.7263 22.1472 90.4487C32.5531 98.1318 40.0765 103.669 42.2847 113.577C43.5672 119.313 42.8929 126.652 42.8929 132.361V149.423H9.08366C8.092 149.423 7.19289 149.012 6.53178 148.363C5.87066 147.714 5.38144 146.8 5.38144 145.807V77.2019H5.39466ZM91.1804 130.891V26.2683C91.1804 25.2218 90.6515 24.2415 89.7127 23.7249L47.005 0.397402C46.5819 0.145714 46.0927 0 45.5902 0C44.0961 0 42.8929 1.27169 42.8929 2.84805V27.9638L1.46767 50.5893C0.528889 51.0926 0 52.0861 0 53.1326V145.807C0 148.337 0.938778 150.642 2.60478 152.298C4.27078 153.967 6.55822 155 9.08366 155H82.0835C84.609 155 86.9096 153.967 88.5624 152.298C90.2152 150.629 91.1672 148.337 91.1672 145.807V130.878L91.1804 130.891ZM48.3536 149.436C49.3718 137.037 57.3844 131.116 69.0464 122.519C74.0576 118.783 79.7432 114.611 85.799 109.272V145.82C85.799 146.814 85.2965 147.714 84.6486 148.377C84.0007 149.039 83.0884 149.436 82.0967 149.436H48.3536Z" fill="#00A351"/>
+          <path d="M207.879 114.943V78.793H214.583V94.3844C214.583 94.3844 218.311 89.1917 225.769 78.793H233.821C233.821 78.793 229.299 84.7143 220.255 96.5436C220.255 96.5436 224.777 102.677 233.821 114.943H225.769C225.769 114.943 222.04 109.645 214.583 99.034V114.943H207.879ZM186.604 94.7818H188.561C190.597 94.7818 192.131 94.6228 193.149 94.3049C194.101 94.04 194.855 93.5233 195.41 92.7683C195.952 92.0132 196.23 91.1257 196.23 90.0924C196.23 88.94 195.952 87.9597 195.397 87.1649C194.842 86.3436 194.075 85.8137 193.11 85.5356C192.158 85.3104 190.743 85.2044 188.865 85.2044H186.631V94.7818H186.604ZM179.901 114.943V78.793H188.839C191.311 78.793 193.242 78.9254 194.657 79.2036C196.071 79.4686 197.314 79.9587 198.385 80.6343C199.853 81.588 200.977 82.873 201.77 84.4758C202.564 86.0787 202.96 87.9067 202.96 89.9202C202.96 92.0662 202.511 94.0267 201.612 95.762C200.712 97.5106 199.483 98.8353 197.936 99.7096C196.957 100.253 195.781 100.637 194.432 100.849C193.083 101.074 191.192 101.18 188.76 101.18H186.618V114.917H179.914L179.901 114.943ZM154.488 99.1929H162.223C162.223 99.1929 160.927 95.5368 158.362 88.2379C158.362 88.2379 157.079 91.894 154.501 99.1929H154.488ZM140.657 114.943C140.657 114.943 145.668 102.889 155.704 78.793H160.966C160.966 78.793 166.017 90.8475 176.106 114.943H168.741C168.741 114.943 167.459 111.83 164.88 105.604H152.041C152.041 105.604 150.706 108.717 148.035 114.943H140.644H140.657ZM111.291 114.943V78.793H136.889V114.943H130.185V85.2044H117.981V114.943H111.277H111.291Z" fill="#313534"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_109_367">
+          <rect width="403" height="155" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </a>
+      <div class="header__btn"><a href="#" class="btn main-btn"><span>Выбрать квартиру</span></a></div>
+      <div class="header__phones">
+        <a href="tel:80000000000" class="h6 link">+7 000 000 00 00</a>
+        <a href="tel:80000000000" class="h6 link">+7 000 000 00 00</a>
+      </div>
+      <div class="icon-menu" role="button" aria-label="Открыть меню">
+        <div class="icon-menu__items">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__body">
+    <div class="header__cols">
+      <a href="#" class="btn main-btn header__mobBtn"><span>Выбрать квартиру</span></a>
+      <div class="container">
+        <div class="header__menu">
+          <h3>Меню</h3>
+          <nav class="menu">
+            <ul>
+              <li><a href="#" class="h6 link">Ход строительства</a></li>
+              <li><a href="#" class="h6 link">Документы</a></li>
+              <li><a href="#" class="h6 link">Новости</a></li>
+              <li><a href="#" class="h6 link">Контакты</a></li>
+              <li><a href="#" class="h6 link">О застройщике</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__departments">
+          <h3>Отдел продаж:</h3>
+          <div class="item-contact">
+            <p class="page-lbl">Адрес</p>
+            <p class="item-contact__address">г.Нижний Новгород, ул.Максима Горького, <span>д.262, офис 48</span></p>
+          </div>   
+          <div class="item-contact">
+            <p class="page-lbl">Телефон</p>
+            <p><a href="tel:88312248872" class="link">8(831)224 88 72</a></p>
+            <p><a href="tel:89277252733" class="link">8 927 725 27 33</a></p>
+          </div> 
+          <div class="item-contact">
+            <p class="page-lbl">Почта</p>
+            <p><a href="mailto:bereg52sales@yandex.ru" class="link">bereg52sales@yandex.ru</a></p>
+          </div>       
+        </div>
+        <div class="question-form">
+          <div class="question-form__header">
+            <h3>Есть вопросы?</h3>
+            <p>Оставьте заявку <span>и мы перезвоним!</span></p>
+          </div>
+          <!--question-form-->
+<form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+    <div class="form__item">
+        <input type="text" placeholder="Имя">
+    </div>
+    <div class="form__item form__item--tel">
+        <input type="tel">
+        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+    </div>
+    <div class="form__footer">
+        <button type="submit" class="btn small-btn modal__btn">оставить заявку</button>
+        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+    </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+        <!--main-->
+        <main class="main">
+            <!--breadcrumbs-->
+    <div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="#" class="link">Главная</a></li>
+            <li class="active">Выбор квартиры</li>
+        </ul>
+    </div>
+</div>
+            <!--catalog section-->
+            <section class="catalog">
+                <div class="container">
+                    <h1 class="h2">Выбрать квартиру</h1>
+                    <nav class="catalog__tabs">
+                        <div class="btn stroke-btn catalog__tab active" data-nav="scheme">По схеме</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="list">По списку</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="cat">По каталогу</div>
+                        <div class="btn stroke-btn catalog__tab" data-nav="plan">Планы этажей</div>
+                    </nav>
+                    <div class="catalog__inner">
+                        <!--filter-->
+                        <div class="filter">
+                            <div class="filter__header">
+                                <div class="page-lbl">Фильтр</div>
+                            </div>
+                            <!--filter-form-->
+                            <form action="" class="modal mob-modal filter-form"
+                                onreset="event.preventDefault();filter-filterFormOnReset(this)">
+                                <div class="modal__overlay filter-form__inner">
+                                    <div class="modal__content filter-form__content">
+                                        <button type="button" class="modal__close filter-form__close"
+                                            aria-label="Закрыть всплывающее окно"></button>
+                                        <div class="modal__scroll">
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Количество комнат</div>
+                                                <div class="filter-form__checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>C</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>1</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>2</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" name="#">
+                                                        <span>3</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Стоимость </div>
+                                                <div class="range range--price" data-min="3.34" data-max="15"
+                                                    data-start="3.34" data-end="8.34">
+                                                    <div class="range__values">
+                                                        <div class="range__value">
+                                                            <input class="range-start" type="number" step="any"
+                                                                autocomplete="off">
+                                                        </div>
+                                                        <span></span>
+                                                        <div class="range__value">
+                                                            <input class="range-end" type="number" step="any"
+                                                                autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__slider price-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__sec">
+                                                <div class="page-lbl">Этаж</div>
+                                                <div class="range integer" data-min="2" data-max="18" data-start="6"
+                                                    data-end="10">
+                                                    <div class="range__values">
+                                                        <div class="range__value">
+                                                            <input class="range-start" type="number" autocomplete="off">
+                                                        </div>
+                                                        <span></span>
+                                                        <div class="range__value">
+                                                            <input class="range-end" type="number" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__slider floor-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="filter-form__footer">
+                                                <div class="filter-form__info">
+                                                    <div class="page-lbl">Найдено:</div>
+                                                    <div class="h6 filter-form__result">230 квартир</div>
+                                                </div>
+                                                <div class="filter-form__btns">
+                                                    <button type="submit" class="btn stroke-btn">Применить</button>
+                                                    <button type="reset" class="filter-form__reset">Сбросить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="filter__footer">
+                                <div class="h6">Срок сдачи:</div>
+                                <div class="h5">III квартал 2025г</div>
+                            </div>
+                        </div>
+                        <!--wrapper-->
+                        <div class="catalog__wrapper">
+                            <!--catalog__block-->
+                            <div class="scheme-cat catalog__block active" data-block="scheme">
+                                <div class="scheme-cat__header">
+                                    <div class="scheme-cat__labels">
+                                        <span>Этаж</span>
+                                        <span>Квартиры</span>
+                                    </div>
+                                    <div class="scheme-cat__status">
+                                        <span>Свободно</span>
+                                        <span>Бронь</span>
+                                        <span>Продано</span>
+                                    </div>
+                                </div>
+                                <div class="custom-scroll scheme-cat__inner">
+                                    <ul class="scheme-cat__floors">
+                                        <li>18</li>
+                                        <li>17</li>
+                                        <li>16</li>
+                                        <li>15</li>
+                                        <li>14</li>
+                                        <li>13</li>
+                                        <li>12</li>
+                                        <li>11</li>
+                                        <li>10</li>
+                                        <li>9</li>
+                                        <li>8</li>
+                                        <li>7</li>
+                                        <li>6</li>
+                                        <li>5</li>
+                                        <li>4</li>
+                                        <li>3</li>
+                                        <li>2</li>
+                                    </ul>
+                                    <div class="custom-scroll scheme-cat__apartaments">
+                                        <div class="scheme-cat__sec">
+                                            <div class="scheme-cat__sec-title">Секция 1</div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="97" data-url="/kvartiry/studiya-n-97.html" data-price="9 400 000" data-img="assets/galleries/350/18-etazh-1k-37-6.jpg" data-area="37.60" data-floor="18">С</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="98" data-url="/kvartiry/3-komnatnaya-n98.html" data-price="27 250 000" data-img="assets/galleries/368/18-et.-3k-109.0-m-2d.jpg" data-area="109.00" data-floor="18">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="99" data-url="/kvartiry/2-komnatnaya-n99.html" data-price="20 650 000" data-img="assets/galleries/360/18-etazh-2k-82-6.jpg" data-area="82.60" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="100" data-url="/kvartiry/3-komnatnaya-n100.html" data-price="21 850 000" data-img="assets/galleries/364/18-etazh-3k-87-4.jpg" data-area="87.40" data-floor="18">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="91" data-url="/kvartiry/1-komnatnaya-n91.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="92" data-url="/kvartiry/2-komnatnaya-n92.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="17">2</a>
+                                                <a href="#" class="sold" data-name="1-комнатная" data-nmb="93" data-url="/kvartiry/1-komnatnaya-n93.html" data-price="0" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="94" data-url="/kvartiry/1-komnatnaya-n94.html" data-price="7 462 000" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="95" data-url="/kvartiry/1-komnatnaya-n95.html" data-price="6 562 000" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="17">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="96" data-url="/kvartiry/3-komnatnaya-n96.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="17">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="85" data-url="/kvartiry/1-komnatnaya-n85.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="16">1</a>
+                                                 <a href="#" class="hold" data-name="2-комнатная" data-nmb="86" data-url="/kvartiry/2-komnatnaya-n86.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="16">2</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="87" data-url="/kvartiry/1-komnatnaya-n87.html" data-price="8 118 000" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="16">1</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="88" data-url="/kvartiry/1-komnatnaya-n88.html" data-price="0" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="16">1</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="89" data-url="/kvartiry/1-komnatnaya-n89.html" data-price="0" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="16">1</a>
+                                                 <a href="#" class="hold" data-name="3-комнатная" data-nmb="90" data-url="/kvartiry/3-komnatnaya-n90.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="16">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="79" data-url="/kvartiry/1-komnatnaya-n79.html" data-price="7 281 600" data-img="assets/galleries/306/15-17-etazh-1k-44-4.jpg" data-area="44.40" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="2-комнатная" data-nmb="80" data-url="/kvartiry/2-komnatnaya-n80.html" data-price="10 624 900" data-img="assets/galleries/334/15-17-etazh-2k-74-3.jpg" data-area="74.30" data-floor="15">2</a>
+                                                 <a href="#" class="sold" data-name="1-комнатная" data-nmb="81" data-url="/kvartiry/1-komnatnaya-n81.html" data-price="0" data-img="assets/galleries/318/15-17-etazh-1k-49-5.jpg" data-area="49.50" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="82" data-url="/kvartiry/1-komnatnaya-n82.html" data-price="7 462 000" data-img="assets/galleries/310/15-17-etazh-1k-45-5.jpg" data-area="45.50" data-floor="15">1</a>
+                                                 <a href="#" class="hold" data-name="1-комнатная" data-nmb="83" data-url="/kvartiry/1-komnatnaya-n83.html" data-price="6 562 000" data-img="assets/galleries/302/15-17-etazh-1k-38-6.jpg" data-area="38.60" data-floor="15">1</a>
+                                                 <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="84" data-url="/kvartiry/3-komnatnaya-n84.html" data-price="12 206 700" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="15">3</a>
+                                             </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="sold" data-name="1-комнатная" data-nmb="73" data-url="/kvartiry/1-komnatnaya-n73.html" data-price="0" data-img="assets/galleries/280/14-etazh-1k-44-4.jpg" data-area="44.40" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="74" data-url="/kvartiry/2-komnatnaya-n74.html" data-price="10 402 000" data-img="assets/galleries/296/14-etazh-2k-74-3.jpg" data-area="74.30" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="75" data-url="/kvartiry/1-komnatnaya-n75.html" data-price="8 118 000" data-img="assets/galleries/286/14-etazh-1k-49-5.jpg" data-area="49.50" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="76" data-url="/kvartiry/1-komnatnaya-n76.html" data-price="7 462 000" data-img="assets/galleries/282/14-etazh-1k-45-5.jpg" data-area="45.50" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="77" data-url="/kvartiry/1-komnatnaya-n77.html" data-price="6 562 000" data-img="assets/galleries/276/14-etazh-1k-38-6.jpg" data-area="38.60" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="78" data-url="/kvartiry/3-komnatnaya-n78.html" data-price="11 850 300" data-img="assets/galleries/298/14-etazh-3k-89-1.jpg" data-area="9.10" data-floor="14">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="67" data-url="/kvartiry/1-komnatnaya-n67.html" data-price="7 104 000" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="68" data-url="/kvartiry/2-komnatnaya-n68.html" data-price="10 402 000" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="13">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="69" data-url="/kvartiry/1-komnatnaya-n69.html" data-price="8 118 000" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="13">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="70" data-url="/kvartiry/1-komnatnaya-n70.html" data-price="0" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="13">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="71" data-url="/kvartiry/1-komnatnaya-n71.html" data-price="6 562 000" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="72" data-url="/kvartiry/3-komnatnaya-n72.html" data-price="11 850 300" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="13">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="61" data-url="/kvartiry/1-komnatnaya-n61.html" data-price="0" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="62" data-url="/kvartiry/2-komnatnaya-n62.html" data-price="0" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="63" data-url="/kvartiry/1-komnatnaya-n63.html" data-price="0" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="64" data-url="/kvartiry/1-komnatnaya-n64.html" data-price="0" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="65" data-url="/kvartiry/1-komnatnaya-n65.html" data-price="0" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="66" data-url="/kvartiry/3-komnatnaya-n66.html" data-price="0" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="12">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="55" data-url="/kvartiry/1-komnatnaya-n55.html" data-price="7 104 000" data-img="assets/galleries/231/11-13-etazh-1k-44-4.jpg" data-area="44.40" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="56" data-url="/kvartiry/2-komnatnaya-n56.html" data-price="10 402 000" data-img="assets/galleries/263/11-13-etazh-2k-74-3.jpg" data-area="74.30" data-floor="11">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="57" data-url="/kvartiry/1-komnatnaya-n57.html" data-price="0" data-img="assets/galleries/243/11-13-etazh-1k-49-5.jpg" data-area="49.50" data-floor="11">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="58" data-url="/kvartiry/1-komnatnaya-n58.html" data-price="7 280 000" data-img="assets/galleries/235/11-13-etazh-1k-45-5.jpg" data-area="45.50" data-floor="11">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="59" data-url="/kvartiry/1-komnatnaya-n59.html" data-price="6 562 000" data-img="assets/galleries/223/11-13-etazh-1k-38-6.jpg" data-area="38.60" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="60" data-url="/kvartiry/3-komnatnaya-n60.html" data-price="11 850 300" data-img="assets/galleries/267/11-13-etazh-3k-89-1.jpg" data-area="89.10" data-floor="11">3</a>
+                                              </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="49" data-url="/kvartiry/1-komnatnaya-n49.html" data-price="6 913 000" data-img="assets/galleries/201/10-etazh-1k-44-6.jpg" data-area="44.60" data-floor="10">1</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="50" data-url="/kvartiry/2-komnatnaya-n50.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="10">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="51" data-url="/kvartiry/1-komnatnaya-n51.html" data-price="7 852 600" data-img="assets/galleries/207/10-etazh-1k-49-7.jpg" data-area="49.70" data-floor="10">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="52" data-url="/kvartiry/1-komnatnaya-n52.html" data-price="7 236 400" data-img="assets/galleries/203/10-etazh-1k-45-8.jpg" data-area="45.80" data-floor="10">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="53" data-url="/kvartiry/1-komnatnaya-n53.html" data-price="0" data-img="assets/galleries/197/10-etazh-38-7.jpg" data-area="38.70" data-floor="10">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="54" data-url="/kvartiry/3-komnatnaya-n54.html" data-price="11 685 200" data-img="assets/galleries/219/10-etazh-3k-89-2.jpg" data-area="89.20" data-floor="10">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="43" data-url="/kvartiry/1-komnatnaya-n43.html" data-price="6 913 000" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="44" data-url="/kvartiry/2-komnatnaya-n44.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="9">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="45" data-url="/kvartiry/1-komnatnaya-n45.html" data-price="7 852 600" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="9">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="46" data-url="/kvartiry/1-komnatnaya-n46.html" data-price="7 236 400" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="9">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="47" data-url="/kvartiry/1-komnatnaya-n47.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="48" data-url="/kvartiry/3-komnatnaya-n48.html" data-price="11 685 200" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="9">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="37" data-url="/kvartiry/1-komnatnaya-n37.html" data-price="6 913 000" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="38" data-url="/kvartiry/2-komnatnaya-n38.html" data-price="10 253 400" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="8">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="39" data-url="/kvartiry/1-komnatnaya-n39.html" data-price="7 852 600" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="40" data-url="/kvartiry/1-komnatnaya-n40.html" data-price="7 236 400" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="8">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="41" data-url="/kvartiry/1-komnatnaya-n41.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="42" data-url="/kvartiry/3-komnatnaya-n42.html" data-price="11 685 200" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="8">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="31" data-url="/kvartiry/1-komnatnaya-n31.html" data-price="0" data-img="assets/galleries/151/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="32" data-url="/kvartiry/2-komnatnaya-n32.html" data-price="0" data-img="assets/galleries/185/7-9-etazh-2k-74-3.jpg" data-area="74.30" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="33" data-url="/kvartiry/1-komnatnaya-n33.html" data-price="0" data-img="assets/galleries/164/7-9-etazh-1k-49-7.jpg" data-area="49.70" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="34" data-url="/kvartiry/1-komnatnaya-n34.html" data-price="0" data-img="assets/galleries/155/7-9-etazh-1k-45-8.jpg" data-area="45.80" data-floor="7">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="35" data-url="/kvartiry/1-komnatnaya-n35.html" data-price="0" data-img="assets/galleries/143/7-9-etazh-38-7.jpg" data-area="38.70" data-floor="7">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="36" data-url="/kvartiry/3-komnatnaya-n36.html" data-price="11 506 800" data-img="assets/galleries/189/7-9-etazh-3k-89-2.jpg" data-area="89.20" data-floor="7">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="25" data-url="/kvartiry/1-komnatnaya-n25.html" data-price="0" data-img="assets/galleries/121/7-9-etazh-1k-44-6.jpg" data-area="44.60" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="26" data-url="/kvartiry/2-komnatnaya-n26.html" data-price="9 881 900" data-img="assets/galleries/137/6-etazh-2k-74-3.jpg" data-area="74.30" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="27" data-url="/kvartiry/1-komnatnaya-n27.html" data-price="7 703 500" data-img="assets/galleries/127/6-etazh-1k-49-7.jpg" data-area="49.70" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="28" data-url="/kvartiry/1-komnatnaya-n28.html" data-price="7 099 000" data-img="assets/galleries/123/6-etazh-1k-45-8.jpg" data-area="45.80" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="29" data-url="/kvartiry/1-komnatnaya-n29.html" data-price="6 192 000" data-img="assets/galleries/117/6-etazh-38-7.jpg" data-area="38.70" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="30" data-url="/kvartiry/3-komnatnaya-n30.html" data-price="11 506 800" data-img="assets/galleries/139/6-etazh-3k-89-2.jpg" data-area="89.20" data-floor="6">3</a>
+                                          </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="19" data-url="/kvartiry/1-komnatnaya-n19.html" data-price="0" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="20" data-url="/kvartiry/2-komnatnaya-n20.html" data-price="0" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="21" data-url="/kvartiry/1-komnatnaya-n21.html" data-price="0" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="22" data-url="/kvartiry/1-komnatnaya-n22.html" data-price="0" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="23" data-url="/kvartiry/1-komnatnaya-n23-kopiya.html" data-price="0" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="24" data-url="/kvartiry/3-komnatnaya-n24.html" data-price="0" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="5">3</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="13" data-url="/kvartiry/1-komnatnaya-n13.html" data-price="6 690 000" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="14" data-url="/kvartiry/2-komnatnaya-n14.html" data-price="9 733 300" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="4">2</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="15" data-url="/kvartiry/1-komnatnaya-n15.html" data-price="7 604 100" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="4">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="16" data-url="/kvartiry/1-komnatnaya-n16.html" data-price="0" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="17" data-url="/kvartiry/1-komnatnaya-n17.html" data-price="6 192 000" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="18" data-url="/kvartiry/3-komnatnaya-n18.html" data-price="11 417 600" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="4">3</a>
+                                          </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="7" data-url="/kvartiry/1-komnatnaya-n7.html" data-price="0" data-img="assets/galleries/73/3-5-etazh-1k-44-6.jpg" data-area="44.60" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="8" data-url="/kvartiry/2-komnatnaya-n8.html" data-price="9 510 400" data-img="assets/galleries/105/3-5-etazh-2k-74-3.jpg" data-area="74.30" data-floor="3">2</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="9" data-url="/kvartiry/1-komnatnaya-n9.html" data-price="0" data-img="assets/galleries/85/3-5-etazh-1k-49-7.jpg" data-area="49.70" data-floor="3">1</a>
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="10" data-url="/kvartiry/1-komnatnaya-n10.html" data-price="6 641 000" data-img="assets/galleries/77/3-5-etazh-1k-45-8.jpg" data-area="45.80" data-floor="3">1</a>
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="11" data-url="/kvartiry/1-komnatnaya-n11.html" data-price="0" data-img="assets/galleries/63/3-5-etazh-1k-38-7.jpg" data-area="38.70" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="12" data-url="/kvartiry/3-komnatnaya-n12.html" data-price="11 328 400" data-img="assets/galleries/109/3-5-etazh-3k-89-2.jpg" data-area="89.20" data-floor="3">3</a>
+                                           </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="hold" data-name="1-комнатная" data-nmb="1" data-url="/kvartiry/1-komnatnaya-n1.html" data-price="6 300 000" data-img="assets/galleries/41/2-etazh-1k-45.jpg" data-area="45.00" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="2" data-url="/kvartiry/2-komnatnaya-n2.html" data-price="9 362 500" data-img="assets/galleries/57/2-etazh-2k-74-9.jpg" data-area="74.90" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="3" data-url="/kvartiry/1-komnatnaya-n3.html" data-price="7 028 000" data-img="assets/galleries/47/2-etazh-1k-50-2.jpg" data-area="50.20" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="4" data-url="/kvartiry/1-komnatnaya-n4.html" data-price="6 482 000" data-img="assets/galleries/43/2-etazh-1k-46-3.jpg" data-area="46.30" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="5" data-url="/kvartiry/1-komnatnaya-n5.html" data-price="5 895 000" data-img="assets/galleries/26/2-etazh-39.3.png" data-area="39,30" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="6" data-url="/kvartiry/3-komnatnaya-n6.html" data-price="11 212 500" data-img="assets/galleries/59/2-etazh-3k-89-8.jpg" data-area="89.80" data-floor="2">3</a>
+                                            </div>
+                                        </div>
+                                        <div class="scheme-cat__sec">
+                                            <div class="scheme-cat__sec-title">Секция 2</div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="210" data-url="/kvartiry/studiya-n-210.html" data-price="9 025 000" data-img="assets/galleries/352/18-etazh-1k-47-5.jpg" data-area="47.50" data-floor="18">С</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="211" data-url="/kvartiry/3-komnatnaya-n211.html" data-price="22 425 000" data-img="assets/galleries/366/18-etazh-3k-89-7.jpg" data-area="89.70" data-floor="18">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="212" data-url="/kvartiry/2-komnatnaya-n212.html" data-price="16 350 000" data-img="assets/galleries/358/18-etazh-2k-65-4.jpg" data-area="65.40" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="213" data-url="/kvartiry/2-komnatnaya-n213.html" data-price="16 150 000" data-img="assets/galleries/356/18-etazh-2k-64-6.jpg" data-area="64.60" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="214" data-url="/kvartiry/2-komnatnaya-n214.html" data-price="21 775 000" data-img="assets/galleries/362/18-etazh-2k-87-1.jpg" data-area="87.10" data-floor="18">2</a>
+                                                <a href="#" class="hold" data-name="1-комнатная" data-nmb="215" data-url="/kvartiry/1-komnatnaya-n215.html" data-price="12 999 000" data-img="assets/galleries/354/18-etazh-1k-61-9.jpg" data-area="61.90" data-floor="18">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="204" data-url="/kvartiry/1-komnatnaya-n204.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="17">1</a>
+                                                <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="205" data-url="/kvartiry/3-komnatnaya-n205.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="17">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="206" data-url="/kvartiry/2-komnatnaya-n206.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="17">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="207" data-url="/kvartiry/2-komnatnaya-n207.html" data-price="9 884 200" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="17">2</a>
+                                                <a href="#" class="sold" data-name="3-комнатная" data-nmb="208" data-url="/kvartiry/3-komnatnaya-n208.html" data-price="0" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="17">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="209" data-url="/kvartiry/1-komnatnaya-n209.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="17">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="198" data-url="/kvartiry/1-komnatnaya-n198.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="16">1</a>
+                                                <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="199" data-url="/kvartiry/3-komnatnaya-n199.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="16">3</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="200" data-url="/kvartiry/2-komnatnaya-n200.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="16">2</a>
+                                                <a href="#" class="sold" data-name="2-комнатная" data-nmb="201" data-url="/kvartiry/2-komnatnaya-n201.html" data-price="0" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="16">2</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="202" data-url="/kvartiry/3-komnatnaya-n202.html" data-price="16 399 500" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="16">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="203" data-url="/kvartiry/1-komnatnaya-n203.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="16">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="192" data-url="/kvartiry/1-komnatnaya-n192.html" data-price="7 564 000" data-img="assets/galleries/314/15-17-etazh-1k-48-8.jpg" data-area="48.80" data-floor="15">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="193" data-url="/kvartiry/3-komnatnaya-n193.html" data-price="12 508 100" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="15">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="194" data-url="/kvartiry/2-komnatnaya-n194.html" data-price="10 044 800" data-img="assets/galleries/330/15-17-etazh-2k-68-8.jpg" data-area="68.80" data-floor="15">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="195" data-url="/kvartiry/2-komnatnaya-n195.html" data-price="9 884 200" data-img="assets/galleries/326/15-17-etazh-2k-67-7.jpg" data-area="67.70" data-floor="15">2</a>
+                                                <a href="#" class="sold" data-name="3-комнатная" data-nmb="196" data-url="/kvartiry/3-komnatnaya-n196.html" data-price="0" data-img="assets/galleries/346/15-17-etazh-3k-113-1.jpg" data-area="113.10" data-floor="15">3</a>
+                                                <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="197" data-url="/kvartiry/1-komnatnaya-n197.html" data-price="9 116 400" data-img="assets/galleries/322/15-17-etazh-1k-64-2.jpg" data-area="64.20" data-floor="15">1</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                 <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="185" data-url="/kvartiry/1-komnatnaya-n185.html" data-price="7 417 600" data-img="assets/galleries/284/14-etazh-1k-48-8.jpg" data-area="48.80" data-floor="14">1</a>
+                                                <a href="#" class="hold" data-name="3-комнатная" data-nmb="186" data-url="/kvartiry/3-komnatnaya-n186.html" data-price="12 142 900" data-img="assets/galleries/300/14-etazh-3k-91-3.jpg" data-area="91.30" data-floor="14">3</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="187" data-url="/kvartiry/2-komnatnaya-n187.html" data-price="9 838 400" data-img="assets/galleries/294/14-etazh-2k-68-8.jpg" data-area="68.80" data-floor="14">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="188" data-url="/kvartiry/2-komnatnaya-n188.html" data-price="9 681 100" data-img="assets/galleries/292/14-etazh-2k-67-7.jpg" data-area="67.70" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="2-комнатная" data-nmb="189" data-url="/kvartiry/2-komnatnaya-n189.html" data-price="9 237 800" data-img="assets/galleries/288/14-etazh-2k-64-6.jpg" data-area="64.60" data-floor="14">2</a>
+                                                <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="190" data-url="/kvartiry/2-komnatnaya-n190.html" data-price="9 280 700" data-img="assets/galleries/290/14-etazh-2k-64-9.jpg" data-area="64.90" data-floor="14">2</a>
+                                                <a href="#" class="hold" data-name="Студия" data-nmb="191" data-url="/kvartiry/studiya-n-191.html" data-price="6 435 000" data-img="assets/galleries/278/14-etazh-1k-42-9.jpg" data-area="42.90" data-floor="14">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="178" data-url="/kvartiry/1-komnatnaya-n178.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="13">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="179" data-url="/kvartiry/3-komnatnaya-n179.html" data-price="12 142 900" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="13">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="180" data-url="/kvartiry/2-komnatnaya-n180.html" data-price="9 838 400" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="181" data-url="/kvartiry/2-komnatnaya-n181.html" data-price="9 681 100" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="182" data-url="/kvartiry/2-komnatnaya-n182.html" data-price="9 237 800" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="13">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="183" data-url="/kvartiry/2-komnatnaya-n183.html" data-price="9 280 700" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="13">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="184" data-url="/kvartiry/studiya-n-184.html" data-price="6 435 000" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="13">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="sold" data-name="1-комнатная" data-nmb="171" data-url="/kvartiry/1-komnatnaya-n171.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="12">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="172" data-url="/kvartiry/3-komnatnaya-n172.html" data-price="0" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="12">3</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="173" data-url="/kvartiry/2-komnatnaya-n173.html" data-price="0" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="174" data-url="/kvartiry/2-komnatnaya-n174.html" data-price="0" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="175" data-url="/kvartiry/2-komnatnaya-n175.html" data-price="0" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="176" data-url="/kvartiry/2-komnatnaya-n176.html" data-price="0" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="12">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="177" data-url="/kvartiry/studiya-n-177.html" data-price="0" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="12">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="164" data-url="/kvartiry/1-komnatnaya-n164.html" data-price="7 417 600" data-img="assets/galleries/239/11-13-etazh-1k-48-8.jpg" data-area="48.80" data-floor="11">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="165" data-url="/kvartiry/3-komnatnaya-n165.html" data-price="12 142 900" data-img="assets/galleries/271/11-13-etazh-3k-91-3.jpg" data-area="91.30" data-floor="11">3</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="166" data-url="/kvartiry/2-komnatnaya-n166.html" data-price="9 838 400" data-img="assets/galleries/259/11-13-etazh-2k-68-8.jpg" data-area="68.80" data-floor="11">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="167" data-url="/kvartiry/2-komnatnaya-n167.html" data-price="9 681 100" data-img="assets/galleries/255/11-13-etazh-2k-67-7.jpg" data-area="67.70" data-floor="11">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="168" data-url="/kvartiry/2-komnatnaya-n168.html" data-price="9 237 800" data-img="assets/galleries/247/11-13-etazh-2k-64-6.jpg" data-area="64.60" data-floor="11">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="169" data-url="/kvartiry/2-komnatnaya-n169.html" data-price="9 280 700" data-img="assets/galleries/251/11-13-etazh-2k-64-9.jpg" data-area="64.90" data-floor="11">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="170" data-url="/kvartiry/studiya-n-170.html" data-price="6 435 000" data-img="assets/galleries/227/11-13-etazh-1k-42-9.jpg" data-area="42.90" data-floor="11">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="hold" data-name="1-комнатная" data-nmb="157" data-url="/kvartiry/1-komnatnaya-n157.html" data-price="7 350 000" data-img="assets/galleries/205/10-etazh-1k-49.jpg" data-area="49.00" data-floor="10">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="158" data-url="/kvartiry/3-komnatnaya-n158.html" data-price="11 973 400" data-img="assets/galleries/221/10-etazh-3k-91-4.jpg" data-area="91.40" data-floor="10">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="159" data-url="/kvartiry/2-komnatnaya-n159.html" data-price="9 591 000" data-img="assets/galleries/215/10-etazh-2k-69.jpg" data-area="69.00" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="160" data-url="/kvartiry/2-komnatnaya-n160.html" data-price="9 438 100" data-img="assets/galleries/213/10-etazh-2k-67-9.jpg" data-area="67.90" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="161" data-url="/kvartiry/2-komnatnaya-n161.html" data-price="8 993 300" data-img="assets/galleries/209/10-etazh-2k-64-7.jpg" data-area="64.70" data-floor="10">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="162" data-url="/kvartiry/2-komnatnaya-n162.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="10">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="163" data-url="/kvartiry/studiya-n-163.html" data-price="6 349 200" data-img="assets/galleries/199/10-etazh-1k-42-9.jpg" data-area="42.90" data-floor="10">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="150" data-url="/kvartiry/1-komnatnaya-n150.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="9">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="151" data-url="/kvartiry/3-komnatnaya-n151.html" data-price="11 973 400" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="9">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="152" data-url="/kvartiry/2-komnatnaya-n152.html" data-price="9 591 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="153" data-url="/kvartiry/2-komnatnaya-n153.html" data-price="9 438 100" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="154" data-url="/kvartiry/2-komnatnaya-n154.html" data-price="8 993 300" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="9">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="155" data-url="/kvartiry/2-komnatnaya-n155.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="9">2</a>
+                                                    <a href="/kvartiry/studiya-n-156.html" class="on-sale" data-name="Студия" data-nmb="156" data-url="/kvartiry/studiya-n-156.html" data-price="6 349 200" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="9">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                     <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="143" data-url="/kvartiry/1-komnatnaya-n143.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="8">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="144" data-url="/kvartiry/3-komnatnaya-n144.html" data-price="11 973 400" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="8">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="145" data-url="/kvartiry/2-komnatnaya-n145.html" data-price="9 591 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="146" data-url="/kvartiry/2-komnatnaya-n146.html" data-price="9 438 100" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="147" data-url="/kvartiry/2-komnatnaya-n147.html" data-price="8 993 300" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="8">2</a>
+                                                    <a href="#" class="hold" data-name="2-комнатная" data-nmb="148" data-url="/kvartiry/2-komnatnaya-n148.html" data-price="9 035 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="8">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="149" data-url="/kvartiry/studiya-n-149.html" data-price="6 349 200" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="8">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="136" data-url="/kvartiry/1-komnatnaya-n136.html" data-price="7 350 000" data-img="assets/galleries/160/7-9-etazh-1k-49.jpg" data-area="49.00" data-floor="7">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="137" data-url="/kvartiry/3-komnatnaya-n137.html" data-price="11 790 600" data-img="assets/galleries/193/7-9-etazh-3k-91-4.jpg" data-area="91.40" data-floor="7">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="138" data-url="/kvartiry/2-komnatnaya-n138.html" data-price="9 315 000" data-img="assets/galleries/181/7-9-etazh-2k-69.jpg" data-area="69.00" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="139" data-url="/kvartiry/2-komnatnaya-n139.html" data-price="0" data-img="assets/galleries/177/7-9-etazh-2k-67-9.jpg" data-area="67.90" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="140" data-url="/kvartiry/2-komnatnaya-n140.html" data-price="0" data-img="assets/galleries/169/7-9-etazh-2k-64-7.jpg" data-area="64.70" data-floor="7">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="141" data-url="/kvartiry/2-komnatnaya-n141.html" data-price="8 775 000" data-img="assets/galleries/173/7-9-etazh-2k-65.jpg" data-area="65.00" data-floor="7">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="142" data-url="/kvartiry/studiya-n-142.html" data-price="0" data-img="assets/galleries/147/7-9-etazh-1k-42-9.jpg" data-area="42.90" data-floor="7">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="129" data-url="/kvartiry/1-komnatnaya-n129.html" data-price="7 350 000" data-img="assets/galleries/125/6-etazh-1k-49.jpg" data-area="49.00" data-floor="6">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="130" data-url="/kvartiry/3-komnatnaya-n130.html" data-price="11 790 600" data-img="assets/galleries/141/6-etazh-3k-91-4.jpg" data-area="91.40" data-floor="6">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="131" data-url="/kvartiry/2-komnatnaya-n131.html" data-price="9 315 000" data-img="assets/galleries/135/6-etazh-2k-69.jpg" data-area="69.00" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="132" data-url="/kvartiry/2-komnatnaya-n132.html" data-price="9 166 500" data-img="assets/galleries/133/6-etazh-2k-67-9.jpg" data-area="67.90" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="133" data-url="/kvartiry/2-komnatnaya-n133.html" data-price="8 734 500" data-img="assets/galleries/129/6-etazh-2k-64-7.jpg" data-area="64.70" data-floor="6">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="134" data-url="/kvartiry/2-komnatnaya-n134.html" data-price="8 775 000" data-img="assets/galleries/131/6-etazh-2k-65.jpg" data-area="65.00" data-floor="6">2</a>
+                                                    <a href="#" class="hold" data-name="Студия" data-nmb="135" data-url="/kvartiry/studiya-n-135.html" data-price="6 220 500" data-img="assets/galleries/119/6-etazh-1k-42-9.jpg" data-area="42.90" data-floor="6">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="122" data-url="/kvartiry/1-komnatnaya-n122.html" data-price="0" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="5">1</a>
+                                                    <a href="#" class="sold" data-name="3-комнатная" data-nmb="123" data-url="/kvartiry/3-komnatnaya-n123.html" data-price="0" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="5">3</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="124" data-url="/kvartiry/2-komnatnaya-n124.html" data-price="0" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="125" data-url="/kvartiry/2-komnatnaya-n125.html" data-price="0" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="126" data-url="/kvartiry/2-komnatnaya-n126.html" data-price="0" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="127" data-url="/kvartiry/2-komnatnaya-n127.html" data-price="0" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="5">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="128" data-url="/kvartiry/studiya-n-128.html" data-price="0" data-img="assets/galleries/39/2-etazh-1k-43-4.jpg" data-area="43.40" data-floor="5">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="115" data-url="/kvartiry/1-komnatnaya-n115.html" data-price="7 105 000" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="4">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="116" data-url="/kvartiry/3-komnatnaya-n116.html" data-price="1 169 920" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="4">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="117" data-url="/kvartiry/2-komnatnaya-n117.html" data-price="9 177 000" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="4">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="118" data-url="/kvartiry/2-komnatnaya-n118.html" data-price="0" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="119" data-url="/kvartiry/2-komnatnaya-n119.html" data-price="8 605 100" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="120" data-url="/kvartiry/2-komnatnaya-n120.html" data-price="8 645 000" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="4">2</a>
+                                                    <a href="#" class="on-sale" data-name="Студия" data-nmb="121" data-url="/kvartiry/studiya-n-121.html" data-price="6 091 800" data-img="assets/galleries/69/3-5-etazh-1k-42-9.jpg" data-area="42.90" data-floor="4">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="sold" data-name="1-комнатная" data-nmb="108" data-url="/kvartiry/1-komnatnaya-n108.html" data-price="0" data-img="assets/galleries/81/3-5-etazh-1k-49.jpg" data-area="49.00" data-floor="3">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="109" data-url="/kvartiry/3-komnatnaya-n109.html" data-price="11 607 800" data-img="assets/galleries/113/3-5-etazh-3k-91-4.jpg" data-area="91.40" data-floor="3">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="110" data-url="/kvartiry/2-komnatnaya-n110.html" data-price="8 970 000" data-img="assets/galleries/101/3-5-etazh-2k-69.jpg" data-area="69.00" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="111" data-url="/kvartiry/2-komnatnaya-n111.html" data-price="8 827 000" data-img="assets/galleries/97/3-5-etazh-2k-67-9.jpg" data-area="67.90" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="112" data-url="/kvartiry/2-komnatnaya-n112.html" data-price="8 411 000" data-img="assets/galleries/89/3-5-etazh-2k-64-7.jpg" data-area="64.70" data-floor="3">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="113" data-url="/kvartiry/2-komnatnaya-n113.html" data-price="8 450 000" data-img="assets/galleries/93/3-5-etazh-2k-65.jpg" data-area="65.00" data-floor="3">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="114" data-url="/kvartiry/studiya-n-114.html" data-price="0" data-img="assets/galleries/69/3-5-etazh-1k-42-9.jpg" data-area="42.90" data-floor="3">С</a>
+                                            </div>
+                                            <div class="item-apartaments">
+                                                    <a href="#" class="on-sale" data-name="1-комнатная" data-nmb="101" data-url="/kvartiry/1-komnatnaya-n101.html" data-price="6 534 000" data-img="assets/galleries/45/2-etazh-1k-49-5.jpg" data-area="49.50" data-floor="2">1</a>
+                                                    <a href="#" class="on-sale" data-name="3-комнатная" data-nmb="102" data-url="/kvartiry/3-komnatnaya-n102.html" data-price="11 500 000" data-img="assets/galleries/61/2-etazh-3k-92.jpg" data-area="92.00" data-floor="2">3</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="103" data-url="/kvartiry/2-komnatnaya-n103.html" data-price="8 851 900" data-img="assets/galleries/55/2-etazh-2k-69-7.jpg" data-area="69.70" data-floor="2">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="104" data-url="/kvartiry/2-komnatnaya-n104.html" data-price="8 712 200" data-img="assets/galleries/53/2-etazh-2k-68-6.jpg" data-area="68.60" data-floor="2">2</a>
+                                                    <a href="#" class="sold" data-name="2-комнатная" data-nmb="105" data-url="/kvartiry/2-komnatnaya-n105.html" data-price="0" data-img="assets/galleries/49/2-etazh-2k-65-5.jpg" data-area="65.50" data-floor="2">2</a>
+                                                    <a href="#" class="on-sale" data-name="2-комнатная" data-nmb="106" data-url="/kvartiry/2-komnatnaya-n106.html" data-price="8 331 200" data-img="assets/galleries/51/2-etazh-2k-65-6.jpg" data-area="65.60" data-floor="2">2</a>
+                                                    <a href="#" class="sold" data-name="Студия" data-nmb="107" data-url="/kvartiry/studiya-n-107.html" data-price="0" data-img="assets/galleries/39/2-etazh-1k-43-4.jpg" data-area="43.40" data-floor="2">С</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="list-cat catalog__block" data-block="list">
+                                <div class="list-cat__inner">
+                                    <div class="list-cat__header">
+                                        <span>Чертёж</span>
+                                        <span>Компас</span>
+                                        <span>№</span>
+                                        <span>Этаж</span>
+                                        <span>Подъезд</span>
+                                        <span>Комнат</span>
+                                        <span class="list-cat__square">Площадь</span>
+                                        <span>Статус</span>
+                                        <span>Цена, руб</span>
+                                    </div>
+                                    <div class="custom-scroll list-cat__items">
+                                        <!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">124</span>
+        <span class="h6">18</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">123</span>
+        <span class="h6">6</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">122</span>
+        <span class="h6">9</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">121</span>
+        <span class="h6">7</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">120</span>
+        <span class="h6">3</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">45</span>
+        <span class="h6">2</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">По запросу</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">32</span>
+        <span class="h6">5</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">89</span>
+        <span class="h6">18</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">100</span>
+        <span class="h6">18</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a><!--item-list-->
+<a href="#" class="list-cat__item">
+    <div class="list-cat__preview">
+        <div class="list-cat__img">
+            <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+        </div>
+        <div class="list-cat__compass">
+            <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+        </div>    
+    </div>
+    <div class="list-cat__details">
+        <span class="h6">119</span>
+        <span class="h6">18</span>
+        <span class="h6">1</span>
+        <span class="h6">С</span>
+        <span class="h6 list-cat__square">45,5 м<sup>2</sup></span>
+        <span class="h6 list-cat__status list-cat__status--free">Свободно</span>
+        <span class="h6">4 452 000</span>
+    </div>
+</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog__btn list-cat__btn"><span>показать еще</span></a>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="catalog-cat catalog__block" data-block="cat">
+                                <div class="catalog-cat__items">
+                                    <!--item-catalog-->
+<div class="catalog-cat__item">
+    <a href="#" class="catalog-cat__main">
+        <div class="catalog-cat__preview">
+            <div class="catalog-cat__images">
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-1.webp" type="image/webp"><img src="img/cat-1.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-3.webp" type="image/webp"><img src="img/cat-3.png" alt=""></picture>
+                </div>
+            </div>
+            <div class="catalog-cat__hovers"></div>
+            <div class="catalog-compass">
+                <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+            </div>
+        </div>
+        <div class="catalog-cat__controls"></div>
+    </a>
+    <div class="catalog-cat__content">
+        <div class="catalog-cat__header">
+            <h5><a href="#"><span>1-комнатная</span><span>№ 124</span></a></h5>
+            <div class="h6 catalog-cat__status catalog-cat__status--free">Свободна</div>
+        </div>            
+        <h6><span>36 кв. м.</span><span>1 этаж</span></h6>
+        <div class="h5 catalog-cat__price">4 452 000 руб</div>
+        <div class="catalog-cat__btns">
+            <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить консультацию</span></button>
+            <a href="#" class="btn stroke-btn">подробнее</a>
+        </div>
+    </div>
+</div><!--item-catalog-->
+<div class="catalog-cat__item">
+    <a href="#" class="catalog-cat__main">
+        <div class="catalog-cat__preview">
+            <div class="catalog-cat__images">
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-1.webp" type="image/webp"><img src="img/cat-1.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-3.webp" type="image/webp"><img src="img/cat-3.png" alt=""></picture>
+                </div>
+            </div>
+            <div class="catalog-cat__hovers"></div>
+            <div class="catalog-compass">
+                <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+            </div>
+        </div>
+        <div class="catalog-cat__controls"></div>
+    </a>
+    <div class="catalog-cat__content">
+        <div class="catalog-cat__header">
+            <h5><a href="#"><span>3-комнатная</span><span>№ 24</span></a></h5>
+            <div class="h6 catalog-cat__status catalog-cat__status--free">Свободна</div>
+        </div>            
+        <h6><span>36 кв. м.</span><span>1 этаж</span></h6>
+        <div class="h5 catalog-cat__price">Цена по запросу</div>
+        <div class="catalog-cat__btns">
+            <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить консультацию</span></button>
+            <a href="#" class="btn stroke-btn">подробнее</a>
+        </div>
+    </div>
+</div><!--item-catalog-->
+<div class="catalog-cat__item">
+    <a href="#" class="catalog-cat__main">
+        <div class="catalog-cat__preview">
+            <div class="catalog-cat__images">
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-1.webp" type="image/webp"><img src="img/cat-1.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-3.webp" type="image/webp"><img src="img/cat-3.png" alt=""></picture>
+                </div>
+            </div>
+            <div class="catalog-cat__hovers"></div>
+            <div class="catalog-compass">
+                <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+            </div>
+        </div>
+        <div class="catalog-cat__controls"></div>
+    </a>
+    <div class="catalog-cat__content">
+        <div class="catalog-cat__header">
+            <h5><a href="#"><span>Студия</span><span>№ 34</span></a></h5>
+            <div class="h6 catalog-cat__status catalog-cat__status--free">Свободна</div>
+        </div>            
+        <h6><span>36 кв. м.</span><span>1 этаж</span></h6>
+        <div class="h5 catalog-cat__price">4 452 000 руб</div>
+        <div class="catalog-cat__btns">
+            <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить консультацию</span></button>
+            <a href="#" class="btn stroke-btn">подробнее</a>
+        </div>
+    </div>
+</div><!--item-catalog-->
+<div class="catalog-cat__item">
+    <a href="#" class="catalog-cat__main">
+        <div class="catalog-cat__preview">
+            <div class="catalog-cat__images">
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-1.webp" type="image/webp"><img src="img/cat-1.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-2.webp" type="image/webp"><img src="img/cat-2.png" alt=""></picture>
+                </div>
+                <div class="catalog-cat__img">
+                    <picture><source srcset="img/cat-3.webp" type="image/webp"><img src="img/cat-3.png" alt=""></picture>
+                </div>
+            </div>
+            <div class="catalog-cat__hovers"></div>
+            <div class="catalog-compass">
+                <svg><use xlink:href="img/icons/sprite.svg#compass"></use></svg>
+            </div>
+        </div>
+        <div class="catalog-cat__controls"></div>
+    </a>
+    <div class="catalog-cat__content">
+        <div class="catalog-cat__header">
+            <h5><a href="#"><span>1-комнатная</span><span>№ 124</span></a></h5>
+            <div class="h6 catalog-cat__status catalog-cat__status--free">Свободна</div>
+        </div>            
+        <h6><span>36 кв. м.</span><span>1 этаж</span></h6>
+        <div class="h5 catalog-cat__price">4 452 000 руб</div>
+        <div class="catalog-cat__btns">
+            <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить консультацию</span></button>
+            <a href="#" class="btn stroke-btn">подробнее</a>
+        </div>
+    </div>
+</div>
+                                </div>
+                                <a href="#" class="catalog__btn catalog-cat__btn"><span>показать еще</span></a>
+                            </div>
+                            <!--catalog__block-->
+                            <div class="catalog-plan catalog__block" data-block="plan">
+                                <div class="catalog-plan__swipers">
+                                    <div class="swiper catalog-plan__mainswiper">
+                                        <div class="swiper-wrapper">
+                                            <div data-src="img/galleries/plan-2-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-2-etazha.webp" type="image/webp"><img src="img/galleries/plan-2-etazha.jpg" alt="План 2 этажа"></picture>
+                                                </div>
+                                                <p class="h6">План 2 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-3-10-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-3-10-etazha.webp" type="image/webp"><img src="img/galleries/plan-3-10-etazha.jpg" alt="План 3-10 этажа"></picture>
+                                                </div>
+                                                <p class="h6">План 3-10 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-11-14-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-11-14-etazha.webp" type="image/webp"><img src="img/galleries/plan-11-14-etazha.jpg" alt="План 11-14 этажа"></picture>
+                                                </div>
+                                                <p class="h6">План 11-14 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-15-17-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-15-17-etazha.webp" type="image/webp"><img src="img/galleries/plan-15-17-etazha.jpg" alt="План 15-17 этажа"></picture>
+                                                </div>
+                                                <p class="h6">План 15-17 этажа</p>
+                                            </div>
+                                            <div data-src="img/galleries/plan-18-etazha.jpg" class="swiper-slide" data-fancy="plan" data-fit="contain">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-18-etazha.webp" type="image/webp"><img src="img/galleries/plan-18-etazha.jpg" alt="План 18 этажа"></picture>
+                                                </div>
+                                                <p class="h6">План 18 этажа</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper catalog-plan__thumbswiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-2-etazha.webp" type="image/webp"><img src="img/galleries/plan-2-etazha.jpg" alt="План 2 этажа"></picture>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-3-10-etazha.webp" type="image/webp"><img src="img/galleries/plan-3-10-etazha.jpg" alt="План 3-10 этажа"></picture>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-11-14-etazha.webp" type="image/webp"><img src="img/galleries/plan-11-14-etazha.jpg" alt="План 11-14 этажа"></picture>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-15-17-etazha.webp" type="image/webp"><img src="img/galleries/plan-15-17-etazha.jpg" alt="План 15-17 этажа"></picture>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="media-contain">
+                                                    <picture><source srcset="img/galleries/plan-18-etazha.webp" type="image/webp"><img src="img/galleries/plan-18-etazha.jpg" alt="План 18 этажа"></picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+        <a href="/" class="footer__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="403" height="155" viewBox="0 0 403 155" fill="none">
+                <g clip-path="url(#clip0_109_367)">
+                <path d="M403.001 64.1414H396.297V51.0669H393.56L385.719 64.1414H377.997L386.539 50.3383C385.891 50.1794 385.256 49.9277 384.648 49.57C383.048 48.6692 381.779 47.3048 380.84 45.49C379.915 43.6885 379.452 41.675 379.452 39.4893C379.452 37.3036 379.862 35.5152 380.682 33.8462C381.501 32.1771 382.678 30.8524 384.185 29.8854C385.283 29.1833 386.552 28.6932 388.007 28.415C389.461 28.1368 391.458 27.9911 394.01 27.9911H403.001V64.1414ZM396.297 44.6687V34.4025H393.957C392.092 34.4025 390.598 34.5217 389.448 34.7734C388.43 35.0516 387.636 35.6212 387.055 36.4955C386.473 37.3698 386.182 38.4163 386.182 39.6217C386.182 40.708 386.46 41.6617 387.055 42.4698C387.636 43.2911 388.417 43.8342 389.395 44.1124C390.625 44.4833 392.238 44.6555 394.234 44.6555H396.284L396.297 44.6687ZM366.653 27.9911H373.449V64.1414H366.798V39.0919C366.798 39.0919 361.575 47.4373 351.13 64.1547H344.334V28.0043H350.984V53.0407C350.984 53.0407 356.207 44.6952 366.653 28.0043V27.9911ZM323.059 43.9667H325.016C327.052 43.9667 328.586 43.8077 329.604 43.4898C330.556 43.2248 331.31 42.7082 331.852 41.9532C332.394 41.1981 332.672 40.3106 332.672 39.2773C332.672 38.1249 332.394 37.1446 331.839 36.3365C331.283 35.5152 330.516 34.9854 329.551 34.7072C328.599 34.482 327.184 34.376 325.307 34.376H323.072V43.9534L323.059 43.9667ZM316.355 64.1282V28.0043H325.294C327.766 28.0043 329.697 28.1368 331.111 28.415C332.526 28.6932 333.769 29.1701 334.84 29.8456C336.308 30.7994 337.432 32.0843 338.225 33.7004C339.018 35.3033 339.428 37.1313 339.428 39.1448C339.428 41.2908 338.979 43.2513 338.08 44.9867C337.18 46.7352 335.951 48.0599 334.404 48.9342C333.425 49.4773 332.249 49.8615 330.9 50.0734C329.551 50.2986 327.66 50.4046 325.228 50.4046H323.086V64.1414H316.382L316.355 64.1282ZM290.942 48.3778H298.677C298.677 48.3778 297.382 44.7217 294.816 37.4228C294.816 37.4228 293.534 41.0789 290.956 48.3778H290.942ZM277.112 64.1282C277.112 64.1282 282.123 52.0737 292.159 27.9779H297.421C297.421 27.9779 302.472 40.0324 312.561 64.1282H305.196C305.196 64.1282 303.913 61.0152 301.335 54.7892H288.496C288.496 54.7892 287.161 57.9022 284.49 64.1282H277.099H277.112ZM263.665 27.9779H270.342V57.73H275.71V71.2284H271.043C271.043 71.2284 270.58 68.8573 269.655 64.1282H245.233V28.0043H251.937V57.7565H263.678V28.0043L263.665 27.9779ZM231.508 27.9779H238.305V64.1282H231.654V39.0919C231.654 39.0919 226.431 47.4373 215.986 64.1547H209.189V28.0043H215.84V53.0407C215.84 53.0407 221.063 44.6952 231.508 28.0043V27.9779ZM215.1 18.2812H220.719C220.719 19.6059 220.97 20.5597 221.46 21.1293C221.962 21.7122 222.716 22.0036 223.747 22.0036C224.778 22.0036 225.545 21.7122 226.048 21.1293C226.537 20.5464 226.775 19.5927 226.775 18.2812H232.381C231.998 20.5464 231.032 22.2553 229.485 23.421C227.938 24.5999 226.021 25.1828 223.747 25.1828C221.473 25.1828 219.569 24.5999 217.995 23.421C216.435 22.2553 215.47 20.5332 215.086 18.2812H215.1ZM183.604 64.1282V28.0043H202.988V34.4158H190.295V42.9202H202.459V49.3183H190.295V57.7565H202.988V64.1547H183.604V64.1282ZM161.642 41.9134H163.784C165.82 41.9134 167.288 41.6352 168.2 41.0391C169.1 40.4563 169.562 39.5158 169.562 38.2043C169.562 35.7537 167.843 34.5217 164.379 34.5217H161.642V41.9002V41.9134ZM161.642 57.73H164.961C167.301 57.73 168.994 57.3591 170.065 56.6438C171.136 55.9152 171.665 54.7627 171.665 53.1599C171.665 51.557 171.096 50.3913 169.972 49.623C168.848 48.8547 167.129 48.4706 164.816 48.4706H161.642V57.7168V57.73ZM154.939 64.1282V28.0043H162.383C165.133 28.0043 167.196 28.1368 168.597 28.4018C169.986 28.6667 171.228 29.1568 172.339 29.8986C173.582 30.7464 174.534 31.8459 175.222 33.1838C175.909 34.535 176.253 36.0186 176.253 37.6347C176.253 39.3436 175.949 40.708 175.327 41.7545C174.719 42.8009 173.688 43.7017 172.247 44.4435C173.45 44.9469 174.375 45.4106 175.023 45.8609C175.671 46.2981 176.24 46.8809 176.755 47.583C177.839 49.0799 178.395 51.0139 178.395 53.3851C178.395 55.2926 177.958 57.0279 177.099 58.5911C176.24 60.1542 175.036 61.3861 173.476 62.2869C171.334 63.5321 168.359 64.1547 164.578 64.1547H154.952L154.939 64.1282ZM148.05 64.1282H111.266V28.0043H117.969V57.7565H126.313V28.0043H133.016V57.7565H141.359V28.0043H148.063V64.1547L148.05 64.1282Z" fill="#313534"/>
+                <path d="M399.958 143.619H402.973C402.417 144.692 401.902 145.527 401.426 146.136C400.963 146.732 400.394 147.289 399.733 147.779C397.935 149.196 395.793 149.911 393.32 149.911C391.324 149.911 389.512 149.448 387.873 148.547C386.233 147.633 384.951 146.388 383.999 144.798C383.06 143.209 382.597 141.447 382.597 139.526C382.597 137.605 383.06 135.896 383.999 134.32C384.924 132.757 386.207 131.512 387.82 130.598C389.446 129.684 391.218 129.233 393.149 129.233C395.37 129.233 397.366 129.816 399.112 130.982C400.87 132.148 402.14 133.724 402.946 135.698H399.958C399.191 134.399 398.226 133.406 397.049 132.717C395.872 132.015 394.563 131.671 393.109 131.671C390.914 131.671 389.076 132.439 387.556 133.962C386.048 135.486 385.295 137.353 385.295 139.579C385.295 141.804 386.061 143.632 387.582 145.156C389.116 146.666 390.98 147.434 393.201 147.434C394.603 147.434 395.819 147.143 396.838 146.547C397.869 145.964 398.9 144.984 399.932 143.606M366.413 129.697H369.084V138.493C369.084 138.493 372.086 135.552 378.088 129.697H381.539C381.539 129.697 378.274 132.876 371.715 139.248C371.715 139.248 374.994 142.639 381.539 149.435H378.062C378.062 149.435 375.074 146.335 369.097 140.135V149.435H366.426V129.71L366.413 129.697ZM344.993 138.029H360.08C359.63 136.069 358.731 134.519 357.356 133.379C355.981 132.24 354.355 131.671 352.437 131.671C350.52 131.671 348.96 132.253 347.585 133.419C346.21 134.585 345.35 136.122 344.98 138.029H344.993ZM362.737 140.453H344.927C345.033 142.4 345.826 144.056 347.32 145.407C348.814 146.759 350.573 147.447 352.596 147.447C354.09 147.447 355.478 147.037 356.748 146.202C358.017 145.381 358.916 144.295 359.472 142.944H362.248C361.521 145.023 360.278 146.706 358.52 147.991C356.761 149.276 354.804 149.925 352.662 149.925C351.234 149.925 349.872 149.66 348.59 149.117C347.294 148.587 346.183 147.845 345.258 146.918C344.332 145.99 343.605 144.878 343.063 143.579C342.521 142.295 342.256 140.93 342.256 139.499C342.256 137.618 342.706 135.896 343.618 134.32C344.517 132.757 345.747 131.512 347.307 130.611C348.867 129.71 350.586 129.26 352.464 129.26C354.341 129.26 356.206 129.737 357.832 130.704C359.472 131.671 360.714 132.982 361.574 134.625C362.01 135.459 362.314 136.32 362.486 137.181C362.658 138.056 362.751 139.155 362.751 140.466L362.737 140.453ZM341.569 149.435H338.752C338.752 149.435 336.372 143.871 331.626 132.73C331.626 132.73 329.232 138.294 324.459 149.435H321.643C321.643 149.435 324.472 142.851 330.118 129.71H333.12C333.12 129.71 335.936 136.28 341.582 149.435H341.569ZM319.223 149.435H316.552V132.121H304.93V149.435H302.259V129.71H319.223V149.435ZM275.682 149.435V129.71H279.834C279.834 129.71 282.122 135.049 286.71 145.725C286.71 145.725 288.997 140.387 293.585 129.71H297.724V149.435H295.066V132.624C295.066 132.624 292.66 138.228 287.86 149.435H285.559C285.559 149.435 283.153 143.831 278.367 132.624V149.435H275.696H275.682ZM261.574 131.671C259.419 131.671 257.621 132.426 256.193 133.936C254.752 135.446 254.051 137.34 254.051 139.619C254.051 141.897 254.778 143.738 256.246 145.222C257.713 146.706 259.565 147.447 261.786 147.447C264.007 147.447 265.739 146.706 267.128 145.249C268.516 143.791 269.217 141.924 269.217 139.658C269.217 137.393 268.503 135.419 267.061 133.923C265.633 132.426 263.809 131.684 261.574 131.684V131.671ZM261.786 129.22C263.703 129.22 265.422 129.67 266.969 130.571C268.516 131.472 269.719 132.717 270.592 134.293C271.464 135.883 271.901 137.658 271.901 139.619C271.901 142.573 270.949 145.037 269.045 146.984C267.154 148.931 264.748 149.911 261.852 149.911C259.869 149.911 258.07 149.474 256.471 148.573C254.871 147.686 253.601 146.454 252.702 144.878C251.803 143.301 251.34 141.539 251.34 139.592C251.34 136.598 252.319 134.121 254.289 132.161C256.259 130.2 258.758 129.233 261.773 129.233L261.786 129.22ZM235.183 129.697H237.854V138.493C237.854 138.493 240.855 135.552 246.858 129.697H250.309C250.309 129.697 247.043 132.876 240.485 139.248C240.485 139.248 243.764 142.639 250.309 149.435H246.831C246.831 149.435 243.843 146.335 237.867 140.135V149.435H235.196V129.71L235.183 129.697ZM218.02 129.697H220.678V149.421H218.02V133.485C218.02 133.485 214.027 138.797 206.028 149.421H203.357V129.697H206.028V145.633C206.028 145.633 210.021 140.321 218.02 129.697ZM206.53 122.504H209.188C209.188 124.517 210.127 125.537 211.991 125.537C213.855 125.537 214.807 124.531 214.807 122.504H217.465C217.201 124.08 216.592 125.246 215.64 126.028C214.702 126.796 213.485 127.193 211.991 127.193C210.497 127.193 209.294 126.796 208.342 126.028C207.39 125.246 206.781 124.08 206.517 122.504H206.53ZM189.249 131.671C187.094 131.671 185.295 132.426 183.867 133.936C182.439 135.446 181.725 137.34 181.725 139.619C181.725 141.897 182.453 143.738 183.92 145.222C185.388 146.706 187.239 147.447 189.46 147.447C191.682 147.447 193.414 146.706 194.802 145.249C196.19 143.791 196.891 141.924 196.891 139.658C196.891 137.393 196.177 135.419 194.749 133.923C193.321 132.426 191.497 131.684 189.262 131.684L189.249 131.671ZM189.46 129.22C191.378 129.22 193.096 129.67 194.643 130.571C196.19 131.472 197.394 132.717 198.266 134.293C199.139 135.883 199.575 137.658 199.575 139.619C199.575 142.573 198.623 145.037 196.719 146.984C194.829 148.931 192.422 149.911 189.526 149.911C187.543 149.911 185.745 149.474 184.145 148.573C182.545 147.686 181.276 146.454 180.377 144.878C179.478 143.301 179.015 141.539 179.015 139.592C179.015 136.598 179.993 134.121 181.963 132.161C183.933 130.2 186.432 129.233 189.447 129.233L189.46 129.22ZM178.327 149.421H175.511C175.511 149.421 173.131 143.858 168.384 132.717C168.384 132.717 165.991 138.281 161.218 149.421H158.401C158.401 149.421 161.231 142.838 166.877 129.697H169.865C169.865 129.697 172.681 136.267 178.327 149.421ZM153.298 129.697H155.955V149.421H153.298V133.485C153.298 133.485 149.304 138.797 141.305 149.421H138.634V129.697H141.305V145.633C141.305 145.633 145.298 140.321 153.298 129.697ZM122.41 129.697H125.081V138.638C125.081 138.638 127.673 135.658 132.856 129.697H136.201C136.201 129.697 133.398 132.903 127.779 139.301C127.779 139.301 130.582 142.679 136.201 149.435H132.856C132.856 149.435 130.264 146.282 125.081 139.976V149.435H122.41V139.976C122.41 139.976 119.819 143.129 114.636 149.435H111.277C111.277 149.435 114.08 146.057 119.7 139.301C119.7 139.301 116.897 136.095 111.277 129.697H114.636C114.636 129.697 117.227 132.677 122.41 138.638V129.697Z" fill="#313534"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M85.7857 44.5223C79.73 49.8607 74.0444 54.0467 69.0068 57.769C57.1332 66.5251 49.0544 72.4861 48.2875 85.3354V133.607C52.3468 127.871 58.4819 123.354 65.9392 117.843C71.8099 113.524 78.5267 108.557 85.7857 101.748V44.5223ZM42.8929 34.3753L10.8554 51.861L5.38144 54.8547V69.691C12.6404 76.4999 19.3573 81.4674 25.228 85.7858C32.6985 91.2965 38.8337 95.8136 42.8797 101.576V34.3753H42.8929ZM48.2875 68.8698C52.3468 63.1339 58.4819 58.6168 65.9392 53.0797C71.7834 48.7612 78.5267 43.7804 85.7857 37.0114V28.0036L48.2743 7.5109V68.8698H48.2875ZM5.39466 77.2019C11.4504 82.5404 17.136 86.7263 22.1472 90.4487C32.5531 98.1318 40.0765 103.669 42.2847 113.577C43.5672 119.313 42.8929 126.652 42.8929 132.361V149.423H9.08366C8.092 149.423 7.19289 149.012 6.53178 148.363C5.87066 147.714 5.38144 146.8 5.38144 145.807V77.2019H5.39466ZM91.1804 130.891V26.2683C91.1804 25.2218 90.6515 24.2415 89.7127 23.7249L47.005 0.397402C46.5819 0.145714 46.0927 0 45.5902 0C44.0961 0 42.8929 1.27169 42.8929 2.84805V27.9638L1.46767 50.5893C0.528889 51.0926 0 52.0861 0 53.1326V145.807C0 148.337 0.938778 150.642 2.60478 152.298C4.27078 153.967 6.55822 155 9.08366 155H82.0835C84.609 155 86.9096 153.967 88.5624 152.298C90.2152 150.629 91.1672 148.337 91.1672 145.807V130.878L91.1804 130.891ZM48.3536 149.436C49.3718 137.037 57.3844 131.116 69.0464 122.519C74.0576 118.783 79.7432 114.611 85.799 109.272V145.82C85.799 146.814 85.2965 147.714 84.6486 148.377C84.0007 149.039 83.0884 149.436 82.0967 149.436H48.3536Z" fill="#00A351"/>
+                <path d="M207.879 114.943V78.793H214.583V94.3844C214.583 94.3844 218.311 89.1917 225.769 78.793H233.821C233.821 78.793 229.299 84.7143 220.255 96.5436C220.255 96.5436 224.777 102.677 233.821 114.943H225.769C225.769 114.943 222.04 109.645 214.583 99.034V114.943H207.879ZM186.604 94.7818H188.561C190.597 94.7818 192.131 94.6228 193.149 94.3049C194.101 94.04 194.855 93.5233 195.41 92.7683C195.952 92.0132 196.23 91.1257 196.23 90.0924C196.23 88.94 195.952 87.9597 195.397 87.1649C194.842 86.3436 194.075 85.8137 193.11 85.5356C192.158 85.3104 190.743 85.2044 188.865 85.2044H186.631V94.7818H186.604ZM179.901 114.943V78.793H188.839C191.311 78.793 193.242 78.9254 194.657 79.2036C196.071 79.4686 197.314 79.9587 198.385 80.6343C199.853 81.588 200.977 82.873 201.77 84.4758C202.564 86.0787 202.96 87.9067 202.96 89.9202C202.96 92.0662 202.511 94.0267 201.612 95.762C200.712 97.5106 199.483 98.8353 197.936 99.7096C196.957 100.253 195.781 100.637 194.432 100.849C193.083 101.074 191.192 101.18 188.76 101.18H186.618V114.917H179.914L179.901 114.943ZM154.488 99.1929H162.223C162.223 99.1929 160.927 95.5368 158.362 88.2379C158.362 88.2379 157.079 91.894 154.501 99.1929H154.488ZM140.657 114.943C140.657 114.943 145.668 102.889 155.704 78.793H160.966C160.966 78.793 166.017 90.8475 176.106 114.943H168.741C168.741 114.943 167.459 111.83 164.88 105.604H152.041C152.041 105.604 150.706 108.717 148.035 114.943H140.644H140.657ZM111.291 114.943V78.793H136.889V114.943H130.185V85.2044H117.981V114.943H111.277H111.291Z" fill="#313534"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_109_367">
+                <rect width="403" height="155" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+        </a>
+        <div class="footer__department">
+            <div class="h6 footer__title">Отдел продаж:</div>
+            <div class="footer__contacts">
+                <div class="item-contact">
+                   <p class="page-lbl">Адрес</p>
+                   <p class="item-contact__address">г.Нижний Новгород, ул.Максима Горького, <span>д.262, офис 48</span></p>
+                </div>   
+                <div class="item-contact">
+                  <p class="page-lbl">Телефон</p>
+                  <p><a href="tel:88312248872" class="link">8(831)224 88 72</a></p>
+                  <p><a href="tel:89277252733" class="link">8 927 725 27 33</a></p>
+                </div> 
+                <div class="item-contact">
+                  <p class="page-lbl">Почта</p>
+                  <p><a href="mailto:bereg52sales@yandex.ru" class="link">bereg52sales@yandex.ru</a></p>
+                </div> 
+            </div>
+        </div>
+        <div class="footer__menu">
+            <nav class="menu">
+                <ul>                 
+                  <li><a href="#" class="page-lbl link">О застройщике</a></li>
+                  <li><a href="#" class="page-lbl link">Контакты</a></li>
+                  <li><a href="#" class="page-lbl link">Документы</a></li>
+                  <li><a href="#" class="page-lbl link">Ход строительства</a></li> 
+                  <li><a href="#" class="page-lbl link">Новости</a></li>  
+                </ul>
+              </nav>
+        </div>
+        <div class="question-form">
+            <div class="question-form__header">
+                <div class="h4 footer__title">Остались вопросы?</div>
+                <p>Оставьте заявку и мы перезвоним!</p>
+            </div>
+            <!--question-form-->
+<form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+    <div class="form__item">
+        <input type="text" placeholder="Имя">
+    </div>
+    <div class="form__item form__item--tel">
+        <input type="tel">
+        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+    </div>
+    <div class="form__footer">
+        <button type="submit" class="btn small-btn modal__btn">оставить заявку</button>
+        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+    </div>
+</form>
+        </div>
+    </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <p class="footer__privacy">Изображения, размещённые на данном сайте, носят исключительно информационный характер</p>
+            <div class="footer__left">
+                <p class="footer__copy">© Швейцария парк 2023</p>
+                <p><a href="#">Политика конфиденциальности</a></p>
+                <p><a href="#">Обработка персональных данных</a></p>
+            </div>
+            <div class="footer__dev">
+                <span>Разработано в</span>
+                <noindex>
+                    <a href="#" rel="nofollow" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="63" height="27" viewBox="0 0 63 27" fill="none">
+                            <path d="M15.1745 23.8819H17.4953V26.1544C16.8335 26.7175 16.0751 27 15.2195 27C14.6619 27 14.1665 26.8765 13.734 26.632C13.3125 26.3981 12.9671 26.0498 12.7384 25.6278C12.5074 25.2035 12.3923 24.7275 12.3923 24.1991C12.3923 23.8249 12.4624 23.4661 12.6039 23.1251C12.7439 22.7842 12.9368 22.487 13.1802 22.2325C13.4237 21.9779 13.7216 21.7768 14.0747 21.6271C14.432 21.4765 14.8166 21.4001 15.2048 21.4026C15.6613 21.4026 16.0517 21.462 16.3745 21.5808C16.7137 21.7091 17.0276 21.8954 17.3017 22.1315L16.6927 22.8528C16.485 22.6725 16.2508 22.5248 15.9981 22.4147C15.7687 22.3183 15.4918 22.2705 15.1659 22.2705C14.8393 22.2705 14.539 22.3576 14.2668 22.5319C13.9941 22.7052 13.7733 22.948 13.6274 23.2348C13.4734 23.5302 13.3972 23.8519 13.3972 24.1991C13.3972 24.5693 13.4734 24.9 13.6251 25.1916C13.7776 25.484 13.9953 25.7131 14.2784 25.8805C14.5607 26.0479 14.8851 26.1322 15.2506 26.1322C15.7655 26.1322 16.2058 25.9957 16.5706 25.7242V24.7087H15.1745V23.8819ZM61.2462 21.4927H62.346L60.1764 24.7505V26.9059H59.2177V24.7727L57.0524 21.4927H58.1825L59.7053 23.8894L61.2462 21.4927ZM17.9503 8.24802C17.9503 9.8256 17.5645 11.2422 16.7914 12.4966C16.0191 13.7509 14.9512 14.7314 13.5886 15.4372C12.2243 16.1431 10.6874 16.496 8.9748 16.496C7.26366 16.496 5.72601 16.1431 4.36256 15.4372C2.99912 14.7314 1.93121 13.7509 1.15888 12.4966C0.386548 11.2422 0 9.8256 0 8.24802C0 6.67044 0.386548 5.25502 1.15888 3.9999C1.93121 2.74556 2.9991 1.76584 4.36332 1.05921C5.72599 0.35335 7.26366 0 8.97552 0C10.6867 0 12.2243 0.35335 13.5878 1.05921C14.9512 1.76584 16.0191 2.74556 16.7914 3.9999C17.5645 5.25502 17.9503 6.67044 17.9503 8.24802ZM12.0727 6.16392C11.7538 5.5699 11.326 5.11226 10.7878 4.78903C10.2418 4.46405 9.61536 4.29635 8.9787 4.30463C8.3121 4.30463 7.70934 4.46658 7.1703 4.78903C6.6321 5.11226 6.20352 5.57066 5.88698 6.16392C5.56809 6.75792 5.40789 7.45194 5.40789 8.24802C5.40789 9.04416 5.56733 9.73932 5.88622 10.3333C6.20358 10.9265 6.6321 11.3846 7.1703 11.7078C7.70934 12.0302 8.3121 12.1918 8.9787 12.1918C9.64602 12.1918 10.2488 12.0302 10.7878 11.7078C11.326 11.3838 11.7538 10.9265 12.0727 10.3333C12.3916 9.73932 12.5502 9.04494 12.5502 8.24802C12.5502 7.45194 12.3916 6.75714 12.0727 6.16392ZM4.18601 21.455L6.58698 26.9051H5.57276L5.02057 25.5999H2.43677L1.87291 26.9051H0.889764L3.29388 21.455H4.18601ZM4.6651 24.7584L3.72089 22.5907L2.78446 24.7584H4.6651ZM60.1326 0.348047H62.4072V16.1435H60.1326V0.348047ZM25.1549 26.0636H28.2792V26.9059H24.1959V21.4927H28.2411V22.3345H25.1549V23.7614H27.8911V24.6025H25.1549V26.0636ZM49.8805 25.9577C50.1185 25.842 50.365 25.6646 50.6217 25.4278L51.2392 26.0489C51.0562 26.239 50.8536 26.4093 50.6349 26.5578C50.4358 26.6905 50.1993 26.797 49.9263 26.878C49.6533 26.959 49.3508 27 49.021 27C48.4999 27 48.027 26.8766 47.6008 26.6297C47.1815 26.3893 46.8365 26.0398 46.6029 25.6191C46.3612 25.1854 46.2371 24.6969 46.2428 24.2013C46.2395 23.4661 46.5206 22.7576 47.0284 22.2219C47.2819 21.9635 47.5863 21.7594 47.9228 21.623C48.2828 21.4744 48.6692 21.3997 49.0591 21.4026C49.5289 21.4026 49.931 21.4742 50.2655 21.6185C50.5999 21.7627 50.911 21.9696 51.1972 22.2403L50.5835 22.9447C50.3684 22.7438 50.1247 22.5755 49.8602 22.4449C49.6074 22.3267 49.3308 22.267 49.0513 22.2705C48.7106 22.2705 48.4019 22.3561 48.1258 22.5281C47.8502 22.6981 47.6267 22.9393 47.4794 23.2261C47.3237 23.5277 47.2444 23.8625 47.2484 24.2013C47.2484 24.739 47.4196 25.1948 47.7633 25.5698C48.1055 25.9447 48.5357 26.1322 49.0513 26.1322C49.3663 26.1322 49.6424 26.0735 49.8805 25.9577ZM53.4621 0.348047H56.4099V16.1435H54.0571L45.241 5.44784V16.1435H42.2932V0.348047H44.646L53.4621 11.0437V0.348047ZM38.6797 21.4927H39.6223V26.9051H38.8204L35.8151 23.0558V26.9051H34.8724V21.4927H35.7614L38.6797 25.2371V21.4927ZM38.9869 16.1435H34.8024L34.7566 7.87176L30.6716 14.6056H28.6736L24.6112 8.09472V16.1435H20.4734V0.348047H24.1803L29.7749 9.4647L35.2342 0.348047H38.9402L38.9869 16.1435Z" fill="#161616"/>
+                        </svg>
+                    </a>
+                </noindex>
+            </div>        
+        </div>
+    </div>  
+</footer>
+        <!--feedback-modal-->
+<div class="modal" id="feedback-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="modal__top">
+                <h3>Заявка<br>на консультацию</h3>
+                <div class="modal__img"><picture><source srcset="img/house-left-sm.webp" type="image/webp"><img src="img/house-left-sm.png" alt=""></picture></div>
+                
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в ближайшее время и обсудим все детали</h6>
+                <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                    <div class="form__item error">
+                        <input type="text" placeholder="Имя">
+                        <div class="form-error">Заполните имя</div>
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input type="tel">
+                        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn"><span>оставить заявку</span></button>
+                        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--question-modal-->
+<div class="modal" id="question-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <div class="modal__top">
+                <h3>Остались<br>вопросы?</h3>
+                <div class="modal__img"><picture><source srcset="img/house-left-sm.webp" type="image/webp"><img src="img/house-left-sm.png" alt=""></picture></div>
+                
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в течение 5 мин и ответим на все вопросы</h6>
+                <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                    <div class="form__item">
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input type="tel">
+                        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn"><span>оставить заявку</span></button>
+                        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <h3>Заявка<br>отправлена!</h3>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно"></button>
+            <h3>Упс! Заявка<br>не отправилась</h3>
+            <p>Попробуйте снова</p>
+        </div>
+    </div>
+</div>
+<!--fixed button-->
+<button class="btn main-btn fixed-btn modal-show-btn" data-modal="#question-modal">
+    <img src="img/icons/fixed-but.svg" alt="">
+    <span>Получить консультацию</span>
+</button>
+        <!--scheme-popup-->
+        <div class="modal mob-modal scheme-popup">
+            <button type="button" class="modal__close"></button>
+            <div class="modal__overlay scheme-popup__inner">
+                <div class="modal__content scheme-popup__content">
+                    <button type="button" class="modal__close"></button>
+                    <div class="modal__scroll">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--scripts-->
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

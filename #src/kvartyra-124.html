@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {
+"title": "1-комнатная №124"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header-nobtn.html')
+        <!--main-->
+        <main class="main">
+            <!--breadcrumbs-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li><a href="#" class="link">Главная</a></li>
+                        <li><a href="#" class="link">Выбор квартиры</a></li>
+                        <li class="active">1-комнатная №124</li>
+                    </ul>
+                </div>
+            </div>
+            <!--flat section-->
+            <section class="flat">
+                <div class="container">
+                    <!--flat-mainswiper-->
+                    <div class="flat__preview">
+                        <div class="flat__images">
+                            <div class="swiper flat__mainswiper">
+                                <div class="swiper-wrapper">
+                                    <div class="media-contain swiper-slide" data-src="img/plan-1.png" data-fit="contain"
+                                        data-fancy="flat-gallery">
+                                        <img src="img/plan-1.png" alt="">
+                                    </div>
+                                    <div class="media-contain swiper-slide" data-src="img/plan-2.png" data-fit="contain"
+                                        data-fancy="flat-gallery">
+                                        <img src="img/plan-2.png" alt="">
+                                    </div>
+                                    <div class="media-contain swiper-slide" data-src="img/plan-3.png" data-fit="contain"
+                                        data-fancy="flat-gallery">
+                                        <img src="img/plan-3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flat__compass">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#compass"></use>
+                                </svg>
+                            </div>
+                            <button class="flat__btn"></button>
+                        </div>
+                        <!--flat-thumbswiper-->
+                        <div class="swiper flat__thumbswiper">
+                            <div class="swiper-wrapper">
+                                <a class="media-contain swiper-slide">
+                                    <img src="img/plan-1.png" alt="">
+                                </a>
+                                <a class="media-contain swiper-slide">
+                                    <img src="img/plan-2.png" alt="">
+                                </a>
+                                <a class="media-contain swiper-slide">
+                                    <img src="img/plan-3.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--flat-info-->
+                    <div class="info-flat">
+                        <h1 class="h2">1-комнатная №124</h1>
+                        <div class="h3 info-flat__price">4 560 482 руб</div>
+                        <div class="info-flat__items">
+                            <div class="info-flat__item">
+                                <div class="h6 info-flat__lbl"><span>Общая площадь</span></div>
+                                <div class="h6">45 кв. м.</div>
+                            </div>
+                            <div class="info-flat__item info-flat__item--gray">
+                                <div class="h6 info-flat__lbl"><span>Кухня</span></div>
+                                <div class="h6">10 кв. м.</div>
+                            </div>
+                            <div class="info-flat__item info-flat__item--gray">
+                                <div class="h6 info-flat__lbl"><span>Ванна</span></div>
+                                <div class="h6">10 кв. м.</div>
+                            </div>
+                            <div class="info-flat__item info-flat__item--gray">
+                                <div class="h6 info-flat__lbl"><span>Комната</span></div>
+                                <div class="h6">10 кв. м.</div>
+                            </div>
+                            <div class="info-flat__item">
+                                <div class="h6 info-flat__lbl"><span>Цена за м2</span></div>
+                                <div class="h6">117 000 руб</div>
+                            </div>
+                            <div class="info-flat__item">
+                                <div class="h6 info-flat__lbl"><span>Этаж</span></div>
+                                <div class="h6">14</div>
+                            </div>
+                            <div class="info-flat__item">
+                                <div class="h6 info-flat__lbl"><span>Подъезд</span></div>
+                                <div class="h6">1</div>
+                            </div>
+                        </div>
+                        <div class="info-flat__btns">
+                            <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить
+                                    консультацию</span></button>
+                            <a download href="#" class="btn stroke-btn">скачать PDF</a>
+                        </div>
+                        <div class="info-flat__share">
+                            <p>Поделиться:</p>
+                            <script src="https://yastatic.net/share2/share.js"></script>
+                            <div class="ya-share2" data-curtain data-shape="round"
+                                data-services="vkontakte,odnoklassniki,telegram,viber,whatsapp"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Контакты"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {   
+                "page": "Контакты"
+            })
+            <!--contacts section-->
+            <section class="contacts">
+                <div class="container contacts__top">
+                    <h1 class="h2">Контакты</h1>
+                </div>
+                <div class="contacts__inner">
+                    <div class="container">
+                        <div class="info-contacts">
+                            <div class="info-contacts__header">
+                                <h2>Адрес ЖК</h2>
+                                <p class="h5">г.Нижний Новгород,<span>проспект Гагарина, 144</span></p>
+                            </div>
+                            <h2>Отдел продаж</h2>
+                            <div class="info-contacts__cols">
+                                <div class="info-contacts__col info-contacts__col--address">
+                                    <p class="h6">Адрес офиса</p>
+                                    <p class="h5">г.Нижний Новгород, ул.Максима Горького, д.262, офис 48</p>
+                                </div> 
+                                <div class="info-contacts__col info-contacts__col--address">
+                                    <p class="h6">Телефон офиса</p>
+                                    <p class="h5"><a class="link" href="tel:88312248872">8(831)224 88 72</a></p>
+                                </div> 
+                                <div class="info-contacts__col">
+                                    <p class="h6">Режим работы</p>
+                                    <h5>9-18 Пн-Пт</h5>
+                                </div> 
+                                <div class="info-contacts__col">
+                                    <p class="h6">Телефоны для связи</p>
+                                    <p class="h5"><a class="link" href="tel:88312248872">8(831)224 88 72</a></p>
+                                    <p class="h5"><a class="link" href="tel:89277252733">8 927 725 27 33</a></p>                                                                     
+                                </div>   
+                                <div class="info-contacts__col">
+                                    <p class="h6">Почта</p>
+                                    <p class="h5"><a class="link" href="mailto:bereg52sales@yandex.ru">bereg52sales@yandex.ru</a></p>                                
+                                </div>                             
+                            </div>
+                        </div>
+                         <!--map-->
+                    <div class="map" id="map"></div>
+                    </div>
+                </div>
+                <!--other-contacts-->
+                <div class="other-contacts">
+                    <div class="container">
+                        <h2>Другие контакты</h2>
+                        <div class="other-contacts__items">
+                            <div class="other-contacts__item">
+                                <p class="h5">Застройщик</p>
+                                <p class="page-lbl">Почта</p>
+                                <p class="h6"><a class="link" href="tel:89277252733">mailto:riversidev21@gmail.com</a></p>  
+                            </div>
+                            <div class="other-contacts__item">
+                                <p class="h5">Отдел утилизации</p>
+                                <p class="page-lbl">Почта</p>
+                                <p class="h6"><a class="link" href="tel:89277252733">mailto:riversidev21@gmail.com</a></p>  
+                            </div>
+                            <div class="other-contacts__item">
+                                <p class="h5">Отдел маркетинга</p>
+                                <p class="page-lbl">Почта</p>
+                                <p class="h6"><a class="link" href="tel:89277252733">mailto:riversidev21@gmail.com</a></p>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU"></script>
+    <script>
+        let center = [56.2633, 43.9757];
+        
+        function init() {
+            let map = new ymaps.Map('map', {
+              center: center,
+              zoom: 17,
+              controls: []
+            });
+            let placemark = new ymaps.Placemark([56.2629, 43.9751], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icons/map-mark.svg',
+                iconImageSize: [100, 140],
+                iconImageOffset: [-50, -140]
+            })
+            map.geoObjects.add(placemark)
+        }
+        
+        ymaps.ready(init);
+    </script>
+</body>
+
+</html>

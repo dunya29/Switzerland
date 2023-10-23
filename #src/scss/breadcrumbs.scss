@@ -1,0 +1,48 @@
+.breadcrumbs {
+    margin: 32px 0 40px;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+            margin: 8px 10px 0 0;
+            font-size: 14px;
+            line-height: 1;
+            color: rgba($main-color, 0.6);
+            display: flex;
+            align-items: center;
+            &.active {
+                color: $green;
+            }
+            &:before {
+                content: "";
+                flex: 0 0 8px;
+                width: 8px;
+                height: 8px;
+                border: 1px solid rgba($main-color, 0.6);
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            &.active:before {
+                border-color: $green;
+            }
+            &:first-child:before {
+                display: none;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            a {          
+                color: inherit;
+                &:after {
+                    background: rgba($main-color, 0.6);
+                }
+            }
+        }
+    }
+    @media (max-width:$bp3) {
+        ul li {
+            font-size: 12px;
+        }
+    }
+}

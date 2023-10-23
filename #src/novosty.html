@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html', {   
+    "title": "Новости"
+})
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {   
+                "page": "Новости"
+            })
+            <!--news section-->
+            <section class="news">
+                <div class="container">
+                   <h1 class="h2">Новости</h1>
+                   <div class="news__items">
+                    @@loop('_item-news.html', [
+                        { "date": "20.12.23" },
+                        { "date": "19.12.23" },
+                        { "date": "18.12.23" },
+                        { "date": "17.12.23" },
+                        { "date": "16.12.23" },
+                    ])
+                   </div>
+                </div>
+            </section> 
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

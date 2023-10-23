@@ -1,0 +1,55 @@
+@import "null";
+@import "vars";
+@import "general";
+@import "modal";
+@import "nouislider";
+@import "header";
+@import "breadcrumbs";
+@import "intro";
+@import "info";
+@import "improvements";
+@import "features";
+@import "infra";
+@import "main-map";
+@import "advant";
+@import "views";
+@import "cards";
+@import "news";
+@import "building";
+@import "privacy";
+@import "404";
+@import "about";
+@import "docs";
+@import "contacts";
+@import "flat";
+@import "catalog";
+@import "cat-wrapper";
+@import "choice";
+@import "footer";
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+.fancybox__backdrop {
+    background: rgba(49, 53, 52, 0.4);
+    backdrop-filter: blur(2.5px);
+}
+.fancybox__footer {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+.f-button {
+    background: none;
+    svg {
+        stroke: #ffff;
+    }
+}
+.fancybox__toolbar {
+    --f-button-hover-bg: none; 
+    --f-button-active-bg: none;
+}
+.fancybox__nav {
+    --f-button-hover-bg: none;
+    --f-button-active-bg: none;
+}
+.fancybox__container {--fancybox-slide-gap: 32px;}

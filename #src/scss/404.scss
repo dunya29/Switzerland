@@ -1,0 +1,66 @@
+.notfound {
+    width: 95.2%;
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 70px!important;
+    h1 {
+        font-weight: 700;
+        color: $green;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    .container {
+        margin-bottom: 50px;
+    }
+    &__img {
+        margin-bottom: 65px;
+        border-bottom: 15px solid $white;
+        img {
+            max-width: 77.69%;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: $bp1) {
+        max-width: none;
+        &__img {
+            margin-bottom: 44px;
+            border-bottom: 10px solid $white;
+            img {
+                max-width: 78.25%;
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        width: calc(100% - 18px);
+        &__img {
+            margin-bottom: 39px;
+            border-bottom: 6px solid $white;
+        }
+        .small-btn {
+            min-width: 344px;
+        }
+    }
+    @media (max-width: $bp4) {
+        width: 100%;
+        margin-bottom: 50px!important;
+        h1 {
+            max-width: 195px;
+            margin: 0 auto 40px;
+        }
+        &__img {
+            border-width: 4px;
+            img {
+                width: 104%;
+                max-width: 104%;
+                position: relative;
+                left: -2%;
+            }
+        }
+    }
+    @media (max-width: $bp5) {
+        .small-btn {
+            min-width: 0;
+            width: 100%;
+        }
+    }
+}

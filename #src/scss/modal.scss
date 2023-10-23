@@ -1,0 +1,528 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: hidden;
+    &.open {
+        display: block!important;
+    }
+    h3 {
+        color: $white;
+    }
+    &__overlay {
+        padding: 40px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(49, 53, 52, 0.4);
+        backdrop-filter: blur(2.5px);
+        opacity: 0;
+        transition: all .3s .2s linear;
+        overflow: auto;
+        &.open {
+            opacity: 1;
+            transition: all .3s linear;
+        }
+    }
+    &__content {
+        width: 100%;
+        max-width: 530px;
+        margin: auto;
+        background: $white;
+        border-radius: 20px 80px 20px 20px;
+        position: relative;
+    }
+    &__close {
+        width: 26px;
+        height: 26px;
+        background: url(../img/icons/popup-close.svg) center no-repeat;
+        cursor: pointer;
+        position: absolute;
+        right: -13px;
+        top: -13px;
+        z-index: 2;
+    }
+    &__scroll {
+        overflow: auto;
+    }
+    &__top {
+        height: 164px;
+        background: $light-blue;
+        border-radius: 0px 80px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h3 {
+            position: relative;
+            z-index: 3;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(49, 53, 52, 0) 31.32%, rgba(49, 53, 52, 0.5) 100%);
+            border-radius: 0px 80px;
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        border-radius: 0 0 0 80px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            left: 50px;
+            bottom: -10px;
+            max-width: 30%;
+        }
+    }
+    &__form {
+        padding: 25px 68px 50px;
+        text-align: center;
+        h6 {
+            margin-bottom: 16px;
+        }
+        .form {
+            padding: 0 22px;
+        }
+        .form__item {
+            margin-bottom: 15px;
+        }
+        input {
+            background: rgba($green, 0.1);     
+        }
+        input::placeholder {
+            color: $main-color;
+        }
+        .form__txt {
+            margin: 0 auto;
+        }
+        .form__txt a {
+            color: #00A3A3;
+        }
+        .btn {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    @media (max-width: $bp1) {
+        &__content {
+            max-width: 520px;
+        }
+        &__form {
+            padding: 25px 85px 50px;
+            .form {
+                padding: 0;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__content {
+            max-width: 401px;
+        }    
+        &__form {
+          padding: 25px 50px 50px;  
+        }    
+    }
+    @media (max-width: $bp4) {
+        &__content {
+            max-width: 335px;
+        }  
+        &__top {
+            height: 128px;
+            border-radius: 0px 50px;
+            h3 {
+                font-size: 24px;
+            }
+            &:after {
+                border-radius: 0px 50px;
+            }
+        }      
+        &__form {
+          padding: 25px 17px 40px;  
+        } 
+        &__img {
+            border-radius: 0 50px;
+        }
+        &__img img {
+            max-width: 34.5%;
+            left: 15px;
+        }  
+        &__close {
+            right: 0;
+            top: -36px;
+        }    
+    }
+}
+.success-modal,
+.error-modal {
+    .modal__content {
+        height: 350px;
+        border-radius: 0 80px;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        p {
+            margin-top: 10px;
+            color: $white;
+        }
+    } 
+    @media (max-width: $bp1) {
+        .modal__content {
+           height: 320px;
+        }
+    }
+    @media (max-width: $bp4) {
+        .modal__content {
+            height: 230px;
+            border-radius: 0 50px;
+        } 
+    }
+}
+.success-modal{
+    .modal__content {
+        background: url(../img/success-form.svg) bottom right /contain no-repeat, $light-blue;
+    } 
+}
+.error-modal {
+    .modal__content {
+        background: url(../img/error-form.svg) center right/contain no-repeat, $light-blue;
+        @media (max-width: $bp4) {
+            background-position: center right -30px;
+        }
+    } 
+}
+.scheme-popup {
+     display: none;
+     width: 331px;
+     box-shadow: 0px 16px 26px -11px rgba(0, 0, 0, 0.25);   
+     position: fixed;
+     left: 0;
+     top: 0;
+     right: auto;
+     bottom: auto;
+     z-index: 1000;
+     &__inner{
+         padding: 20px;
+         background: #FFFFFF;
+         border-radius: 4px;
+     }
+     &__header {
+         h5, h6 {
+             display: flex;
+             flex-wrap: wrap;
+             column-gap: 20px;
+             margin-bottom: 10px;
+         }
+         h5 {
+             justify-content: space-between;
+         }
+         h6 span {
+             color: rgba($main-color, 0.6);
+         }
+     }
+     &__preview {
+        display: block;
+         min-height: 65px;
+         position: relative;
+         background: rgba($main-color, 0.05);
+         border-radius: 10px;
+         margin-bottom: 20px;
+         overflow: hidden;
+         img {
+             width: 100%;
+             height: auto
+         }
+     }
+     &__price {
+         font-weight: 700;
+         color: $black-green;
+     }
+     .stroke-btn {
+        display: none;
+     }
+     @media (max-width: $bp2) {
+        box-shadow: none;
+        width: 100%;
+        left: 0!important;
+        top: 0!important;
+        &__header, &__preview {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__footer {
+           text-align: center;
+        }
+        .stroke-btn {
+           display: inline-flex;
+           margin-top: 20px;
+        }
+     }
+     @media (max-width: $bp4) {
+        .stroke-btn {
+            width: auto;
+        }
+        h5,.h5 {
+            font-size: 22px;
+        }
+        h6,.h6 {
+            font-size: 18px;
+        }
+     }
+}
+.map-modal {
+    .modal__overlay {
+        padding: 0;
+        img, iframe, video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .modal__content {
+        max-width: 100%;
+        height: 100%;
+    }
+    .modal__close {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        color: #ffffff;
+        padding: 16px 20px 16px 55px;
+        background: url(../img/icons/popup-close.svg) left 20px center/20px 20px no-repeat, $black-green;
+        white-space: nowrap;
+        border-radius: 10px;
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        transition: all .3s ease-out;
+        &:hover {
+            transform: translateX(50%) translateY(-10px);
+        }
+    }
+    @media (max-width: 370px) {
+        .modal__close {
+            background-size: 15px 15px;
+        }
+    }
+}
+.fixed-btn {
+    height: 70px;
+    border-radius: 35px 0px 0px 0px;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    z-index: 900;
+    box-shadow: none;
+    &:after {
+        border-radius: 35px 0px 0px 0px;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        position: relative;
+        z-index: 3;
+    }
+    &.show {
+        transform: translateY(0%);
+    }
+    @media (max-width: $bp4) {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 50%;
+        right: 20px;
+        bottom: 112px;
+        transform: translateY(0%) translateX(calc(100% + 20px));
+        span {
+            display: none;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+        }
+        &.show {
+            transform: translateX(0%);
+        }
+        &:after {
+            border-radius: 50%;
+        }
+    }
+}
+.mob-modal {
+    height: auto;
+    .modal__overlay {   
+        height: auto;
+        position: static;
+        opacity: 1;
+        backdrop-filter: none;
+    }  
+    .modal__close {
+        display: none;
+        pointer-events: none;
+    }
+    @media (max-width: $bp2) {
+        height: 100%;
+        .modal__overlay {        
+            position: absolute;
+            opacity: 0; 
+            background: rgba($main-color, 0.4);    
+            padding: 100px 0 0;
+            align-items: flex-end;
+            overflow: auto;
+            transition-delay: .3s;
+            border-radius: 0;
+            overflow: hidden;
+            &.open {
+                opacity: 1;
+                transition-delay: 0s;
+                .modal__content {
+                    transform: translateY(0%);
+                }
+                .modal__close {
+                    opacity: 1;
+                    transition: all .3s .3s;
+                }
+            }
+        }  
+        .modal__content {
+            max-height: 100%;
+            border-radius: 20px 20px 0px 0px;  
+            max-width: none;
+            margin: auto 0 0;
+            display: flex;
+            transform: translateY(100%);
+            transition: all .4s ease-out;
+            padding-top: 20px;
+        } 
+        .modal__scroll {
+            padding: 30px 45px 50px;
+            flex: 1 1 auto;
+            max-width: 758px;
+            margin: 0 auto;
+        } 
+        .modal__close {
+            display: block;
+            right: 27px;
+            top: -52px;
+            opacity: 0;
+            transition: all .3s 0s ease-out;
+        }    
+    }
+    @media (max-width: $bp4) {
+        .modal__scroll {
+            max-width: 567px;
+            padding: 0 20px 30px;
+        }
+    }
+}
+.fancy-modal {
+    .modal__overlay {
+        padding: 110px 0;
+    }
+    .modal__content {
+        background: none;
+        max-width: none;
+        border-radius: 0;
+        overflow: hidden;
+    }
+    .modal__close {
+        position: fixed;
+        top: 61px;
+        right: calc((100vw - 1440px) / 2);
+    }
+    .swiper {
+        width: 800px;
+        height: 690px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+    .swiper-slide {
+        display: flex;
+        background-color: $white;
+        cursor:grab;
+        &.cover {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &.contain {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .swiper-img {
+       width: 100%;
+       height: 100%;
+    }
+    @media (max-width: $bp1) {
+        .swiper {
+            width: 660px;
+            height: 570px;
+        }
+        .modal__close {
+            right: calc((100vw - 1170px) / 2);
+        }   
+    }
+    @media (max-width: 1300px) {
+        .modal__overlay {
+            padding: 86px 0;
+        }
+        .modal__close {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+        }     
+    }
+    @media (max-width: $bp4) {
+        .swiper {
+            width: calc(100% - 50px);
+            height: 100%
+        }
+        .modal__overlay {
+            padding: 66px 0;
+        }
+        .modal__close {
+            top: 20px;
+            right: 20px;
+        }
+    }
+    @media (max-width: $bp5) {
+        .swiper {
+            width: calc(100% - 15px);
+            height: 100%
+        }
+    }
+
+}

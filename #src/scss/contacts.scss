@@ -1,0 +1,206 @@
+.contacts {
+	&__inner {
+        position: relative;
+        margin-bottom: 180px;
+        .container {
+            padding-bottom: 40px;
+        }
+    }
+    .map {
+        position: absolute;
+        right: 0;  
+        top: 40px;
+        width: 61.82%;
+        bottom: 0;
+        background-color: $white;
+        border-radius: 8px;
+        overflow: hidden;
+        @media (max-width: $bp1) {
+            [class*=placemark-overlay] {
+                [class*=image] {
+                    width: 75px!important;
+                    height: 108px!important;
+                    left: -37.5px!important;
+                    top: -108px!important;
+                    background-size: 75px 108px !important;
+                }
+            }
+        }
+    }
+    @media (max-width: $bp1) {
+        &__inner {
+            margin-bottom: 160px;
+            .map {
+                width: 62.75%;
+                right: 30px;
+            }
+            .container {
+                position: relative;
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        &__inner {
+            margin-bottom: 120px;
+            .map {
+                width: 100%;
+                height: 1000px;
+                position: static;
+                margin-top: -75px;
+            }
+            .container {
+                padding-bottom: 0;
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        &__inner {
+            margin-bottom: 100px;
+        } 
+        .map {
+            height: 800px;
+            right: 20px;
+            margin-top: -40px;
+        }      
+    }
+    @media (max-width: $bp6) {
+        &__inner .container {
+            padding: 0;
+        }
+    }  
+}
+.info-contacts {
+    width: 40.07%;
+    padding: 70px 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 7px 26px -11px rgba(0, 0, 0, 0.25);
+    border-radius: 8px 80px;
+    position: relative;
+    z-index: 2;
+    h2 {
+        margin-bottom: 20px;
+        color: $black-green;
+    }
+    .h6 {
+        color: rgba($main-color, 0.6);
+    }
+	&__header {
+        margin-bottom: 60px;
+        .h5 span {
+            display: block;
+        }
+    }
+	&__cols {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 80px;
+    }
+	&__col {
+        margin-bottom: 40px;
+        &:first-child {
+            flex: 0 0 100%;
+        }
+        p {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        a {
+            color: inherit;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width: $bp1) {
+        padding: 60px 40px;
+        border-radius: 8px 60px;
+    }
+    @media (max-width: $bp2) {
+        width: 430px;
+        padding: 40px;
+        border-radius: 8px 50px;
+        &__cols {
+            column-gap: 40px;
+        }
+    }
+    @media (max-width: $bp3) {
+        width: 100%;
+        &__header {
+            margin-bottom: 40px;
+        }
+        &__col {
+            min-width: 240px;
+            flex: 0 0 auto;
+            &--address {
+                .h5 {
+                   max-width: 367px; 
+                }            
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 40px 20px;
+        border-radius: 4px 30px;
+        &__header {
+           .h5 {
+              max-width: 320px;
+            }
+            .h5 span {
+                display: inline;
+            }
+        }
+        &__cols {
+            column-gap: 60px;
+         }
+        &__col {
+           min-width: 0;
+           &:last-child {
+           flex: 0 0 100% ;
+           }
+        }
+    }  
+}
+.other-contacts {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        flex: 0 0 31.33%;
+        .h5 {
+            color: $black-green;
+            margin-bottom: 25px;
+        }
+        .page-lbl {
+            color: $light-gray;
+            margin-bottom: 9px;
+        }
+        .link {    
+            color: inherit;        
+            line-height: 1.2;
+        }
+        @media (max-width: $bp1) {
+            .h5 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media (max-width: $bp3) {
+        &__items {
+            margin-bottom: -40px;
+        }
+        &__item {
+            flex: 0 0 calc(50% - 10px);
+            margin-bottom: 40px;
+        }
+    }
+    @media (max-width: $bp4) {
+        .h5 {
+            margin-bottom: 15px;
+        }
+    }
+}
+

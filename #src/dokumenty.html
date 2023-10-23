@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Документы"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {   
+                "page": "Документы"
+            })
+            <!--docs section-->
+            <section class="docs">
+                <div class="container">
+                    <h1 class="h2">Документы</h1>
+                    <div class="docs__top">
+                        <div class="h3">
+                            Всю проектную декларацию вы можете найти на сайте «НАШ.ДОМ.РФ»
+                        </div>
+                        <a href="#" class="btn main-btn"><span>Перейти</span></a>
+                    </div>
+                    <div class="docs__items">
+                        @@loop("_item-docs.html", [
+                          {"txt": "Заключение о соответствии застройщика и проектной декларации требованиям федерального закона № 214-ФЗ", "type": "DOC"},
+                          {"txt": "Разрешение на строительство", "type": "PDF"},
+                          {"txt": "Название документа", "type": "DOC"},
+                          {"txt": "Название документа", "type": "PDF"},
+                          {"txt": "Название документа", "type": "DOC"},
+                        ])
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

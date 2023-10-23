@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html', {   
+    "title": "Ход строительства"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            @@include('_breadcrumbs.html', {   
+                "page": "Ход строительства"
+            })
+            <!--building section-->
+            <section class="building">
+                <div class="container">
+                    <h1 class="h2">Ход строительства</h1>
+                    <nav class="building__nav">
+                        <a href="#" class="h6 building__navitem active">2025</a>
+                        <a href="#" class="h6 building__navitem">2024</a>
+                        <a href="#" class="h6 building__navitem">2023</a>
+                    </nav>
+                    <div class="building__items">
+                       @@loop("_item-building.html", [
+                         {"mesyac": "Август", "nmb": "1"},
+                         {"mesyac": "Июль", "nmb": "2"},
+                         {"mesyac": "Июнь", "nmb": "3"},
+                         {"mesyac": "Май", "nmb": "4"},
+                         {"mesyac": "Апрель", "nmb": "5"},
+                         {"mesyac": "Март", "nmb": "6"},
+                         {"mesyac": "Февраль", "nmb": "7"},
+                         {"mesyac": "Январь", "nmb": "8"},
+                       ])
+                    </div> 
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

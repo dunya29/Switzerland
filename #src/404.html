@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html', {   
+    "title": "Страница не найдена"
+})
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header.html')
+        <!--main-->  
+        <main class="main">
+            <!--notfound section-->
+            <section class="section-sm notfound">
+                <div class="notfound__img">
+                    <img src="img/404.svg" alt="Страница не найдена">
+                </div>
+                <div class="container">
+                    <h1 class="h2">Страница не найдена</h1>
+                    <a href="/" class="btn small-btn">НА главную</a>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer.html')
+        @@include('_modal.html')
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

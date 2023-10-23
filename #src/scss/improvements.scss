@@ -1,0 +1,32 @@
+.improvements {
+    .swiper {
+        overflow: visible;
+    }
+    .swiper-wrapper {
+        cursor: url("../img/icons/cursor.svg") 120 120, auto;
+        user-select: none;
+    }
+    .swiper-slide:nth-child(2n+1) {       
+        .improvements__item {
+            padding-top: 68.75%;
+        }
+    }
+    .media-cover {
+        padding-top: 68.75%;
+        border-radius: 8px;
+    }
+    h5 {
+        max-width: 388px;
+        padding: 20px 20px 0;
+    }
+    @media (max-width: $bp1) {
+        h5 {
+            max-width: 370px;
+        }
+    }
+    @media (max-width: $bp4) {
+        h5 {
+            padding: 15px 15px 0;
+        }
+    }
+}
