@@ -755,7 +755,7 @@ if (document.querySelector(".catalog-plan__swipers")) {
       swiper: thumbSwiper,
     },
     autoplay: {
-      delay: 3500,
+      delay: 5000,
       disableOnInteraction: false
     },
     speed: 400

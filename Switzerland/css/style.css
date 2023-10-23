@@ -3770,6 +3770,7 @@ h1.h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 -15px -10px;
 }
 
 .scheme-cat__status span {
@@ -3780,7 +3781,7 @@ h1.h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 30px;
+  margin: 0 15px 10px;
 }
 
 .scheme-cat__status span:last-child {
@@ -3860,6 +3861,7 @@ h1.h2 {
 .scheme-cat__sec-title {
   color: #F80101;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1;
   padding-bottom: 10px;
   border-bottom: 1px solid #F80101;
@@ -4341,6 +4343,7 @@ h1.h2 {
   flex-basis: 100%;
   position: relative;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .catalog-plan__mainswiper .swiper-slide-active {
@@ -7593,7 +7596,7 @@ h1.h2 {
   .scheme-cat__status {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 16px;
   }
 
