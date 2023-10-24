@@ -3784,10 +3784,6 @@ h1.h2 {
   margin: 0 15px 10px;
 }
 
-.scheme-cat__status span:last-child {
-  margin-right: 0;
-}
-
 .scheme-cat__status span:before {
   content: "";
   -webkit-box-flex: 0;

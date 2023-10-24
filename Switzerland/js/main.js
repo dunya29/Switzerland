@@ -13,7 +13,6 @@ const filter = document.querySelector(".filter-form")
 const filterCheckbox = document.querySelector(".filter-form__checkbox")
 const priceSlider = document.querySelector('.price-slider');
 const floorSlider = document.querySelector('.floor-slider');
-const filterReset = document.querySelector(".filter-form__reset")
 const catalogCat = document.querySelector(".catalog-cat")
 const schemePopup = document.querySelector(".scheme-popup")
 let paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0
@@ -48,21 +47,27 @@ function initSliders() {
       }
     });
     rangeStart.addEventListener("change", () => {
-      rangeSlider.noUiSlider.set([rangeStart.value, null])
+      if (item.classList.contains("range--price")) {
+        rangeSlider.noUiSlider.set([rangeStart.value * 1000000, null])
+      } else {
+        rangeSlider.noUiSlider.set([rangeStart.value, null])
+      }
     });
     rangeEnd.addEventListener("change", () => {
-      rangeSlider.noUiSlider.set([null, rangeEnd.value])
+      if (item.classList.contains("range--price")) {
+        rangeSlider.noUiSlider.set([null, rangeEnd.value * 1000000])
+      } else {
+        rangeSlider.noUiSlider.set([null, rangeEnd.value])
+      }
     });
     let rangeValues = [rangeStart, rangeEnd];
-    let updateCount = 0
     rangeSlider.noUiSlider.on('update', function (values, handle) {
-      updateCount++
       rangeValues[handle].value = item.classList.contains("integer") ? parseInt(values[handle]) : values[handle]
       if (item.classList.contains("range--price")) {
         rangeValues[handle].value = parseFloat(values[handle] / 1000000).toFixed(2);
       }
     });
-    rangeSlider.noUiSlider.on('end', function (values, handle) {
+    rangeSlider.noUiSlider.on('change', function (values, handle) {
       $(document).find('#eFiltr').trigger("submit");
     });
   })
@@ -103,9 +108,9 @@ function formSuccess(form) {
 function filterFormOnReset(form) {
   form.querySelectorAll("input").forEach(inp => {
     inp.checked = false
-    priceSlider.noUiSlider.reset()
-    floorSlider.noUiSlider.reset()
   })
+  form.querySelector('.price-slider').noUiSlider.reset()
+  form.querySelector('.floor-slider').noUiSlider.reset()
 }
 //show modal
 function openModal(modal) {
@@ -443,6 +448,7 @@ if (document.querySelector(".infra__swiper")) {
     })
   }, 100);
 }
+
 //filter-form
 if (filter) {
   initSliders()
@@ -458,7 +464,23 @@ if (filter) {
       openModal(document.querySelector(".mob-modal"))
     }
   })
+  filter.addEventListener("reset", () => {
+    filter.querySelectorAll("input").forEach(inp => {
+      inp.removeAttribute("checked")
+    })
+     filter.querySelectorAll(".range").forEach(item => {
+      if (item.classList.contains("range--price")) {
+        let min = parseFloat(+item.getAttribute("data-min") /* / 1000000 */).toFixed(2)
+        let max = parseFloat(+item.getAttribute("data-max") /* / 1000000 */).toFixed(2)
+        item.querySelector(".range__slider").noUiSlider.set([min, max])
+      } else {
+        item.querySelector(".range__slider").noUiSlider.set([+item.getAttribute("data-min"),+item.getAttribute("data-max")])
+      }   
+    })
+    $(document).find('#eFiltr').trigger("submit");
+  })
 }
+
 // change image on mousemove/touchmove in catalog__block
 function catalogSlider() {
   document.querySelectorAll(".catalog__wrapper .catalog-cat__item").forEach(item => {
@@ -509,7 +531,7 @@ if (catalogCat) {
 }
 // scheme-popup position on mousemove
 function setSchemePopup() {
-  document.querySelectorAll(".scheme-cat .item-apartaments .on-sale").forEach(item => {
+  document.querySelectorAll(".scheme-cat__apartaments .item-apartaments .on-sale").forEach(item => {
     function move(xPos, yPos) {
       schemePopup.classList.add("open")
       let top = item.getBoundingClientRect().top
@@ -542,7 +564,7 @@ function setSchemePopup() {
           <picture><img src=${img} alt=""></picture>
           <div class="catalog-compass">
               <svg>
-                  <use xlink:href="img/icons/sprite.svg#compass"></use>
+                  <use xlink:href="html/img/icons/sprite.svg#compass"></use>
               </svg>
           </div>
       </a>
@@ -595,11 +617,6 @@ catTab.forEach((tab, idx) => {
     })
     catTab[idx].classList.add("active")
     catBlock[idx].classList.add("active")
-    if (catBlock[idx].classList.contains("catalog-plan") && window.innerWidth > 991.98) {
-      document.querySelector(".filter").style.display = "none"
-    } else {
-      document.querySelector(".filter").style.display = "block"
-    }
   })
 })
 // day/night views
