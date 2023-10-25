@@ -969,6 +969,54 @@ h1.h2 {
   margin: 0 auto;
 }
 
+.nord {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.northeast {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.east {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.southeast {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.south {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.southwest {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.west {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.northwest {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -3878,9 +3926,9 @@ h1.h2 {
 
 .item-apartaments a {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 65.5px;
-  flex: 0 0 65.5px;
-  width: 65.5px;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  width: 64px;
   height: 45px;
   border-radius: 4px;
   display: -webkit-box;
