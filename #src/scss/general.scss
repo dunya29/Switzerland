@@ -762,22 +762,57 @@ h1.h2 {
 }
 .northeast {
     transform: rotate(45deg);
+    .compass__item {
+        transform: rotate(-45deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .east {
     transform: rotate(90deg);
+    .compass__item {
+        transform: rotate(-90deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .southeast {
     transform: rotate(135deg);
+    .compass__item {
+        transform: rotate(-135deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .south {
     transform: rotate(180deg);
+    .compass__item {
+        transform: rotate(-180deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .southwest {
     transform: rotate(225deg);
+    .compass__item {
+        transform: rotate(-225deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .west {
     transform: rotate(270deg);
+    .compass__item {
+        transform: rotate(-270deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
 .northwest {
     transform: rotate(315deg);
+    .compass__item {
+        transform: rotate(-315deg); 
+        transform-origin: center;
+        transform-box: fill-box;
+    }
 }
