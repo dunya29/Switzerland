@@ -617,6 +617,11 @@ catTab.forEach((tab, idx) => {
     })
     catTab[idx].classList.add("active")
     catBlock[idx].classList.add("active")
+    if (catBlock[idx].classList.contains("catalog-plan") ) {
+      document.querySelector(".filter").style.display = "none"
+    } else {
+      document.querySelector(".filter").style.display = "block"
+    }
   })
 })
 // day/night views
