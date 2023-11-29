@@ -531,7 +531,7 @@ if (catalogCat) {
 }
 // scheme-popup position on mousemove
 function setSchemePopup() {
-  document.querySelectorAll(".scheme-cat__apartaments .item-apartaments .on-sale").forEach(item => {
+  document.querySelectorAll(".scheme-cat__apartaments .item-apartaments a").forEach(item => {
     function move(xPos, yPos) {
       schemePopup.classList.add("open")
       let top = item.getBoundingClientRect().top
@@ -555,6 +555,7 @@ function setSchemePopup() {
       let url = item.getAttribute("data-url")
       let price = item.getAttribute("data-price").replace(/\B(?=(\d{3})+(?!\d))/g, " ").trim()
       let img = item.getAttribute("data-img")
+      let compassDir = item.getAttribute("data-compass")
       schemePopup.querySelector(".modal__scroll").innerHTML = `
       <div class="scheme-popup__header">
         <h5>${`<span>${name}</span><span>№ ${nmb}</span>`}</h5>
@@ -562,7 +563,7 @@ function setSchemePopup() {
       </div>
       <a href=${url} class="scheme-popup__preview">
           <picture><img src=${img} alt=""></picture>
-          <div class="catalog-compass east">
+          <div class="catalog-compass ${compassDir}">
           <svg viewBox="0 0 42 45" xmlns="http://www.w3.org/2000/svg">
              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.296 4.04707C14.4482 4.48597 14.2147 4.96336 13.7834 5.13596C7.1202 7.8026 2.41515 14.319 2.41515 21.9322C2.41515 29.5455 7.1202 36.0619 13.7834 38.7285C14.2147 38.9011 14.4482 39.3785 14.296 39.8174C14.1438 40.2563 13.6637 40.4904 13.2317 40.3195C5.91214 37.424 0.73291 30.284 0.73291 21.9322C0.73291 13.5805 5.91214 6.44044 13.2317 3.54498C13.6637 3.37411 14.1438 3.60818 14.296 4.04707ZM38.5834 21.9322C38.5834 14.3944 33.9711 7.93179 27.4124 5.21629C26.9832 5.03859 26.7554 4.55845 26.9128 4.1214C27.0702 3.68434 27.5531 3.45599 27.983 3.63198C35.1881 6.58148 40.2656 13.6629 40.2656 21.9322C40.2656 30.2016 35.1881 37.283 27.983 40.2325C27.5531 40.4085 27.0702 40.1801 26.9128 39.7431C26.7554 39.306 26.9832 38.8259 27.4124 38.6482C33.9711 35.9327 38.5834 29.4701 38.5834 21.9322Z"/>
              <path class="compass__item" d="M21.5081 5.44602C21.8449 5.04002 22.3281 4.68736 22.8331 4.84C23.2909 4.97838 23.5778 5.45983 23.362 5.88661C23.2827 6.04329 23.1928 6.18718 23.0921 6.31826C22.839 6.64792 22.5241 6.89663 22.1473 7.06441C21.7735 7.23218 21.2967 7.31606 20.7168 7.31606C20.0134 7.31606 19.4379 7.21452 18.9905 7.01143C18.5461 6.80539 18.162 6.44483 17.8382 5.92973C17.5144 5.41464 17.3525 4.75533 17.3525 3.95178C17.3525 2.88039 17.6366 2.05772 18.2046 1.48376C18.7757 0.906859 19.5821 0.618408 20.6241 0.618408C21.4394 0.618408 22.0796 0.783237 22.5447 1.1129C22.7799 1.27858 22.9846 1.48887 23.1588 1.74377C23.4574 2.18054 23.1379 2.73152 22.6215 2.84643L22.2855 2.92118C22.0226 2.97967 21.7868 2.80823 21.6263 2.59194C21.5145 2.43889 21.3776 2.32115 21.2157 2.23874C21.0538 2.15632 20.8728 2.11512 20.6727 2.11512C20.2194 2.11512 19.8721 2.29761 19.6307 2.66258C19.4482 2.93338 19.357 3.35869 19.357 3.93854C19.357 4.65672 19.4659 5.14974 19.6837 5.41759C19.9015 5.68249 20.2076 5.81494 20.602 5.81494C20.9847 5.81494 21.2731 5.70751 21.4674 5.49264C21.4812 5.47758 21.4948 5.46204 21.5081 5.44602Z"/>
@@ -607,7 +608,7 @@ if (schemePopup) {
   setSchemePopup()
 }
 //tabs on click
-const catTab = document.querySelectorAll(".catalog__tab")
+const catTab =  document.querySelectorAll(".catalog__tab")
 const catBlock = document.querySelectorAll(".catalog__block")
 catTab.forEach((tab, idx) => {
   tab.addEventListener("click", e => {
@@ -746,47 +747,49 @@ if (document.querySelector('.main-map__content')) {
 }
 //init plan swipers
 function initPlanSwipers() {
-  if(!mainPlanSwiper) {
-    thumbPlanSwiper = new Swiper(".catalog-plan__thumbswiper", {
-      slidesPerView: 3.15,
-      spaceBetween: 16,
-      observer: true,
-      observeParents: true,
-      direction: "horizontal",
-      speed: 800,
-      breakpoints: {
-        480.98: {
-          slidesPerView: 4.1,
-          spaceBetween: 16,
-          direction: "horizontal",
-        },
-        767.98: {
-          slidesPerView: 5,
-          spaceBetween: 20,
-          direction: "horizontal",
-        },
-        991.98: {
-          slidesPerView: 5,
-          spaceBetween: 20,
-          direction: "vertical",
-        }
-      },
-    })
-    mainPlanSwiper = new Swiper(".catalog-plan__mainswiper", {
-      slidesPerView: 1,
-      observer: true,
-      observeParents: true,
-      effect: 'fade',
-      thumbs: {
-        swiper: thumbPlanSwiper,
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      speed: 400
-    })
+  if(mainPlanSwiper) {
+    mainPlanSwiper.destroy()
+    thumbPlanSwiper.destroy()
   }
+  thumbPlanSwiper = new Swiper(".catalog-plan__thumbswiper", {
+    slidesPerView: 3.15,
+    spaceBetween: 16,
+    observer: true,
+    observeParents: true,
+    direction: "horizontal",
+    speed: 800,
+    breakpoints: {
+      480.98: {
+        slidesPerView: 4.1,
+        spaceBetween: 16,
+        direction: "horizontal",
+      },
+      767.98: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        direction: "horizontal",
+      },
+      991.98: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        direction: "vertical",
+      }
+    },
+  })
+  mainPlanSwiper = new Swiper(".catalog-plan__mainswiper", {
+    slidesPerView: 1,
+    observer: true,
+    observeParents: true,
+    effect: 'fade',
+    thumbs: {
+      swiper: thumbPlanSwiper,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    speed: 400
+  })
 }
 //plan swiper
 let thumbPlanSwiper,

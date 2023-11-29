@@ -561,17 +561,13 @@ h1.h2 {
             &::placeholder {
                 color: $light-gray!important;
             }
-        }
-        &:hover, &:active {
-            input {
+            &:hover, &:active {
                 border-color: $dark-blue;
             }
         }
-        &--tel {      
-            &:hover {
-                .form__placeholder {
-                    display: none !important;
-                }
+        &--tel  {      
+            input:hover +.form__placeholder {
+                display: none !important;
             }
 
         }

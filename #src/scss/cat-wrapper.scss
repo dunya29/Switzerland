@@ -97,6 +97,7 @@
         border-bottom: 1px solid #F80101;
         text-align: center;
         margin-bottom: 10px;
+        white-space: nowrap;
     }
     @media (max-width: $bp1) {
         margin-left: 43px;
@@ -203,13 +204,11 @@
         &.hold {
             color: rgba($white, .6);
             background: $light-gray;
-            pointer-events: none;
         }
         &.sold {
             color: rgba($main-color, 0.2);
             border: 1px solid rgba($main-color, 0.2);
             background: #f6f6f6;
-            pointer-events: none;
         }
     }
     @media (max-width: $bp1) {
@@ -435,12 +434,13 @@
         }
     }
     &__main {
+        display: block;
         margin-right: 60px;
     }
     &__preview {   
         width: 270px;  
         height: 260px;
-        background: rgba($main-color, 0.05);
+        background: #fff;
         border-radius: 8px;
         overflow: hidden;
         position: relative;

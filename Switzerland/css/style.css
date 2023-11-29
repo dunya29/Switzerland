@@ -768,12 +768,12 @@ h1.h2 {
   color: rgba(22, 26, 25, 0.4) !important;
 }
 
-.form__item:hover input,
-.form__item:active input {
+.form__item input:hover,
+.form__item input:active {
   border-color: #46A7DF;
 }
 
-.form__item--tel:hover .form__placeholder {
+.form__item--tel input:hover + .form__placeholder {
   display: none !important;
 }
 
@@ -3743,9 +3743,6 @@ h1.h2 {
 .filter-form__reset {
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: translateY(7px);
-  -ms-transform: translateY(7px);
-  transform: translateY(7px);
   font-size: 16px;
   line-height: 105%;
   -webkit-text-decoration-line: underline;
@@ -3760,9 +3757,6 @@ h1.h2 {
 .filter-form__reset.show {
   visibility: visible;
   opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
 }
 
 .filter-form .stroke-btn {
@@ -3981,6 +3975,7 @@ h1.h2 {
   border-bottom: 1px solid #F80101;
   text-align: center;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .item-apartaments {
@@ -4061,14 +4056,12 @@ h1.h2 {
 .item-apartaments a.hold {
   color: rgba(255, 255, 255, 0.6);
   background: rgba(22, 26, 25, 0.4);
-  pointer-events: none;
 }
 
 .item-apartaments a.sold {
   color: rgba(49, 53, 52, 0.2);
   border: 1px solid rgba(49, 53, 52, 0.2);
   background: #f6f6f6;
-  pointer-events: none;
 }
 
 .list-cat__header {
@@ -4218,13 +4211,14 @@ h1.h2 {
 }
 
 .catalog-cat__main {
+  display: block;
   margin-right: 60px;
 }
 
 .catalog-cat__preview {
   width: 270px;
   height: 260px;
-  background: rgba(49, 53, 52, 0.05);
+  background: #fff;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -4713,6 +4707,11 @@ h1.h2 {
 
 .fancybox__container {
   --fancybox-slide-gap: 32px;
+}
+
+.catalog-cat__item.disabled,
+.list-cat__item.disabled {
+  opacity: 0.7;
 }
 
 @media (max-width: 1650px) {
