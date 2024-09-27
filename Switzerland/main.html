@@ -155,6 +155,15 @@
                     </div>
                 </div>
             </section>
+            <!--main-pay-->
+            <section class="main-pay">
+                <div class="container">
+                    <div class="main-pay__content">
+                        <h2 class="title-grad fadeUp">Доступна Беспроцентная рассрочка от застройщика <span>до 16.05.2025 года</span></h2>
+                        <button class="btn main-btn modal-show-btn" data-modal="#feedback-modal"><span>Получить консультацию</span></button>
+                    </div>
+                </div>
+            </section>
             <!--info-->
             <section class="info">
                 <div class="container">
@@ -205,6 +214,24 @@
                                 <h4>155 парковочных мест</h4>
                                 <h6>Подземный паркинг,<br>в который ходит лифт</h6>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--main-award-->
+            <section class="section-sm main-award">
+                <div class="main-award__inner">
+                    <div class="container">
+                        <div class="main-award__content">
+                            <h2 class="h1">Премия «Искусство строить» 2024</h2>
+                            <h3 class="h2">Номинация:</h3>
+                            <div class="main-award__txt">
+                                <img src="img/icons/award-icon.svg" alt="">
+                                <p>Выбор Нижегородцев:<br>Жилой комплекс Комфорт класса</p>
+                            </div>
+                        </div>
+                        <div class="main-award__img">
+                            <img src="img/icons/award.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -567,45 +594,56 @@
                     </a>
                 </div>
             </section>
-            <!--news section-->
-            <section class="news main-news">
+            <!--partners-->
+            <section class="partners">
                 <div class="container">
-                    <h2>Новости</h2>
-                    <div class="news__items">
-                        <!--item-news-->
-<div class="item-news">
-    <a href="#" class="media-cover item-news__preview">
-        <picture><source srcset="img/news1-sm.webp" type="image/webp"><img src="img/news1-sm.jpg" alt=""></picture>
-    </a>
-    <div class="item-news__content">
-        <a href="#"><h5>Название новости. Название новости. Название новости. Название новости.</h5></a>
-        <div class="page-lbl">20.12.23</div>
-    </div>
-    <a href="#" class="btn circle-btn">подробнее</a>
-</div><!--item-news-->
-<div class="item-news">
-    <a href="#" class="media-cover item-news__preview">
-        <picture><source srcset="img/news1-sm.webp" type="image/webp"><img src="img/news1-sm.jpg" alt=""></picture>
-    </a>
-    <div class="item-news__content">
-        <a href="#"><h5>Название новости. Название новости. Название новости. Название новости.</h5></a>
-        <div class="page-lbl">19.12.23</div>
-    </div>
-    <a href="#" class="btn circle-btn">подробнее</a>
-</div><!--item-news-->
-<div class="item-news">
-    <a href="#" class="media-cover item-news__preview">
-        <picture><source srcset="img/news1-sm.webp" type="image/webp"><img src="img/news1-sm.jpg" alt=""></picture>
-    </a>
-    <div class="item-news__content">
-        <a href="#"><h5>Название новости. Название новости. Название новости. Название новости.</h5></a>
-        <div class="page-lbl">18.12.23</div>
-    </div>
-    <a href="#" class="btn circle-btn">подробнее</a>
-</div>
+                    <div class="section-header partners__header">
+                        <h2 class="title-grad fadeUp">Предложения<span>от ведущих банков</span></h2>
+                        <div class="fadeUp partners__content">
+                            <p>Мы сотрудничаем с ведущими Банками и можем предложить индивидуальные условия ипотечного кредитования.</p>
+                            <p>Ставки по льготной ипотеке 6% годовых.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <a href="#" class="btn stroke-btn">Все новости</a>
+                    <div class="partners__items">
+                        <div class="partners__item">
+                            <img src="img/partner-1.svg" alt="">
+                        </div>
+                        <div class="partners__item">
+                            <img src="img/partner-2.svg" alt="">
+                        </div>
+                        <div class="partners__item">
+                            <img src="img/partner-3.svg" alt="">
+                        </div>
+                        <div class="partners__item">
+                            <img src="img/partner-4.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="partners__form">
+                        <div class="partners__form-bg">
+                            <picture><source srcset="img/partners-bg.webp" type="image/webp"><img src="img/partners-bg.jpg" alt=""></picture>
+                        </div>
+                        <div class="partners-form">
+                            <div class="partners-form__inner">
+                                <div class="partners-form__header">
+                                    <h3 class="h2">Пора действовать!</h3>
+                                    <p>Оставьте заявку и узнайте индивидуальные условия покупки квартиры!</p>
+                                </div>                    
+                                <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                                    <div class="form__item">
+                                        <input type="text" placeholder="Имя">
+                                    </div>
+                                    <div class="form__item form__item--tel">
+                                        <input type="tel" inputmode="text">
+                                        <div class="form__placeholder"><span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00</div>
+                                    </div>
+                                    <div class="form__footer">
+                                        <button type="submit" class="btn main-btn modal__btn"><span>оставить заявку</span></button>
+                                        <p class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциальности</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--main-building section-->
