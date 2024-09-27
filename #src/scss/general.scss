@@ -704,6 +704,13 @@ h1.h2 {
     &.nav-btn--next {
       transform: rotate(180deg);
     }
+    @media (max-width: $bp2) {
+        width: 48px;
+        height: 48px;
+        svg {
+            width: 24px;
+        }
+    }
 }
 .swiper-pagination-bullet {
     flex: 0 0 20px;

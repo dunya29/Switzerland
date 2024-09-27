@@ -797,6 +797,36 @@ let thumbPlanSwiper,
 if (document.querySelector(".catalog-plan__swipers")) {
   initPlanSwipers()
 }
-
+const partnersSwiper = document.querySelector(".partners__swiper")
+if (partnersSwiper && partnersSwiper.querySelectorAll(".swiper-slide").length > 10) {
+  partnersSwiper.querySelector(".swiper-wrapper").classList.remove("partners__items")
+  partnersSwiper.querySelector(".swiper-nav").style.display = "flex"
+  let swiper = new Swiper(partnersSwiper.querySelector(".swiper"), {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    observer: true,
+    observeParents: true,
+    wathcSlidesProgress: true,
+    speed: 800,
+    navigation: {
+      nextEl: partnersSwiper.querySelector(".nav-btn--next"),
+      prevEl: partnersSwiper.querySelector(".nav-btn--prev"),
+    },
+    breakpoints: {
+      1520.98: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1260.98: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      480.98: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      }
+    }
+  })
+}
 
 

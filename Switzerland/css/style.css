@@ -4771,6 +4771,29 @@ h1.h2 {
   padding-right: 20px;
 }
 
+.partners {
+  overflow: hidden;
+}
+
+.partners .swiper-nav {
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.partners .swiper-nav .nav-btn--prev {
+  margin-right: 10px;
+}
+
+.partners .swiper-nav .swiper-button-disabled {
+  opacity: 0.5;
+}
+
 .partners__content {
   max-width: 31.7%;
 }
@@ -4779,11 +4802,23 @@ h1.h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 48px;
+}
+
+.partners__items .partners__item:last-child::after {
+  display: block;
+}
+
+.partners__items .partners__item:nth-child(4n)::after {
+  display: none;
+}
+
+.partners__swiper {
   margin-bottom: 100px;
 }
 
 .partners__item {
   height: 150px;
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4796,8 +4831,8 @@ h1.h2 {
   position: relative;
 }
 
-.partners__item:nth-child(4n)::after {
-  content: none;
+.partners__item:last-child::after {
+  display: none;
 }
 
 .partners__item:after {
@@ -5666,7 +5701,14 @@ h1.h2 {
 
   .partners__items {
     gap: 30px;
+  }
+
+  .partners__swiper {
     margin-bottom: 80px;
+  }
+
+  .partners__swiper .swiper {
+    overflow: visible;
   }
 
   .partners__item {
@@ -5753,6 +5795,15 @@ h1.h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 20px;
+  }
+
+  .nav-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-btn svg {
+    width: 24px;
   }
 
   .scheme-popup {
@@ -6411,6 +6462,13 @@ h1.h2 {
   .partners__items {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .partners__items .partners__item:nth-child(2n)::after {
+    display: none;
+  }
+
+  .partners__swiper {
     margin-bottom: 60px;
   }
 
@@ -6420,10 +6478,6 @@ h1.h2 {
 
   .partners__item:after {
     right: -10px;
-  }
-
-  .partners__item:nth-child(2n)::after {
-    content: none;
   }
 
   .partners__form-bg {
@@ -7137,6 +7191,10 @@ h1.h2 {
     max-width: 559px;
     padding-right: 0;
     margin: 0 auto;
+  }
+
+  .partners .swiper-nav {
+    display: none !important;
   }
 
   .partners__content {
@@ -8475,18 +8533,18 @@ h1.h2 {
     grid-template-columns: 1fr;
   }
 
-  .partners__item {
+  .partners__items .partners__item {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 163, 81, 0.2);
   }
 
-  .partners__item:last-child {
+  .partners__items .partners__item:last-child {
     padding-bottom: 0;
     border-bottom: 0;
   }
 
   .partners__item:after {
-    content: none;
+    display: none;
   }
 
   .partners__form-bg {
