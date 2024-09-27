@@ -213,6 +213,7 @@
         align-items: start;
     }
     &__form-bg {
+        background: #fff;
         border: 8px solid #fff;
         border-radius: 8px 160px;
         overflow: hidden;
@@ -303,6 +304,7 @@
             border-width: 4px;
             border-radius: 4px 80px;
             img {
+                border-radius: 4px;
                 min-height: 196px;
                 object-fit: cover;
             }

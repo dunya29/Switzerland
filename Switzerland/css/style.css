@@ -4830,6 +4830,7 @@ h1.h2 {
 }
 
 .partners__form-bg {
+  background: #fff;
   border: 8px solid #fff;
   border-radius: 8px 160px;
   overflow: hidden;
@@ -8495,6 +8496,7 @@ h1.h2 {
   }
 
   .partners__form-bg img {
+    border-radius: 4px;
     min-height: 196px;
     -o-object-fit: cover;
     object-fit: cover;
