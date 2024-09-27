@@ -7193,10 +7193,6 @@ h1.h2 {
     margin: 0 auto;
   }
 
-  .partners .swiper-nav {
-    display: none !important;
-  }
-
   .partners__content {
     max-width: 59.42%;
     margin-top: 20px;
